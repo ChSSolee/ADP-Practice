@@ -1,0 +1,523 @@
+---
+title: "ADP Part 02"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#### for / while
+```{r pressure1}
+for (year in c(2015:2017)) {
+  print(paste("This year is", year))
+}
+```
+```{r pressure2}
+year = 2015
+while(year <= 2017) {
+  print(paste("This year is", year))
+  year <- year + 1
+}
+
+```
+#### 변수 추가
+- transform(데이터프레임, "추가할변수 이름", "추가할변수")
+```{r pressure3, results = "hide"}
+data(iris)
+iris$ID1 <- 1:nrow(iris)
+iris["ID2"] <- ifelse(iris$ID1%%2 == 0, "A", "B")
+head(transform(iris, ID3=iris$ID1*2))
+```
+```{r echo = FALSE, results = 'axis'}
+library(knitr)
+kable(head(transform(iris, ID3=iris$ID1*2)))
+```
+```{r pressure4, echo=F}
+student_id <- c("s1", "s2", "s3", "s4", "s5", "s6") 
+score <- c(55, 90, 85, 71, 63, 99)                  
+score_df <- data.frame(student_id, score)  
+```
+```{r pressure5}
+score_df <- within(score_df, {
+  grade = character(0)         # 새로운 변수의 데이터 타입 지정 (생략 가능)
+  grade[ score < 60 ] = "가"   # score가 60미만인 경우 grade에 “가” 입력
+  grade[ score >=60 & score < 70 ] = "양" 
+  grade[ score >=70 & score < 80 ] = "미"
+  grade[ score >=80 & score < 90 ] = "우" 
+  grade[ score >=90 ] = "수" 
+  grade = factor(grade, level = c("수", "우", "미", "양", "가")) 
+  # grade변수를 "수", "우", "미", "양", "가"의 범주로 이루어진 팩터로 변환
+})
+```
+
+#### 변수축소 (PCA)
+- prcomp : 자료 행렬을 특이값 분해(SVD) 방법
+```{r pressure6, results = "hide"}
+library(datasets) ; data("USArrests")
+prcomp(USArrests, center=T, # 데이터 중심이 0이 되게 함
+       scale.=F) # 데이터를 표준화
+```
+
+- princomp : 공분산행렬/상관행렬의 고유벡터 사용
+- 공분산행렬은 변수의 측정 단위 반영 / 상관행렬은 변수의 측정 단위 표준화(변수들 간 척도 차이가 클 떄)
+```{r pressure7, results = "hide"}
+princomp(USArrests, cor = F, # F : 공분산행렬 사용 / T : 상관행렬 사용
+         scores = T)
+```
+
+```{r pressure8}
+US.prin <- princomp(USArrests, cor = T)
+summary(US.prin)
+```
+```{r pressure9}
+plot(US.prin, type = "l") # Screeplot
+```
+```{r pressure10}
+US.prin$loadings # 주성분계수
+```
+```{r pressure11}
+US.prin$scores[1:5,] # 주성분점수
+```
+
+```{r pressure12}
+biplot(US.prin, scale = 0, cex = 0.6)
+```
+#### 요인분석
+- 요인분석 : 변수들 간의 상관관계 고려, 서로 유사한 변수들을 묶어 새로운 잠재요인 추출 (PCA, 공통요인분석)
+
+```{r pressure13}
+data(swiss)
+Min <- apply(swiss, 2, min) ; Max <- apply(swiss, 2, max)
+swiss_fa <- scale(swiss, center = Min, scale = (Max-Min)) # Min-Max 정규화 
+factanal(swiss_fa, factors = 3) # 요인 개수를 3으로 지정
+# 누적 분산비 = 75.9%, 3개의 요인은 전체의 75.9%를 설명
+```
+
+#### 표준화 (Z-score)
+```{r pressure14, results = "hide"}
+scale(swiss, center = T, # center = T이면 데이터에서 평균을 뺌
+      scale = T) # scale = T이면 표준편차로 나눔 / F면 어떤 값으로도 나누지 않음
+# center = F, scale = T이면 데이터를 제곱평균제곱근(RMS)로 나눔
+```
+
+#### 정규화 (X-Min) / (Max-Min)
+```{r pressure15}
+Min <- apply(swiss, 2, min) ; Max <- apply(swiss, 2, max)
+swiss_fa <- scale(swiss, center = Min, scale = (Max-Min))
+```
+
+#### 데이터 결합 및 요약
+- rbind(data1, data2) : 행결합
+- cbind(data1, data2) : 열결합
+- merge(x, y, by = "기준열") : 데이터 병합
+```{r pressure16, results="hide"}
+id_name <- data.frame(id = c("c01","c02","c03","c04","c05", "c06", "c07"), 
+                      last_name = c("Lee", "Kim", "Choi", "Park", "Lim" , "Bae", "Kim"))
+id_number <- data.frame(id = c("c03", "c04", "c05", "c06", "c07", "c08", "c09"), 
+                        number = c(3, 1, 0, 7, 3, 4, 1))
+```
+```{r pressure17}
+merge(id_name, id_number, by = "id") # "id"열 기준 inner join
+```
+```{r pressure18}
+merge(id_name, id_number, by = "id", all = T) # "id"열 기준 outer join
+```
+```{r pressure19}
+merge(id_name, id_number, by = "id", all.x = T) # "id"열 기준 left outer join 
+```
+```{r pressure20}
+merge(id_name, id_number, by = "id", all.y = T) # "id"열 기준 right outer join
+```
+
+#### 데이터 요약
+```{r pressure21}
+aggregate(Sepal.Width ~ Species, iris, mean)
+# iris 데이터의 Species별 Sepal.Width의 평균
+```
+
+#### table
+```{r pressure22}
+Titanic <- as.data.frame(Titanic)
+table(Titanic$Class)
+```
+```{r pressure23}
+table(Titanic$Class, Titanic$Survived)
+```
+
+#### prop.table
+```{r pressure24}
+prop.table(table(Titanic$Class, Titanic$Survived)) # 비율
+```
+```{r pressure25}
+prop.table(table(Titanic$Class, Titanic$Survived), 1) # 행 별 비율
+```
+
+```{r pressure26}
+prop.table(table(Titanic$Class, Titanic$Survived), 2) # 열 별 비율
+```
+
+#### apply 계열 함수
+- apply
+```{r pressure27}
+apply(iris[,1:4], # iris 데이터의 1~4열에 대해서 
+      2, # 1은 행 방향 / 2는 열 방향으로 계산 
+      mean) # 평균 계산
+```
+- lapply : 결과를 리스트로 변환, 데이터프레임에 대해서는 열 방향으로 함수 적용
+```{r pressure28}
+a <- c(1,2,3)
+lapply(a, FUN = function(x){x^2})
+```
+- sapply : 결과를 벡터 혹은 행렬로 변환, 데이터프레임에 대해서는 열별로 함수 적용
+```{r pressure29}
+sapply(iris, class)
+```
+- vapply : sapply와 유사, 출력결과의 형태를 사용자가 직접 지정
+```{r pressure30}
+test <- c(1:100) ; fivenum(test)
+```
+```{r pressure31}
+test <- list(test) ; test2 <- vapply(test, 
+                                     fivenum, # 적용할 함수
+                                     c("Min" = 0, "Q1" = 0, "Median" = 0, "Q3" = 0, "Max" = 0)) # 함수 실행 후 출력되는 값의 형태
+test2
+```
+- mapply : sapply의 확장, 여러개의 인자를 필요로 하는 함수를 여러 데이터에 적용할 경우, 다수의 요소를 한 번에 적용 가능
+```{r pressure32}
+rep(1,4) ; rep(2,3) ; rep(3,2) ; rep(4,1)
+```
+```{r pressure33}
+mapply(rep, # 적용함수
+       c(1:4), c(4:1))
+```
+- tapply : 각 그룹별로 함수를 적용
+```{r pressure34, message=FALSE, results="hide"}
+library(googleVis)
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Fruits))
+```
+```{r pressure35}
+tapply(Fruits$Sales, Fruits$Fruit, mean)
+# Fruit별 Sales의 평균
+```
+```{r pressure36}
+tapply(Fruits$Profit, Fruits$Location == "West", mean)
+# Location이 West인 것과 아닌 것으로 그룹을 지정하여, Profit의 평균
+```
+
+#### plyr
+- a : array / l : list / d : data frame / _ : 아무런 출력을 하지 않음
+
+- adply : 배열을 입력받아 함수를 적용한 후 데이터 프레임으로 반환
+```{r pressure37, message=FALSE, results="hide"}
+library(plyr)
+```
+```{r pressure38, results = "hide"}
+head(adply(iris,1, 
+      function(row){
+        data.frame(setosa_PL1.5=
+                     c(ifelse(row$Petal.Length<1.5 & 
+                                row$Species=="setosa", "1", "0"))
+        )
+      })) # 변수명을 "setosa_PL1.5"로 지정하여 데이터프레임으로 반환
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(adply(iris,1, 
+      function(row){
+        data.frame(setosa_PL1.5=
+                     c(ifelse(row$Petal.Length<1.5 & 
+                                row$Species=="setosa", "1", "0"))
+        )
+      })))
+```
+
+- ddply : 인자에 지정한 변수들로 데이터를 그룹화한 후 그룹별로 함수를 적용하고 결과값 반환
+```{r pressure39, results = "hide"}
+ddply(iris, .(Species, Petal.Length < 1.5), function(sub){
+  data.frame(
+    mean_SL=mean(sub$Sepal.Length), mean_SW=mean(sub$Sepal.Width),
+    mean_PL=mean(sub$Petal.Length), mean_PW=mean(sub$Petal.Width))
+})
+# Petal.Length가 1.5 미만인 데이터에 대해 변수별 평균
+```
+```{r echo = FALSE, results = 'axis'}
+kable(ddply(iris, .(Species, Petal.Length < 1.5), function(sub){
+  data.frame(
+    mean_SL=mean(sub$Sepal.Length), mean_SW=mean(sub$Sepal.Width),
+    mean_PL=mean(sub$Petal.Length), mean_PW=mean(sub$Petal.Width))
+}))
+```
+- transform : 원본 데이터에 새로운 연산 결과를 담은 칼럼을 추가하여 함께 출력
+```{r pressure40, results = "hide"}
+ddply(baseball, .(id), transform, avgG = sum(g)/length(year))
+# 원본데이터에 id별 avgG칼럼 추가
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(ddply(baseball, .(id), transform, avgG = sum(g)/length(year))))
+```
+- mutate : 원본 데이터에 여러 칼럼 추가
+```{r pressure41, results = "hide"}
+ddply(baseball, .(id), mutate, avgG=sum(g)/length(year), avgG_RND=round(avgG))
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(ddply(baseball, .(id), mutate, avgG=sum(g)/length(year), avgG_RND=round(avgG))))
+```
+- summarise : 데이터의 요약 정보 생성
+```{r pressure42, results="hide"}
+ddply(baseball, .(id), summarise, year_fin = max(year))
+# id별 요약변수 year_fin 생성
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(ddply(baseball, .(id), summarise, year_fin = max(year))))
+```
+- subset : 조건을 만족하는 행들만 출력
+```{r pressure43, results = "hide"}
+ddply(baseball, .(id), subset, 
+      year == max(year), # subset 조건
+      select = c("id", "year", "stint", "team", "lg", "g"))
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(ddply(baseball, .(id), subset, 
+      year == max(year), # subset 조건
+      select = c("id", "year", "stint", "team", "lg", "g"))))
+```
+
+#### dplyr
+- %>% 기호로 연결하여 중첩사용 가능 
+- filter : 조건에 맞는 행들을 추출
+```{r pressure44, message=FALSE, warning=FALSE, results="hide"}
+library(dplyr) ; library(MASS)
+```
+```{r pressure45,results = "hide"}
+Cars93 %>% filter((Manufacturer == "Audi" | Manufacturer == "BMW") & EngineSize >= 2.4)
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Cars93 %>% filter((Manufacturer == "Audi" | Manufacturer == "BMW") & EngineSize >= 2.4)))
+```
+- select : 특정 열만을 추출
+```{r pressure46, results = "hide"}
+Cars93 %>%
+  filter((Manufacturer == "Chevrolet" | Manufacturer == "Volkswagen") & Price >= 10) %>% 
+  dplyr::select(Manufacturer, Model, Type, Price)
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Cars93 %>%
+  filter((Manufacturer == "Chevrolet" | Manufacturer == "Volkswagen") & Price >= 10) %>% 
+  dplyr::select(Manufacturer, Model, Type, Price)))
+```
+- group_by : 지정한 변수들을 기준으로 데이터 그룹화
+- summarise : 통계치 계산 (mean / median / sd / min / max / sum / n : 행의 개수 세기)
+```{r pressure47, results = "hide"}
+Cars93 %>% group_by(Manufacturer) %>%
+  summarise(mean_Price = mean(Price), max_Weight = max(Weight))
+# Cars93의 Manufacturer별 Price의 평균과 Weight의 최댓값을 산출한 뒤 각각 mean_Price, max_Weight로 지정하여 출력
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Cars93 %>% group_by(Manufacturer) %>%
+  summarise(mean_Price = mean(Price), max_Weight = max(Weight))))
+```
+- mutate : 새로운 파생변수 추가
+```{r pressure48, results = "hide"}
+Cars93 %>% mutate(Pr_level = ifelse(Price < 12, "low",
+                                    ifelse(Price >= 12 & Price < 23, "middle", "high"))) %>% 
+  dplyr::select(Model, Price, Pr_level)
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Cars93 %>% mutate(Pr_level = ifelse(Price < 12, "low",
+                                    ifelse(Price >= 12 & Price < 23, "middle", "high"))) %>% 
+  dplyr::select(Model, Price, Pr_level)))
+```
+- arrange : 특정 열 기준으로 데이터를 정렬
+```{r pressure49, results = "hide"}
+Cars93 %>% 
+  filter(Type %in% c("Midsize", "Small")) %>%
+  dplyr::select(Model, Type, Weight, Price) %>%
+  group_by(Type) %>%
+  mutate(Weight_lv = ifelse(Weight < median(Weight), "low", "high")) %>%
+  arrange(Price) # arrange(desc(Price))면 내림차순
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(Cars93 %>% 
+  filter(Type %in% c("Midsize", "Small")) %>%
+  dplyr::select(Model, Type, Weight, Price) %>%
+  group_by(Type) %>%
+  mutate(Weight_lv = ifelse(Weight < median(Weight), "low", "high")) %>%
+  arrange(Price)))
+```
+- {left, right, inner, full}_join
+```{r pressure50}
+NAME<-data.frame(code=c("A01","A02","A03"), name=c("coffee","cake","cookie"))
+PRICE<-data.frame(code=c("A01","A02","A04"), price=c(3000, 4000, 3000))
+left_join(NAME, PRICE, by = "code")
+```
+```{r pressure51}
+right_join(NAME, PRICE, by = "code")
+```
+```{r pressure52}
+inner_join(NAME, PRICE, by = "code")
+```
+```{r pressure53}
+full_join(NAME, PRICE, by = "code")
+```
+- bind_rows / bind_cols : 행/열을 이어 붙여 결합
+- rbind는 열 이름이 다르면 제대로 결합되지 않는 반변, bind_rows는 열 이름이 다르더라도 빈자리는 NA값으로 채워지면서 데이터가 결합
+```{r pressure54}
+A <- data.frame(code = c(1,2), name = c("coffee", "cake"))
+B <- data.frame(code = c(3,4), name = c("cookie", "juice"))
+C <- data.frame(code = 5, name = "bread")
+dplyr::bind_rows(A,B,C, .id = "id")
+```
+
+#### reshape2
+- melt
+```{r pressure55, message=FALSE, warning=FALSE, results = "hide"}
+library(reshape2)
+```
+```{r pressure56, results = "hide"}
+air_melt <- melt(airquality, id.vars = c("Month", "Day"), na.rm=T)
+# Month와 Day를 식별자로, 나머지 변수와 변수 값은 데이터 내에 포함되는 형태
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(air_melt))
+```
+- dcast 
+```{r pressure57, results = "hide"}
+dcast(air_melt, Month + Day ~ variable, fun.aggregate = mean)
+```
+```{r echo = FALSE, results = 'axis'}
+kable(head(dcast(air_melt, Month + Day ~ variable, fun.aggregate = mean)))
+```
+
+#### data.table
+- data.table(tag = value, ...) : tag(변수명) = value(값)의 형태로 데이터 생성
+- as.data.table(데이터프레임) : 데이터프레임을 데이터테이블로 변환 
+- tables() : 모든 데이터테이블 객체의 목록을 확인
+```{r pressure58, message=FALSE, results="hide"}
+library(data.table)
+```
+```{r pressure59}
+(mydata <- data.table(x = c(1:3), y = "가","나","다"))
+```
+```{r pressure60}
+iris_dt <- as.data.table(iris)
+tables()
+```
+- 데이터테이블[행, 열, by = "그룹화 기준 변수"]
+```{r pressure61, results = "hide"}
+iris_dt[iris_dt$Species == "setosa",] 
+iris_dt[, mean(Petal.Length), by = Species] # Species별 Petal.Length의 평균
+iris_dt[Petal.Length>=1, .(mean.SL=mean(Sepal.Length), mean.SW=mean(Sepal.Width)), by=Species] 
+# Petal.Length값이 1이상인 행들을 Species로 그룹화 한 뒤, mean.SL, mean.SW를 변수명으로 하여 출력
+```
+- 새로운 변수 생성
+```{r pressure62}
+air <- as.data.table(airquality)
+air[, Wind_class := ifelse(Wind >= mean(Wind), "U", "D")]; air[1:5,]
+```
+- 데이터 정렬
+```{r pressure63}
+air[, season:=ifelse(Month %in% c(12,1,2), "winter", 
+                     ifelse(Month %in% c(3:5), "spring", 
+                            ifelse(Month %in% c(6:8), "summer", "fall")))]
+air[, .(Ozone_mean=mean(Ozone, na.rm=T), Solar.R_mean=mean(Solar.R, na.rm=T)), 
+    by=.(season)][order(Ozone_mean, decreasing = T)] ; air[1:5, ]
+# season별 Ozone과 Solar.R 변수들의 평균 산출 및 내림차순 정렬
+```
+- key를 활용
+```{r pressure64, results = "hide"}
+baseball <- as.data.table(baseball)
+setkey(baseball, year) # year변수를 key로 지정
+baseball[J(1960)] # 1960년 데이터 조회
+```
+```{r pressure65}
+baseball[J(1960), list(gmean = mean(g)), by = team][1:5]
+# 1960년 팀별, g의 평균
+```
+
+#### 결측치
+```{r pressure66, results = "hide"}
+air_na <- airquality[!complete.cases(airquality),] # 결측값을 포함하는 행만 저장
+air_com <- airquality[complete.cases(airquality),] # 결측값을 미포함하는 행만 저장
+```
+- 단순 대치법 : 완전분석, 평균대치, 단순확률 대치(Hot-deck, nearest neighbor)
+- 다중 대치법 : 단순 대치법을 한 번이 아닌 m번 수행하여 m개의 가상적 완전 자료를 만듬
+```{r pressure67}
+# 평균대치
+airquality$Ozone <- ifelse(is.na(airquality$Ozone), mean(airquality$Ozone, na.rm = T), airquality$Ozone)
+```
+- DMwR
+- library(DMwR)
+- centralImputation(data) : 결측값 중앙값으로 대치
+- centralValue(data) : 숫자 데이터의 결측값은 중앙값으로, factor 변수는 최빈값으로 - knnImputation(data, k) : k 최근접 이웃의 결과로 결측값을 대체
+
+#### 이상치
+- quantile
+```{r pressure68, results = "hide"}
+quantile(airquality$Ozone, 0.2, na.rm = FALSE) # 20백분위수
+fivenum(airquality$Ozone) # 1사분위, 2사분위, 평균, 3사분위, 최대값
+IQR(airquality$Ozone) # IQR
+summary(airquality$Ozone)
+```
+```{r pressure69}
+OzoneBP <- boxplot(airquality$Ozone, horizontal = T) # boxplot 가로로 
+```
+```{r pressure70}
+OzoneBP   # 135, 168라는 이상치가 존재함을 확인할 수 있음
+```
+
+#### 날짜 데이터
+- Date
+- POSIXct
+- POSIXlt
+- (POSIX시간 : 유닉스 시간, 1970년 1월 1일 00:00:00부터의 경과시간을 초로 환산)
+```{r pressure71}
+(today<-Sys.Date()) # 현재 날짜 
+class(today) 
+(time<-Sys.time()) # 현재 날짜와 시간
+class(time)
+```
+```{r pressure72}
+unclass(today) # 1970년 1월 1일 이후로 경과한 일 수
+unclass(time) # 1970년 1월 1일 00:00:00 이후로 경과한 초 수를 의미
+```
+```{r pressure73}
+as.POSIXct(unclass(time), origin="1970-01-01")
+# unclass한 time값을 다시 원래 날짜로
+```
+```{r pressure74}
+(time <- as.POSIXlt(Sys.time()))
+time$year + 1900 # time$year에는 1900년 이후의 경과 년도수가 저장
+time$mon+1 # 월(mon) 추출 : 월 정보는 0-11값으로 저장
+time$mday # 일(mday) 추출
+time$wday # 요일(wday) 추출
+```
+- 날짜형을 문자형으로 변경
+- %Y / %y : 4자리 년도 / 2자리 년도
+- %m / %d : 2자리 월 / 일
+- %B / %b : 월(영문 전체) / 월(영문 약자)
+- %A / %a : 요일(영문 전체) / 요일(영문 약자)
+- %H / %M : 2자리 시간(00 ~ 23) / 2자리 분(00 ~ 59)
+- %S / %u : 2자리 초(00 ~ 59) / 요일(1 ~ 7)
+
+- format(x, " ")
+```{r pressure75}
+(now<-Sys.time())
+format(now, "%y-%m-%d %H:%M:%S") # 날짜형을 문자형으로 변경
+```
+- as.Date(x, format = " ")
+```{r pressure76}
+(date<-as.Date("20200101", format="%Y%m%d")) # 문자형을 날짜형으로 변경
+```
+- 날짜 데이터 연산
+```{r pressure77}
+Sys.Date() + 100 # 현재 날짜로부터 100일 후의 날짜 구하기
+as.Date("2020-01-01", format="%Y-%m-%d") + 365 # "2020-01-01"로 표현된 데이터로부터 365일 후의 날짜 구하기
+(days <- as.Date("1990-01-01") - as.Date("2025-01-01")) # "1990-01-01" 과 "2025-01-01" 사이의 일 수 구하기
+as.numeric(days)
+```
+```{r pressure78}
+difftime("1990-01-01", Sys.Date()) # 오늘 날짜와 "1990-01-01" 사이의 일 수 구하기
+as.difftime("09:40:00")-as.difftime("18:30:00") # "09:40:00"시간과 "18:30:00"시간 사이의 차이 구하기
+```

@@ -1,0 +1,449 @@
+---
+title: "ADP05-01"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+#### 데이터 분할
+```{r}
+credit.df <- read.csv("C:/Users/이찬솔/Desktop/숭실/R/ADP/실기/PART 05 실습용 데이터/credit_final.csv", header = T, sep = ",")
+set.seed(1111)
+idx <- sample(3, nrow(credit.df), replace = T, prob = c(0.5, 0.3, 0.2))
+train <- credit.df[idx == 1,] ; test <- credit.df[idx == 2,] ; val <- credit.df[idx == 3,]
+dim(train) ; dim(test) ; dim(val)
+```
+- createDataPartition
+```{r message=FALSE, warning=FALSE}
+library(caret)
+```
+```{r}
+part<-createDataPartition(credit.df$credit.rating,                  
+                          times=1, # 생성할 데이터 분할은 1개로 지정 
+                          p=0.7) # 훈련데이터를 70%로 설정
+
+parts <- as.vector(part$Resample1) # 훈련데이터 인덱스
+train <- credit.df[parts,] ; test <- credit.df[-parts,]
+nrow(train) ; nrow(test)
+```
+#### 성과분석
+confusionMatrix(예측값, 실제값)
+- 예측값과 실제값 데이터 모두 factor형
+```{r}
+predicted <- factor(c(1,0,0,1,1,1,0,0,0,1,1,1))
+actual <- factor(c(1,0,0,1,1,0,1,1,0,1,1,1))
+confusionMatrix(predicted, actual)  
+```
+#### 분류 분석
+###### 로지스틱 회귀분석
+```{r}
+credit <- read.csv("C:/Users/이찬솔/Desktop/숭실/R/ADP/실기/PART 05 실습용 데이터/credit_final.csv", header = T, sep = ",")
+credit$credit.rating <- as.factor(credit$credit.rating)
+set.seed(123)
+idx <- sample(1:nrow(credit), nrow(credit)*0.7, replace = FALSE)
+train <- credit[idx,] ; test <- credit[-idx,]
+dim(train) ; dim(test)
+```
+```{r} 
+logistic <- glm(credit.rating ~ ., data = train,
+                family = binomial(link = "logit"))
+summary(logistic)
+```
+```{r, results= "hide"}
+step.logistic<-step(glm(credit.rating ~ ., data = train, family = "binomial"),
+                    scope = list(lower = ~ 1, upper = ~ .),
+                    direction = "backward")
+```
+```{r}
+summary(step.logistic)
+```
+###### predict(model, newdata, type, ...)
+- type : 예측 결과의 유형 지정 (link : 로그오즈값  / class : 범주형(factor) 값 / response : 0 ~ 1 확률값)
+```{r}
+pred <- predict(step.logistic, newdata = test, 
+                type = "response") 
+pred1 <- as.data.frame(pred)
+pred1$grade <- ifelse(pred1$pred < 0.5, 0, 1)
+confusionMatrix(as.factor(pred1$grade), test$credit.rating, 
+                positive = '1') # 1값을 Positive로 인식
+```
+##### ROC곡선
+- prediction(예측값, 실제값), 예측값과 실제값에 들어갈 데이터는 numeric
+- performance(prediction객체, "tpr", "fpr")
+- performance(prediction객체, "auc")
+```{r}
+library(ROCR)
+roc <- prediction(pred1$grade, test$credit.rating)
+rocp <- performance(roc, "tpr", "fpr")
+plot(rocp) ; abline(a=0, b=1, lty = 2, col = "red")
+```
+- AUC값
+```{r}
+auc <- performance(roc, "auc") ; auc <- unlist(auc@y.values)
+```
+
+###### 다항 로지스틱 회귀분석
+- multinom(formula, data)
+```{r message=FALSE, warning=FALSE}
+library(nnet)
+```
+```{r}
+idx <- sample(1:nrow(iris), nrow(iris)*0.7, replace = FALSE)
+iris.train <- iris[idx,] ; iris.test <- iris[-idx,]
+mul.iris <- multinom(Species ~ ., iris.train)
+```
+```{r}
+pred.mul <- predict(mul.iris, newdata = iris.test)
+confusionMatrix(pred.mul, iris.test$Species)
+```
+
+#### 의사결정나무
+- 성장 -> 가지치기 -> 타당성 평가 -> 해석 및 예측
+- 분리 규칙
+이산형 : 카이제곱 통계량 p값, 지니지수, 엔트로피 지수
+연속형 : 분산분석 F통계량, 분산의 감소량
+- 정지규칙 : 나무의 깊이, 끝마디의 레코드 수의 최소 개수
+
+- 가지치기 : 비용 복잡도 가지치기, 과적합 방지
+- 타당성평가 ; 이익도표, 위험도표
+
+- cART : (범주형 : 지니지수 / 연속형 : 분산)
+- C4.5 / C5.0 : 다지분리(입력변수의 범주 만큼 분리가 발생), 엔트로피지수 사용
+- CAHID : 가지치기X, 입력변수가 반드시 범주형, 카이제곱 통계량 사용
+
+- tree : 엔트로피 지수 사용 / ctree : 가지치기X / rpart : CART
+
+###### rpart(formula, data, method, control = rpart.control(), ...)
+- method : 나무 종류 선정 (anova, poisson, exp 등이 존재)
+- control : 옵션설정
+```{r message=FALSE, warning=FALSE}
+library(rpart)
+library(rpart.plot)
+```
+```{r}
+dt.model <- rpart(credit.rating ~ ., 
+                  method = "class", 
+                  data = train, 
+                  control = rpart.control(maxdepth = 5,    #의사결정나무의 최대 깊이는 5개까지
+                                          minsplit = 15))  #노드에서 최소 관측치는 15개 이상
+prp(dt.model, type = 4, extra = 2)
+```
+- 교차타당성 오차 제공
+```{r}
+dt.model$cptable
+```
+- nsplit : 분할 횟수
+- xerror : 해당 CP에서 CV했을 때 오류율
+- xstd : 해당 CP에서 CV했을 떄 편차
+- cptable에서 xerror가 가장 낮은 split 개와 CP선택
+```{r}
+opt <- which.min(dt.model$cptable[,"xerror"]) 
+cp <- dt.model$cptable[opt,"CP"] 
+prune.c <- prune(dt.model, cp=cp)
+plotcp(dt.model) 
+```
+```{r}
+pred.dt <- predict(dt.model, newdata = test, type = "class")
+confusionMatrix(pred.dt, as.factor(test$credit.rating), positive = '1')
+```
+```{r}
+dt.roc <- prediction(as.numeric(pred.dt), as.numeric(test$credit.rating))
+dt.perf <- performance(dt.roc, "tpr", "fpr") ; dt.auc <- performance(dt.roc, "auc")
+plot(dt.perf) ; abline(0, 1, lty = 2, col = "red")
+(auc <- unlist(dt.auc@y.values))
+```
+
+#### 앙상블
+##### 배깅
+- 여러 개의 붓스트랩 자료를 생성하고, 각 붓스트랩 자료에 예측모형을 만든 후 결합
+
+bagging(formula, data, mfinal, control = , ...)
+- mfinal : 반복 수 또는 사용 트리 수
+- control : 옵션 설정
+```{r message=FALSE, warning=FALSE}
+library(adabag)
+idx <- sample(1:nrow(credit), nrow(credit)*0.7, replace = FALSE)
+train <- credit[idx,] ; test <- credit[-idx,]
+```
+```{r}
+bag <- bagging(credit.rating ~ ., data = train, mfinal = 15)
+names(bag)
+```
+- trees : 생성된 나무의 수
+- votes : 투표 진행
+- class : 배깅을 활용해 각 행의 분류를 예측한 결과
+- samples : 각 나무에 사용된 붓스트랩 데이터의 레코드 번호
+- importance : 변수의 상대적인 중요도 (지니지수의 gain)
+
+```{r}
+pred.bg <- predict(bag, newdata = test, type = "class")
+confusionMatrix(as.factor(pred.bg$class), test$credit.rating, positive = '1')
+```
+```{r}
+bg.roc <- prediction(as.numeric(pred.bg$class), as.numeric(test$credit.rating))
+bg.perf <- performance(bg.roc, "tpr", "fpr") ; bg.auc <- performance(bg.roc, "auc")
+plot(bg.perf) ; abline(0, 1, lty = 2, col = "red")
+(auc <- unlist(bg.auc@y.values))
+```
+##### 부스팅
+- 약한 모형들을 결합하여 강한 예측모형을 만듬
+- 랜덤 분류기보다 조금 더 좋은 분류기 n개에 각각 가중치를 설정하고, n개의 분류기를 결합하여 최종 분류기를 만드는 방법을 제안
+- 훈련오차를 빨리, 쉽게 줄일 수 잇고, 배깅보다 뛰어난 성능
+
+boosting(formula, data, boos, mfinal, control = , ...)
+- boos : 샘플의 가중치 여부 (TRUE : 붓스트랩 샘플의 iteration에 대한 관찰값들에 대해 가중치 적용 / FALSE : 모든 관측치에 동일한 가중치 부여)
+- mfinal : 반복 수 또는 사용할 트리의 수
+- contril : 옵션 설정
+```{r}
+boost <- boosting(credit.rating ~ ., data = train,
+                  boos = T, mfinal = 80)
+names(boost)
+```
+- trees : 부스팅을 통해 생성된 나무
+- weights : 각 나무에 부여된 가중치 값
+- votes : 투표 진행 
+- class : 부스팅을 활용해 각 행의 분류를 예측한 것
+- importance : 변수의 상대적 중요도 (지니지수의 gain) 
+```{r}
+pred.boos <- predict(boost, newdata = test, type = "class")
+confusionMatrix(as.factor(pred.boos$class), test$credit.rating, positive = '1')
+```
+```{r}
+boos.roc <- prediction(as.numeric(pred.boos$class), as.numeric(test$credit.rating))
+boos.perf <- performance(boos.roc, "tpr", "fpr"); boos.auc <- performance(boos.roc, "auc")
+plot(boos.perf); abline(0, 1, lty = 2, col = "red")
+(auc <- unlist(boos.auc@y.values))
+```
+
+##### 랜덤포레스트 
+- 부스팅보다 더 많은 무작위성을 주어 약한 학습기들을 선형 결합하여 최종 학습기 만드는 방법
+
+randomForest(formula, data, ntree, mtry, ...)
+- ntree : 사용할 트리의 수
+- mtry : 각 분할에서 랜덤으로 뽑힌 변수의 개수 (분류의 경우 sqrt(변수개수) / 회귀의 경우 (변수개수 / 3))
+```{r message=FALSE, warning=FALSE}
+library(randomForest)
+```
+```{r}
+rf.model<-randomForest(credit.rating ~.,
+                       data=train, 
+                       ntree=50, # 나무 50개 사용
+                       mtry=sqrt(20), # 사용할 변수의 개수(classification이므로 sqrt(20)개)
+                       importance=T) # 변수중요도 결과를 확인
+rf.model
+```
+```{r}
+names(rf.model)
+```
+- predicted : OOB에 기초한 예측값 확인
+- err.rate : 입력데이터 각각에 대한 예측 오류율 확인
+- importance : 변수중요도
+```{r}
+varImpPlot(rf.model)
+```
+```{r}
+pred.rf <- predict(rf.model, newdata = test, type = "class")
+confusionMatrix(as.factor(pred.rf), as.factor(test$credit.rating), positive = '1')
+```
+```{r}
+rf.roc <- prediction(as.numeric(pred.rf), as.numeric(test$credit.rating))
+rf.perf <- performance(rf.roc, "tpr", "fpr"); rf.auc <- performance(rf.roc, "auc")
+plot(rf.perf) ; abline(0, 1, lty = 2, col = "red")
+```
+```{r}
+(auc <- unlist(rf.auc@y.values))
+```
+
+#### SVM
+- 결정 초평면 : 각 그룹을 구분하는 분류자를 결정 초평면
+- 서포트 벡터 : 초평면에 가장 가까이에 붙은 최전방 데이터
+= 마진 : 서포트 벡터와 초평면 사이의 수직거리
+= 초평면 : n차원의 공간보다 한 차원이 낮은 n-1차원의 하위공간
+
+- 마진을 최대화 하는 초평면(최대 마진 초평면)을 찾아 분류와 회귀를 수행
+- 비선형 분류에도 사용 (kernel trick)
+
+svm(formula, data, kernel, gamma, cost, ...)
+- kernel : 훈련과 예측에 사용되는 커널 ("kernel", "linear", "polynomial", "sigmoid")
+- gamma : 초평면의 기울기
+- cost : 과적합을 막는 정도
+
+tune.svm(formula, data, kernel, gamma, cost, ...)
+
+- 최적의 초 매개변수 탐색
+```{r message=FALSE, warning=FALSE}
+library(e1071)
+```
+```{r}
+tune.svm(credit.rating ~ ., data = credit,
+         gamma = 10^(-6:-1), cost = 10^(1:2))
+```
+```{r}
+svm.model <- svm(credit.rating ~ ., data = train, kernel = "radial", 
+                 gamma = 0.01, cost = 10)
+summary(svm.model)
+```
+```{r}
+pred.svm <- predict(svm.model, test, type = "class")
+confusionMatrix(as.factor(pred.svm), test$credit.rating, positive = '1')
+```
+```{r}
+svm.roc <- prediction(as.numeric(pred.svm), as.numeric(test$credit.rating))
+svm.perf <- performance(svm.roc, "tpr", "fpr"); svm.auc <- performance(svm.roc, "auc")
+plot(svm.perf) ; abline(0, 1, lty = 2, col = "red")
+```
+```{r}
+(auc <- unlist(svm.auc@y.values))
+```
+```{r, results="hide"}
+tune <- tune.svm(Species ~ ., data = iris, gamma = 2^(-1:1), cost = 2^(2:4))
+tune$best.parameters
+tune$best.model
+
+ind <- sample(1:nrow(iris), nrow(iris)*0.7, replace = FALSE)
+iris.train <- iris[ind,] ; iris.test <- iris[-ind,]
+svm.model2 <- svm(Species ~ ., data = iris.train, kernel = "radial", gamma = 0.5, cost = 4 )
+pred.svm2 <- predict(svm.model2, newdata = iris.test, type = "class")
+
+confusionMatrix(as.factor(pred.svm2), as.factor(iris.test$Species))
+```
+
+#### 나이브 베이즈
+naiveBayes(formula, data, laplace = 0, ...)
+- laplace : 라플라스 보정 여부
+
+```{r, results="hide"}
+nb.model <- naiveBayes(credit.rating ~ ., data = train)
+pred.nb <- predict(nb.model, newdata = test, type = "class")
+confusionMatrix(as.factor(pred.nb), as.factor(test$credit.rating), positive = '1')
+
+nb.roc <- prediction(as.numeric(pred.nb), as.numeric(test$credit.rating))
+nb.perf <- performance(nb.roc, "tpr", "fpr"); nb.auc <- performance(nb.roc, "auc")
+plot(nb.perf) ; abline(0, 1, lty = 2, col = "red")
+(auc <- unlist(nb.auc@y.values))
+```
+
+#### KNN
+- 일반적으로 K는 훈련 데이터 개수의 제곱근으로 설정
+
+knn(train, test, cl, k, ...)
+- cl : 훈련 데이터의 반응변수
+- k : K값
+
+```{r message=FALSE, warning=FALSE}
+library(class)
+```
+```{r}
+train.data <- train[, -1] ; test.data <- test[, -1] ; class <- train[, 1]
+result <- numeric()
+for (i in 3:22) {
+  pred <- knn(train.data, test.data, class, k = i-2)
+  result[i-2] = mean(pred == test$credit.rating)
+}
+result ; which.max(result)
+```
+
+#### ANN 
+- 계단함수 [0 / 1]
+- 부호함수 [-1 / 1]
+- 시그모이드 함수 [1 / (1+e^x)]
+- relu 함수 [0 / x]
+- 소프트맥스 : 표준화지수 함수, 출력값이 여러 개, 목표치가 다범주인 경우 각 범주에 속할 사후확률 제공 
+
+##### nnet
+- 전통적인 역전파
+- 전방 포워드 신경망 훈련
+- 신경망 매개변수 : 엔트로피, SSE
+- 소프트맥스 함수를 사용해 확률 형태로 변환, 과적합을 막기 위해 가중치 감소 제공
+
+nnet(formula, data, size, maxit, decay)
+- size : 은닉 노드 개수
+- maxit : 학습 반복횟수
+- decay : 가중치 감소의 모수 (보통 5e-04)
+
+```{r message=FALSE, warning=FALSE}
+library(nnet)
+```
+```{r}
+set.seed(1231)
+nn.model <- nnet(credit.rating ~ ., data = train, size = 2,
+                 maxit = 200, decay = 5e-04)
+```
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+library(devtools)
+```
+```{r eval=FALSE, message=FALSE, warning=FALSE, include=FALSE}
+source_url('https://gist.githubusercontent.com/Peque/41a9e20d6687f2f3108d/raw/85e14f3a292e126f1454864427e3a189c2fe33f3/nnet_plot_update.r')
+```
+```{r eval=FALSE, include=FALSE}
+plot.nnet(nn.model)
+```
+
+
+```{r message=FALSE, warning=FALSE}
+```
+- 변수 중요도 파악 
+garson(mod_in)
+
+```{r message=FALSE, warning=FALSE}
+library(NeuralNetTools)
+```
+```{r}
+garson(nn.model)
+```
+```{r, results = "hide"}
+pred.nn <- predict(nn.model, test, type = "class")
+confusionMatrix(as.factor(pred.nn), as.factor(test$credit.rating), positive = '1')
+
+nn.roc <- prediction(as.numeric(pred.nn), as.numeric(test$credit.rating))
+nn.perf <- performance(nn.roc, "tpr", "fpr") ; nn.auc <- performance(nn.roc, "auc")
+plot(nn.perf) ; abline(0, 1, lty = 2, col = "red")
+(auc <- unlist(nn.auc@y.values))
+```
+
+##### neuralnet
+- 탄력적 역전파
+
+neuralnet(formula, data, algorithm, threshold, hidden, stepmax ...)
+- algorithm : 사용할 알고리즘 ("backprop" : 역전파 / "rprop+" / "rprop-")
+- threshold : 훈련중단 기준
+- hidden : 은닉 노드의 개수 [c(n, m)으로 입력하면 첫 번째 은닉층에 n개의 노드, 두 번째 은닉층에 m개의 노드]
+- stepmax : 인공 신경망 훈련 수행 최대횟수
+
+```{r message=FALSE, warning=FALSE}
+library(neuralnet)
+```
+```{r}
+data(infert)
+in.part<-createDataPartition(infert$case, times = 1, p = 0.7)        
+parts<-as.vector(in.part$Resample1)
+train.infert <- infert[parts,] ; test.infert <- infert[-parts,]
+
+nn.model2<-neuralnet(case ~ age + parity + induced + spontaneous, 
+                     data = train.infert, 
+                     hidden = c(2,2), 
+                     algorithm = "rprop+",
+                     threshold = 0.01,
+                     stepmax = 1e+5)
+```
+```{r}
+plot(nn.model2)
+```
+```{r}
+names(nn.model2)
+```
+- data : 사용한 전체 자료
+- covariate / response : 모형 적합에 사용된 자료
+- net.result : 적합값
+- startweights / weights : 가중치의 초기값과 적합값
+
+```{r, results = "hide"}
+#각 뉴런의 출력값 계산
+test.infert$nn.model2_pred.prob <- compute(nn.model2, covariate=test.infert[,c(2:4,6)])$net.result
+
+#cut-off 값을 임의로 0.5로 선정
+test.infert$nn.model2_pred <- ifelse(test.infert$nn.model2_pred.prob > 0.5, 1, 0)
+
+confusionMatrix(as.factor(test.infert$nn.model2_pred), as.factor(test.infert[,5]))
+```
