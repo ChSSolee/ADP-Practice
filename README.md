@@ -10,6 +10,6 @@
 
 ### [Machine Learning & Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20%26%20DL%20with%20Python)
 
-### [MySQL]()
+### [MySQL](https://github.com/ChSSolee/ADP-Practice/tree/main/MySQL)
 
 ### [실기 대비 모의고사](https://github.com/ChSSolee/ADP-Practice/tree/main/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC)
