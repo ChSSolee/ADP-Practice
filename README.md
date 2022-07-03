@@ -5,7 +5,7 @@
 
 ### [Time Series with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
 
-### [Text Mining with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
+### [Text Mining with R](https://github.com/ChSSolee/R-study/tree/main/TextMining)
 
 ### [Machine Learning & Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20%26%20DL%20with%20Python)
 
