@@ -3,7 +3,7 @@
 
 ### [Machine Learning & Deep Learning with R](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20%26%20DL%20with%20R)
 
-### [Time Series with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20)
+### [Time Series with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
 
 ### [Text Mining with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
 
