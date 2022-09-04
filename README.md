@@ -17,7 +17,7 @@
 
 ### [Statistics with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Statistics%20with%20Python)
 
-### [Machine Learning & Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20%26%20DL%20with%20Python)
+### [Machine Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20%26%20DL%20with%20Python)
 
 -----
 
