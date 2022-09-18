@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 기타 선택자-->
+        <!-- :lang(ko) : lang 속성 값이 ko인 태그 선택
+             :not(S) : S가 아닌 태그 선택
+             :target : url요청 시 선택
+             ::first-line : 태그의 첫번째 줄 선택
+             ::first-letter : 태그의 첫번째 문자 선택
+             ::before : 태그의 시작 지점 태그 선택
+             ::after : 태그의 끝 지점 태그 선택 
+             ::selection : 드래그 (선택) 시 -->
+        <style>
+            div::first-letter { font-size: 30px; }
+            div::first-line { color: royalblue; }
+            div::selection { background: yellow; color: red; }
+        </style>
+    </head>
+    <body>
+        <div>이수안 컴퓨터 연구소<br />
+        SuanLab<br />
+        이수안 컴퓨터 연구소
+        </div>
+    </body>
+</html>

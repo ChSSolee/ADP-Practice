@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>웹 페이지 제목</title>
+    </head>
+    <body>
+        <h1>제목</h1>
+        <p>단락</p>
+        <!-- href : 하이퍼 레퍼런스 (링크 추가)-->
+        <h1>href : 하이퍼 레퍼런스</h1>
+        <a href="http://suanlab.com">SuanLab</a> 
+        <br>
+        <br>
+
+
+        <!-- content 내의 연속된 공백 또는 줄바꿈은 하나의 공백으로 처리-->
+        <h1>content 내의 연속된 공백 또는 줄바꿈은 하나의 공백으로 처리</h1>
+        공     백
+        줄   바    꿈
+        줄 바 꿈
+        줄바꿈
+        <br>
+        <br>
+
+        <!--각 태그는 시작 태그와 종료 태그 쌍이 서로 교차 되면 안됨-->
+        <h1>각 태그는 시작 태그와 종료 태그 쌍이 서로 교차 되면 안됨</h1>
+        <br>
+        <br>
+
+        <!--제목태그 : h1 ~ h6-->
+        <h1>제목태그 : h1 ~ h6</h1>
+        <br>
+        <h1>Heading 1</h1>
+        <h2>Heading 2</h2>
+        <h3>Heading 3</h3>
+        <h4>Heading 4</h4>
+        <h5>Heading 5</h5>
+        <h6>Heading 6</h6> 
+        <br>
+        <br>
+
+
+        <!-- <p> : paragraph-->
+        <h1> p 태그 : 단락, paragraph</h1>
+        <p>단락</p>
+        <br>
+        <br>
+
+        <!-- <br>태그 : 강제로 줄 바꿈-->
+        <h1> {br 태그 : 강제로 줄 바꿈}</h1>
+        <p>
+            줄 나누기 <br>
+            줄 나누기 <br>
+        </p>
+        <br>
+        <br>
+
+
+        <!-- <pre> : preformatted text, 입력한 텍스트 그대로 화면에 표시--> 
+        <h1> pre 태그 : preformatted text, 입력한 텍스트 그대로 화면에 표시</h1>
+        <pre>
+            텍스트 서식
+            서식을  그대로  출력
+서식    출력
+
+            서식 출력
+        </pre>
+        <br>
+        <br>
+
+        <!--텍스트 서식 태그-->
+        <h1>텍스트 서식 태그</h1>
+        <b>굵게<br></b>
+        <i>이텔릭<br></i>
+        <small>작게<br></small>
+        <ins>밑줄(insert)<br></ins>
+        <del>가운데 선<br></del>
+        <mark>하이라이트<br></mark>
+        <strong>중요<br></strong>
+        <code>코드<br></code>
+        <em>강조 (emphasized text)<br></em>
+        <sup>위 첨자 (superscript)<br></sup>
+        <sub>아래 첨자 (subscript)<br></sub>
+        <br>
+        <br>
+
+
+        <!--인용 태그-->    
+        <h1> q 태그 : 인용 태그 </h1> 
+        <q>인용구 (quote)</q>
+        <blockquote>길이가 긴 인용구는 <br>
+            블록 인용구 태그를 사용하여 별도 단락으로 표현<br></blockquote>
+        <abbr title="HyperText Markup Language">HTML<br></abbr> <!--마우스 커서 올리면 title 표시-->
+        <cite>인용<br></cite>
+        <address>서울특별시 강남구 청담동<br></address> <!--문서 작성자/소유자 연락처 정의-->
+        <br>
+        <br>
+
+
+        <!--앵커 태그-->
+        <h1>외부 앵커 태그</h1>
+        <a href="http://www.google.com" target="_blank">구글</a>
+        <!-- <a> : 다른 사이트로 통하는 링크나 같은 페이지의 다른 위치로 이동하는 링크 생성 시 사용-->
+        <!-- href 속성에 값을 설정하여 이동할 링크 지정-->
+        <!-- target 속성을 통해 새로운 페이지가 열릴 곳을 지정-->
+        <!-- "_blank" : 새로운 창-->
+        <!-- "_self" : 현재 창-->
+        <!-- "_parent" : 웹 브라우저 부모 창-->
+        <!-- "_top" : 웹 브라우저 전체 영역-->
+        <br>
+        <br>
+        <br>
+
+        <!-- 웹 페이지 내부 앵커 태그-->
+        <h1>웹 페이지 내부 앵커 태그</h1>
+        <a href="#content1">Content 1<br></a>
+        <a href="#content2">Content 2<br></a>
+        <a href="#content3">Content 3<br></a>
+        <hr>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <h1 id="content1">Content 1</h1>
+        <h1 id="content2">Content 2</h1>
+        <h1 id="content3">Content 3</h1>
+        <br>
+        <br>
+
+
+        <!-- 리스트 태그-->
+        <!-- 순서가 없는 리스트 (Unordered list)-->
+
+        <!-- <u1> : 전체 리스트 표현-->
+        <!-- <li> : 각 항목을 입력 (list item)-->
+        <h1>순서가 없는 리스트 (Unordered list)</h1>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <br>
+
+        <ul style="list-style-type: circle">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <br>
+
+        <ul style="list-style-type: square">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+        <br>
+        <br>
+
+
+        <!-- 순서가 있는 리스트 (Ordered list)-->
+        <h1>순서가 있는 리스트 (Ordered list)</h1>
+        <ol>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <br>
+
+        <ol type="i">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <br>
+
+        <ol type="I">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <br>
+
+        <ol type="a">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <br>
+
+        <ol type="A">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ol>
+        <br>
+        <br>
+
+
+        <!-- 정의 리스트 (definitionlist)-->
+        <!-- <dl> : 전체 리스트 표현 / <dd> : 각 <dt>에 대한 설명 -->
+        <h1>정의 리스트 (definitionlist)</h1>
+        <dl>
+            <dt>HTML</dt>
+            <dd>웹 페이지를 위한 마크업 언어</dd>
+            <dt>CSS</dt>
+            <dd>마크업 언어가 실제 표시되는 방법을 기술하는 언어</dd>
+            <dt>JavaScript</dt>
+            <dd>웹 브라우저 내에서 주로 사용되는 객체 기반의 스크립트 언어</dd>
+        </dl>
+        <br>
+        <br>
+
+        <h1>테이블 태그</h1>
+        <!-- 테이블 태그-->
+        <!-- <table> ~ </table> : 테이블 생성-->
+        <!-- <caption> ~ </caption> : 테이블 캡션 (제목) 설정-->
+        <!-- <tr> ~ </tr> : 테이블의 행(row) 생성-->
+        <!-- <th> ~ </th> : 테이블의 헤드 (head) 생성-->
+        <!-- <td> ~ </td> : 테이블의 열 (column) 생성-->
+        <!-- <rowspan> : 셀을 세로로 병합, 병합하고 싶은 행의 수를 설정-->
+        <!-- <colspan> : 셀을 가로로 병합, 병합하고 싶은 열의 수를 설정-->
+        <table border="2">
+            <caption>테이블 1</caption>
+            <tr>
+                <th>이름</th>
+                <th>성별</th>
+            </tr>
+            <tr>
+                <td>이수안</td>
+                <td>남자</td>
+            </tr>
+            <tr>
+                <td>이소은</td>
+                <td>여자</td>
+            </tr>
+        </table>
+        <br>
+        <br>
+
+        <table border="2">
+            <caption>시간표</caption>
+            <thead>
+                <tr>
+                    <th rowspan=2>교시</th>
+                    <th colspan=5>요일</th>
+                </tr>
+                <tr>
+                    <th>월</th>
+                    <th>화</th>
+                    <th>수</th>
+                    <th>목</th>
+                    <th>금</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1교시</td>
+                    <td>컴퓨터 개론</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>2교시</td>
+                    <td></td>
+                    <td>머신러닝</td>
+                    <td></td>
+                    <td>웹과 인터넷</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>3교시</td>
+                    <td></td>
+                    <td></td>
+                    <td>프로그래밍</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>4교시</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <br>
+        <br>
+
+        <h1>이미지 태그</h1>
+        <!-- 멀티미디어 태그-->
+        <!-- 이미지 태그-->
+        <!-- src : 이미지 파일 경로-->
+        <!-- title : 이미지 제목-->
+        <!-- width : 이미지 가로 크기-->
+        <!-- height : 이미지 세로 크기-->
+        <!-- alt : 이미지 대체 텍스트-->
+        <!-- style : 이미지 스타일 정의-->
+        <!-- border : 이미지 테두리 두께-->
+        <img src = "https://dictionary.cambridge.org/ko/images/thumb/dog_noun_001_04904.jpg?version=5.0.250"
+        width="100" height="200" title="강아지 사진" alt="강아지 사진" border="1">
+        <br>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Cat_November_2010-1a.jpg/220px-Cat_November_2010-1a.jpg"
+         title="고양이 사진" style="float : right; width : 100px; height : 200px;">
+        <br>
+        <br>
+
+        <h1>오디오 태그</h1>
+         <!-- 오디오 태그-->
+         <!-- src : 오디오 파일 경로-->
+         <!-- controls : 오디오 파일의 재생 제어기 표시-->
+         <!-- autoplay : 자동 재생-->
+         <!-- loop : 반복 재생-->
+         <!-- muted : 초기에 음소거 상태-->
+         <!-- preload : 오디오 파일 미리 다운로드 (인터넷 속도가 느릴 때 사용X)-->
+         <audio src = "mixkit-dog-barking-twice-1.wav" controls autoplay>dog.mp3</audio>
+        <br>
+        <br>
+
+        <h1>비디오 태그</h1>
+         <!-- 비디오 태그-->
+         <!-- src : 비디오 파일 경로-->
+         <!-- controls : 비디오 파일의 재생 제어기 표시-->
+         <!-- autoplay : 자동 재생-->
+         <!-- width : 비디오의 가로크기-->
+         <!-- height : 비디오의 세로 크기-->
+         <!-- loop : 반복 재생-->
+         <!-- muted : 초기에 음소거 상태-->
+         <!-- preload : 비디오 파일 미리 다운로드 (인터넷 속도가 느릴 때 사용X)-->
+         <!-- poster : 비디오의 썸네일-->
+         <video src="istockphoto-1328134236-640_adpp_is.mp4" controls autoplay height="250", width="500">dog.mp4</video>
+         <br>
+         <br>
+    </body>
+    <body>
+
+        <h1>공간 분할 태그</h1>
+         <!-- 공간분할 태그-->
+         <!-- <div> : 블록 분할 태그, 웹 문서의 전체 공간을 block 형식으로 분할-->
+         <!-- <span> : 인라인 분할 태그-->
+            <div style = "border : 1px solid black">Block</div>
+            <span style = "background-color: aqua;">Inline</span>
+         <br>
+         <br>
+
+         <h1>아이프레임 태그</h1>
+         <!-- 아이프레임 태그-->
+         <!-- <iframe> : 웹 문서 내에 다른 웹 문서를 표시할 때 사용-->
+         <!-- src : 포함할 페이지의 URL 정의-->
+         <!-- width : 너비-->
+         <!-- height : 높이-->
+         <!-- title : 아이프레임의 제목-->
+         <!-- name : 링크 대상 이름-->
+         <!-- scrolling : 스크롤바-->
+         <iframe src = "Iframe.html" name="iframe_a" height="100" width="500"
+          title="Iframe Example" scrolling></iframe>
+
+         <!-- 하이퍼 레퍼런스 링크의 target을, iframe 객체의 name으로 지정 
+            => href 링크를 iframe 상에서 구현-->
+         <h1>하이퍼 레퍼런스를 아이프레임에서</h1>
+          <p><a href="http://www.suanlab.com" target="iframe_a">SuanLab.com</a></p>
+          <br>
+          <br>
+         </body>
+
+         <body>
+         <!-- 입력 양식 태그-->
+         <!-- 폼 태그 : 웹에서 폼을 만드는데 사용-->
+         <!-- name : form 이름-->
+         <!-- action : 입력 데이터를 처리하는 웹 프로그램-->
+         <!-- method : 전송방식-->
+         <!-- type : 입력 양식 모양-->
+         <h1>form 태그</h1>
+         <form name="이름" action="sign.jsp" method="post">
+            <input type = "text" name="name1" value="value1">
+         </form>
+
+         <!-- method 속성 : 입력 양식의 method 속성에는 
+            입력한 데이터의 전송방식 (GET/POST) 설정-->
+         <!-- GET : URL 뒷부분에 파라미터를 추가하여 데이터를 전달
+                    URL에 어떤 데이터가 전송되는지 표현되어 있으므로 보안에 취약 (검색 등에 사용)
+                    최대 글자 수 : 2048-->
+         <!-- POST : HTTP Request 헤더에 파라미터를 추가하여 데이터 전송
+                     어떤 데이터가 전송되는지 표면상에 보이지 않기 때문에 GET 방식보다 보안성이 높음 (로그딘 등)
+                     글자 수 제한 없음-->
+         <br>
+         <br>
+         
+         <!-- input 태그 : 입력 제어-->
+         <!-- id : label의 for과 동일하게-->
+         <!-- value : 기본 값 (default)-->
+         <h2>input 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <input type="text" id="name" name="name" value="Suan" size="20">   
+         </form>
+         <br>
+         <br>
+
+         <!-- select 태그 : 드롭다운 리스트-->
+         <!-- id : label의 for과 동일하게-->
+         <!-- value : 기본 값 (default)-->
+         <h2>select 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <select id="food" name="food">
+                <option value="pizza" selected>피자</option>
+                <option value="hamburger">햄버거</option>   
+                <option value="pasta">파스타</option>
+            </select>
+         </form>
+         <br>
+         <br>
+
+         <!-- select 태그 (다중선택)-->
+         <h2>select 태그 (다중 선택)</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <select id="food" name="food" multiple>
+                <option value="pizza" selected>피자</option>
+                <option value="hamburger">햄버거</option>   
+                <option value="pasta">파스타</option>
+            </select>
+         </form>
+         <br>
+         <br>
+
+         <!-- select 태그 (그룹)-->
+         <h2>select 태그 (그룹)</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <select id="food" name="food" multiple>
+                <optgroup label="음식">
+                    <option value="pizza" selected>피자</option>
+                    <option value="hamburger">햄버거</option>   
+                    <option value="pasta">파스타</option>
+                </optgroup>
+                <optgroup label="후식">
+                    <option value="cola">콜라</option>
+                    <option value="coffee">커피</option>
+                    <option value="icecream">아이스크림</option>
+                </optgroup>
+            </select>   
+         </form>
+         <br>
+         <br>
+
+         <!-- textarea 태그 : 여러줄의 텍스트 입력-->
+         <h2>textarea 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <textarea name="article" rows="5" cols="10">텍스트</textarea>
+         </form>
+         <br>
+         <br>
+
+         <!-- button 태그 : 버튼-->
+         <h2>button 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <label for="name">이름</label>
+            <button>Button</button>
+         </form>
+         <br>
+         <br>
+
+         <!-- fildset 태그 -->
+         <!-- legend 태그 : <fileset> 요소의 캡션(제목)-->
+         <h2>fieldset & legend 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <fieldset>
+                <legend>개인정보</legend>
+                <label for="name">이름 :</label><br/>
+                <input type="text" id="name" name="name" value="suan"><br/>
+                
+                <label for="affiliation">소속</label><br/>
+                <input type="text" id="affiliation" name="affiliation" value="SuanLab"><br/>
+                
+                <input type="submit" value="전송">
+            </fieldset>
+         </form>
+         <br>
+         <br>
+
+         <!-- datalist 태그 : 입력 제어에 대해 미리 정의된 옵션 리스트-->
+         <h2>datalist 태그</h2>
+         <form name="frame" action="sign.jsp" method="post">
+            <input list="browsers">
+            <datalist id="browsers">
+                <option value="Chrome"></option>
+                <option value="Firefox"></option>
+                <option value="Internet Explorer"></option>
+                <option value="Opera"></option>
+                <option value="Safari"></option>
+            </datalist>
+         </form>
+         <br>
+         <br>
+
+
+         <!-- output 태그 : 게산 결과-->
+         <h2>output 태그</h2>
+         <form oninput="r.value=parseInt(x.value) * parseInt(y.value)">
+            <input type="number" id="x" name="x" value="10">
+            *
+            <input type="number" id="y" name="y" value="20">
+            =
+            <output name="r" for="x y"></output>
+            <br /><br />
+            <input type="submit">
+         </form>
+         <br>
+         <br>
+    </body>
+    <body>
+        <!-- 입력 형식 
+             <input> 태그를 <form> ~ </form> 내부에서 사용되며, 
+             type 속성에 데이터 입력 양식 지정-->
+         <!-- 주요 공통 속성
+                1. readonly : 읽기 전용
+                2. disabled : 비활성화
+                3. autocomplete : 자동 완성
+                4. autofocus : 웹 페이지 로드시 초기에 포커싱 설정
+                5. placeholder : 입력 폼에 희미하게 설명을 보여줌
+                6. required : 필수 속성
+                7. spellcheck : 오타 점검-->
+
+         <h2>입력 형식</h2>
+         <form>
+            <!-- text 타입 : 텍스트 입력 사용-->
+            <input type="text" name="text" size="20" placeholder="이름">
+            
+            <!-- password 타입 : 비밀번호 사용-->
+            <input type="password" name="password" required>
+            
+            <!-- button 타입 : 버튼 모양에 사용-->
+            <input type="button" value="Button">
+            <br>
+
+            <!-- radio 타입 : 여러 개의 항목 중에서 하나늘 선택할 대 사용-->
+            <input type="radio" name="gender" value="male">남자
+            <input type="radio" name="gender" value="female">여자
+            <br>
+            
+            <!-- checkbox 타입 : 여러 개의 항목 중에서 여러개를 선택할 때 사용-->
+            <input type="checkbox" name="food" value="pizza">피자<br />
+            <input type="checkbox" name="food" value="hamburger">햄버거<br />
+            <input type="checkbox" name="food" value="pasta">파스타<br />
+
+            <!-- date 타입 : 날짜를 입력할 때 사용-->
+            <input type="date" name="date" min="2022-01-01" max="2022-12-31"><br>
+            <!-- month 타입 : 월과 년도를 입력할 때 사용-->
+            <input type="month" id="month" name="month"><br>
+            <!-- week 타입 : 주 를 입력할 때 사용-->
+            <input type="week" id="week" name="week"><br>
+            <!-- time 타입 : 시간을 입력할 때 사용-->
+            <input type="time" id="time" name="time"><br>
+            <!-- datetime-local 타입 : 날짜/시간을 입력할 때 사용-->
+            <input type="datetime-local" id="datetime" name="datetime"><br>
+            <br>
+
+            <!-- color 타입 : 색상을 선택할 때 사용-->
+            <input type="color" name="color"><br>
+
+            <!-- number 타입 : 숫자를 입력할 때 사용-->
+            <input type="number" name="num" min="0" max="1000"><br>
+
+            <!-- range 타입 : 범위를 지정할 때 사용-->
+            <input type="range" name="point" min="0" max="100"><br>
+
+            <!-- email 타입 : email을 입력할 때 사용, 이메일 형식을 자동 체킽-->
+            <input type="email" name="email" placeholder="abc@gmail.com"><br>
+
+            <!-- url 타입 : url을 입력할 때 사용, url 형식을 자동 체킹-->
+            <input type="url" name="myUrl" placeholder="http://google.com"><br>
+            
+            <!-- tel 타입 : 전화번호 입력에 사용-->
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{4}-[0-9]{4}"
+            placeholder="010-1234-5678"><br>
+
+            <!-- file 타입 : 파일 선택에 사용-->
+            <input type="file" id="myfile" name="myfile"><br>
+
+            <!-- submit 타입 / reset 타입 : 입력 양식의 전송과 초기화에 사용-->
+            <input type="submit" value="전송">
+            <input type="reset" value="초기화">
+        </form>
+        </body>
+        <br>
+        <br>
+
+        <body>
+            <!-- 회원가입 폼 예제-->
+            <h2>회원가입 폼 예제</h2>
+            <form name="signup" action="signUp.jsp" method="post">
+                <fieldset height="600px" width="500px">
+                    <legend>회원가입</legend>
+                    아이디 : <input type="text" name="id" placeholder="아이디를 입력하세요" required>
+                    <button type="button" onclick="alert('사용가능한 아이디 입니다!')">아이디 확인</button><br><br>
+                    비밀번호 : <input type="password" placeholder="8글자 이상 입력" required><br><br>
+                    생년월일 : <input type="date" name="birthday"><br><br>
+                    이메일 : <input type="email" name="email" placeholder="이메일을 입력하세요" required><br><br>
+                    전화번호 : <input type="tel" name="tel" placeholder="전화번호를 입력하세요" required><br><br>
+                    사이트를 알게된 경로 :<br>
+                    <input type="checkbox" name="a" value="search">검색
+                    <input type="checkbox" name="a" value="friend">친구
+                    <input type="checkbox" name="a" value="recommend">추천
+                    <input type="checkbox" name="a" value="ad">광고
+                    <input type="checkbox" name="a" value="etc">기타 
+                </fieldset>
+                <button type="submit">회원가입</button>
+                <button type="reset">다시 입력</button>
+            </form>
+        </body>
+        <br>
+        <br>
+
+        <body>
+            <!-- class 와 id-->
+            <!-- class 속성 : 여러 태그들을 하나의 그룹으로 그룹핑
+                              태그에 class = "클래스명"으로 지정
+                              ".클래스이름" 으로 선택-->
+            <!-- id 속성 : 하나의 태그에 고유 id 부여
+                           태그에 id="고유id값"으로 지정
+                           "#id값" 으로 선택-->
+
+            <p id="paragraph1">첫번째 문단</p>
+            <p class="content1">컨텐츠 1</p>
+            <p class="content2">컨텐츠 2</p>
+        </body>
+
+
+         
+
+        
+     
+
+
+
+
+</html>

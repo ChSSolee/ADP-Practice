@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 테이블의 head 행의 테두리를 둥글게-->
+        <!-- 짝수 행의 색은 skyblue
+            홀수 행의 색은 purple
+            마우스를 갖다대면 royalblue-->
+        <style>
+            th:first-child { border-radius: 10px 0 0 0; }
+            th:last-child { border-radius: 0 10px 0 0; }
+            tr:nth-child(2n) { background-color: skyblue; }
+            tr:nth-child(2n+1) { background-color: purple; }
+            td:hover { background-color: royalblue; }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>Head</th>
+                <th>Head</th>
+                <th>Head</th>
+            </tr>
+            <tr>
+                <td>Body 1</td>
+                <td>Body 1</td>
+                <td>Body 1</td>
+            </tr>
+            <tr>
+                <td>Body 2</td>
+                <td>Body 2</td>
+                <td>Body 2</td>
+            </tr>
+            <tr>
+                <td>Body 3</td>
+                <td>Body 3</td>
+                <td>Body 3</td>
+            </tr>
+        </table>
+    </body>
+</html>

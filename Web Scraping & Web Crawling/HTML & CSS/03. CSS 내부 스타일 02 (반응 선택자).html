@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+    <html>
+        <!-- 반응 선택자-->
+        <!-- :link : 방문하지 않은 링크
+            :visited : 방문했던 링크
+            :active : 클릭하는 순간
+            :hover : 마우스를 올려놓는 순간-->
+    <head>
+        <style>
+            a:link { color: blue; }
+            a:visited { color: purple; }
+            a:hover { color: red; }
+            a:active { color: black; }
+            div.d1:hover { background-color: yellow; }
+        </style>
+    </head>
+    <body>
+        <a href="https://www.google.com">구글 링크</a>
+        <div class="d1">
+        <p>div영역</p>
+        <p>class=d1</p>
+        </div>
+    </body>
+</html>

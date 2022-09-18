@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- 상태 선택자-->
+        <!-- :enabled : 사용 가능한 form 관련 태그 선택
+             :disabled : 사용 불가능한 form 관련 태그 선택
+             :checked : 현재 선택된 form 관련 태그 선택
+             :focus : 현재 초점이 맞추어진 form 관련 태그 선택-->
+        <title>CSS3 Selector Basic</title>
+            <style>
+                input:enabled { background-color: skyblue; }
+                input:disabled { background-color: darkgray; }
+                input:focus { background-color: yellow; }
+            </style>
+    </head>
+    <body>
+        <input>
+        <input disabled="disabled"/>
+        <input>
+    </body>
+</html>

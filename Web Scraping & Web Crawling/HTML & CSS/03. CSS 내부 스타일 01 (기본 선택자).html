@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+    <html>
+        <!-- 내부 스타일-->
+        <!-- 기본 선택자-->
+        <!-- 전체 선택자 : * { }
+            태그 선택자 : 태그 { }
+            id 선택자 : #아이디 { }
+            class 선택자 : .클래스 { }
+            속성 선택자 : 선택자[속성=값] { } -->
+        <h1>기본 선택자</h1>
+    <head>
+        <style>
+            p {
+                background-color: yellow;
+            }
+            #id1 {
+                color: yellow;
+                background-color: black;
+            }
+            .class1 {
+                color: blue;
+                background-color: yellow;
+            }
+            p.class1 {
+                color: red;
+                background-color: navy;
+            }
+            p.class2 {
+                color: white;
+                background-color: blueviolet;
+            }
+            h1 {
+                color: green;
+            }
+            h1[text] {
+                color: purple;
+            }
+            input[type="password"] {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <p>p</p>
+        <p id="id1">id1</p>
+        <p class="class1">class1</p>
+        <p class="class2">class2</p>
+        <h1>h1</h1>
+        <h1 text="h1_text">text속성 h1</h1>
+        <form>
+            <input type="password">
+        </form>
+    </body>
+</html>
