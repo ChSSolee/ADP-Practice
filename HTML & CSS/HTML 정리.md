@@ -863,4 +863,4 @@ url을 입력할 때 사용, url 형식을 자동 체킹
 
 [시맨틱 관련 태그 (1)](https://www.notion.so/988029e3d02e4e27a8ad8e22d83ea12a)
 
-![HTML%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5%203f8832fa1d4e4d01b09e64f5cd5d711a/semantic.png](HTML%20%E1%84%8C%E1%85%A5%E1%86%BC%E1%84%85%E1%85%B5%203f8832fa1d4e4d01b09e64f5cd5d711a/semantic.png)
+![semantic.png](img/semantic.png)
