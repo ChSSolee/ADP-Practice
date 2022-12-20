@@ -25,6 +25,8 @@
 
 ### [MySQL](https://github.com/ChSSolee/ADP-Practice/tree/main/MySQL)
 
+### [SQL for Data Analysis](https://github.com/ChSSolee/ADP-Practice/tree/main/SQL%20for%20Data%20Analysis)
+
 ----- 
 
 ### [JavaScript](https://github.com/ChSSolee/ADP-Practice/tree/main/JavaScript)
