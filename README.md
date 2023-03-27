@@ -11,7 +11,7 @@
 
 ### [Text Mining with R](https://github.com/ChSSolee/R-study/tree/main/TextMining)
 
-### [Survival Analysis with R]
+### [Survival Analysis with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Survival%20Analysis)
 
 ### [Geodata & Shiny with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Geodata%20%26%20Shiny%20with%20R)
 
