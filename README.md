@@ -24,6 +24,8 @@
 
 ### [Machine Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20with%20Python)
 
+### [NLP with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/NLP%20with%20Python)
+
 -----
 
 ### [MySQL](https://github.com/ChSSolee/ADP-Practice/tree/main/MySQL)
