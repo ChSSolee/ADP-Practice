@@ -23,7 +23,7 @@
 
 ### [Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Deep%20Learning%20with%20Python)
 
-### [Deep Learning Framework]
+### [Deep Learning Framework](https://github.com/ChSSolee/ADP-Practice/tree/main/Deep%20Learning%20Framework)
 
 ### [Machine Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20with%20Python)
 
