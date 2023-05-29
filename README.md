@@ -15,7 +15,6 @@
 
 ### [Geodata & Shiny with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Geodata%20%26%20Shiny%20with%20R)
 
-### [Bayes Rules with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Bayes%20Rules)
 -----
 
 ### [Data Analysis with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Data%20Analysis%20with%20Python)
@@ -23,6 +22,8 @@
 ### [Statistics with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Statistics%20with%20Python)
 
 ### [Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Deep%20Learning%20with%20Python)
+
+### [Deep Learning Framework]
 
 ### [Machine Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/ML%20with%20Python)
 
