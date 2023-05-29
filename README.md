@@ -35,15 +35,12 @@
 
 ### [SQL for Data Analysis](https://github.com/ChSSolee/ADP-Practice/tree/main/SQL%20for%20Data%20Analysis)
 
------ 
-
 ### [JavaScript](https://github.com/ChSSolee/ADP-Practice/tree/main/JavaScript)
-
------
 
 ### [HTML & CSS](https://github.com/ChSSolee/ADP-Practice/tree/main/HTML%20%26%20CSS)
 
 ----
+
 ### [ADP 실기 대비 모의고사](https://github.com/ChSSolee/ADP-Practice/tree/main/%EB%AA%A8%EC%9D%98%EA%B3%A0%EC%82%AC)
 
 ### [ADP 실기 대비 실습 및 정리](https://github.com/ChSSolee/ADP-Practice/tree/main/%EC%8B%A4%EA%B8%B0%EB%8C%80%EB%B9%84%EC%8B%A4%EC%8A%B5)
