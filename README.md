@@ -21,6 +21,8 @@
 
 ### [Statistics with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Statistics%20with%20Python)
 
+### [Bayes Statistics with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Bayesian%20Statistics%20with%20Python)
+
 ### [Deep Learning with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Deep%20Learning%20with%20Python)
 
 ### [Deep Learning Framework](https://github.com/ChSSolee/ADP-Practice/tree/main/Deep%20Learning%20Framework)
