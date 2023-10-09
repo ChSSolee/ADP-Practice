@@ -9,7 +9,7 @@
 
 ### [Time Series with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
 
-### [[Timeseries Forecasting with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Timeseries%Forecasting%with%R)](https://github.com/ChSSolee/ADP-Practice/tree/a9795b6c45e5317a0093799c1382cd2ab4bc27ab/Timeseries%20Forecasting%20With%20R)
+### [[Timeseries Forecasting with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Timeseries%Forecasting%with%R)]
 
 ### [Text Mining with R](https://github.com/ChSSolee/R-study/tree/main/TextMining)
 
