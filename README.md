@@ -9,6 +9,8 @@
 
 ### [Time Series with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Time%20Series%20with%20R)
 
+### [Timeseries Forecasting](https://github.com/ChSSolee/ADP-Practice/tree/main/Timeseries%Forecasting)
+
 ### [Text Mining with R](https://github.com/ChSSolee/R-study/tree/main/TextMining)
 
 ### [Survival Analysis with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Survival%20Analysis)
