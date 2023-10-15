@@ -15,8 +15,6 @@
 
 ### [Survival Analysis with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Survival%20Analysis)
 
-### [Geodata & Shiny with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Geodata%20%26%20Shiny%20with%20R)
-
 -----
 
 ### [Data Analysis with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Data%20Analysis%20with%20Python)
