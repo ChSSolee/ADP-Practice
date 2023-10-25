@@ -15,6 +15,8 @@
 
 ### [Survival Analysis with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Survival%20Analysis)
 
+### [Experimental Design with R](https://github.com/ChSSolee/ADP-Practice/tree/main/Experimental%20Design%20with%20R)
+
 -----
 
 ### [Data Analysis with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Data%20Analysis%20with%20Python)
