@@ -14787,17 +14787,15 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><h3 id="9-2-%EC%A3%BC%EB%B3%80%EB%AA%A8%ED%98%95">9-2 &#51452;&#48320;&#47784;&#54805;<a class="anchor-link" href="#9-2-%EC%A3%BC%EB%B3%80%EB%AA%A8%ED%98%95">&#182;</a></h3><h4 id="%EC%A3%BC%EB%B3%80%EB%AA%A8%ED%98%95-:-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B5%B0%EC%A7%91%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EB%AC%B4%EC%8B%9C%ED%95%98%EA%B3%A0-%EB%B9%84%EB%A1%80%EC%9C%84%ED%97%98-%EA%B0%80%EC%A0%95%EC%9D%B4-%EB%AA%A8%EB%93%A0-%EB%8C%80%EC%83%81%EC%9D%84-%EB%A7%8C%EC%A1%B1%ED%95%98%EB%8A%94-%EA%B2%83%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%A0%95">&#51452;&#48320;&#47784;&#54805; : &#45936;&#51060;&#53552;&#50640; &#51080;&#45716; &#44400;&#51665;&#44396;&#51312;&#47484; &#47924;&#49884;&#54616;&#44256; &#48708;&#47168;&#50948;&#54744; &#44032;&#51221;&#51060; &#47784;&#46304; &#45824;&#49345;&#51012; &#47564;&#51313;&#54616;&#45716; &#44163;&#51004;&#47196; &#44032;&#51221;<a class="anchor-link" href="#%EC%A3%BC%EB%B3%80%EB%AA%A8%ED%98%95-:-%EB%8D%B0%EC%9D%B4%ED%84%B0%EC%97%90-%EC%9E%88%EB%8A%94-%EA%B5%B0%EC%A7%91%EA%B5%AC%EC%A1%B0%EB%A5%BC-%EB%AC%B4%EC%8B%9C%ED%95%98%EA%B3%A0-%EB%B9%84%EB%A1%80%EC%9C%84%ED%97%98-%EA%B0%80%EC%A0%95%EC%9D%B4-%EB%AA%A8%EB%93%A0-%EB%8C%80%EC%83%81%EC%9D%84-%EB%A7%8C%EC%A1%B1%ED%95%98%EB%8A%94-%EA%B2%83%EC%9C%BC%EB%A1%9C-%EA%B0%80%EC%A0%95">&#182;</a></h4><ul>
 <li>콕스모형에 적합시켜 회귀계수를 구하고, 회귀계수에 대한 표준오차를 계산할 때 군집을 보정한 분산 및 표준오차를 계산</li>
-<li><strong>i번째 군집의 j번째 대상의 스코어잔차 $s_{ij}$</strong>
-### $s_{ij} = \delta_{ij}[z_{ij} - \bar{z}_{ij}]-\sum_{t_u \leq t_{ij}}[z_i - \bar{z_{ij}}] e^{z_i \beta}[\hat{H}_0(t_u) - \hat{H}(t_{u-1})]$
-# </li>
-<li><strong>C통계량</strong>
-### $C = \sum^G_{i=1} \sum^{n_i}_{j=1} \sum^{n_i}_{m=1} s_{ij} s_{im}$</li>
+<li><strong>i번째 군집의 j번째 대상의 스코어잔차 $s_{ij}$</strong></li>
 </ul>
-<h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><ul>
-<li><strong>군집을 보정한 분산 $V^*$ (샌드위치 분산)</strong>
-### $V^* = \hat{V} C \hat{V}$</li>
+<h3 id="$s_%7Bij%7D-=-%5Cdelta_%7Bij%7D%5Bz_%7Bij%7D---%5Cbar%7Bz%7D_%7Bij%7D%5D-%5Csum_%7Bt_u-%5Cleq-t_%7Bij%7D%7D%5Bz_i---%5Cbar%7Bz_%7Bij%7D%7D%5D-e%5E%7Bz_i-%5Cbeta%7D%5B%5Chat%7BH%7D_0(t_u)---%5Chat%7BH%7D(t_%7Bu-1%7D)%5D$">$s_{ij} = \delta_{ij}[z_{ij} - \bar{z}_{ij}]-\sum_{t_u \leq t_{ij}}[z_i - \bar{z_{ij}}] e^{z_i \beta}[\hat{H}_0(t_u) - \hat{H}(t_{u-1})]$<a class="anchor-link" href="#$s_%7Bij%7D-=-%5Cdelta_%7Bij%7D%5Bz_%7Bij%7D---%5Cbar%7Bz%7D_%7Bij%7D%5D-%5Csum_%7Bt_u-%5Cleq-t_%7Bij%7D%7D%5Bz_i---%5Cbar%7Bz_%7Bij%7D%7D%5D-e%5E%7Bz_i-%5Cbeta%7D%5B%5Chat%7BH%7D_0(t_u)---%5Chat%7BH%7D(t_%7Bu-1%7D)%5D$">&#182;</a></h3><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><ul>
+<li><strong>C통계량</strong></li>
 </ul>
-
+<h3 id="$C-=-%5Csum%5EG_%7Bi=1%7D-%5Csum%5E%7Bn_i%7D_%7Bj=1%7D-%5Csum%5E%7Bn_i%7D_%7Bm=1%7D-s_%7Bij%7D-s_%7Bim%7D$">$C = \sum^G_{i=1} \sum^{n_i}_{j=1} \sum^{n_i}_{m=1} s_{ij} s_{im}$<a class="anchor-link" href="#$C-=-%5Csum%5EG_%7Bi=1%7D-%5Csum%5E%7Bn_i%7D_%7Bj=1%7D-%5Csum%5E%7Bn_i%7D_%7Bm=1%7D-s_%7Bij%7D-s_%7Bim%7D$">&#182;</a></h3><h1 id="-"> <a class="anchor-link" href="#-">&#182;</a></h1><ul>
+<li><strong>군집을 보정한 분산 $V^*$ (샌드위치 분산)</strong></li>
+</ul>
+<h3 id="$V%5E*-=-%5Chat%7BV%7D-C-%5Chat%7BV%7D$">$V^* = \hat{V} C \hat{V}$<a class="anchor-link" href="#$V%5E*-=-%5Chat%7BV%7D-C-%5Chat%7BV%7D$">&#182;</a></h3>
 </div>
 </div>
 </div>
