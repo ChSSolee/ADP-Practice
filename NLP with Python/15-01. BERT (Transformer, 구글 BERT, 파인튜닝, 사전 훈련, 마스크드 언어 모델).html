@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>724aa1b3cb594b238def47bb971bbd93</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 16px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 30px;
+      padding-right: 30px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section
+id="bert-bidirectional-encoder-representations-from-transformers"
+class="cell markdown" id="fXvcf_FKgYBc">
+<h1>BERT (Bidirectional Encoder Representations from Transformers)</h1>
+<ul>
+<li>트랜스포머(transformer)의 등장 이후, 다양한 자연어 처리 태스크에서
+사용되었던 RNN 계열의 신경망인 LSTM, GRU는 트랜스포머로 대체되어가는
+추세</li>
+<li>이에 따라 다양한 트랜스포머 계열의 BERT, GPT, T5 등 다양한 사전
+훈련된 언어 모델들이 계속해서 등장</li>
+</ul>
+<p><br></p>
+<h2 id="nlp에서의-사전-훈련pre-training">NLP에서의 사전
+훈련(Pre-training)</h2>
+<blockquote>
+<p>"사전 훈련된 단어 임베딩이 모든 NLP 실무자의 도구 상자에서 사전
+훈련된 언어 모델로 대체되는 것은 시간 문제이다."</p>
+</blockquote>
+<ul>
+<li>BERT(Bidirectional Encoder Representations from Transformers)와 같은
+트랜스포머 계열의 모델들이 자연어 처리를 지배</li>
+<li>BERT를 배우기에 앞서 워드 임베딩에서부터 ELMo, 그리고 트랜스포머에
+이르기까지 자연어 처리가 발전되어온 흐름에 대한 정리 필요</li>
+</ul>
+<p><br></p>
+<h3 id="사전-훈련된-워드-임베딩">사전 훈련된 워드 임베딩</h3>
+<ul>
+<li><strong>어떤 태스크를 수행할 때, 임베딩을 사용하는 방법으로는 크게
+두 가지가 존재</strong></li>
+</ul>
+<ol>
+<li>임베딩 층(Embedding layer)을 랜덤 초기화하여 처음부터 학습하는
+방법</li>
+<li>방대한 데이터로 Word2Vec 등과 같은 임베딩 알고리즘으로 사전에 학습된
+임베딩 벡터들을 가져와 사용하는 방법</li>
+</ol>
+<p><br></p>
+<ul>
+<li><p>만약, 태스크에 사용하기 위한 데이터가 적다면, 사전 훈련된
+임베딩을 사용하면 성능 향상을 기대가능</p></li>
+<li><p>이 두 가지 방법 모두 하나의 단어가 하나의 벡터값으로
+맵핑되므로,</p>
+<p>문맥을 고려하지 못 하여 다의어나 동음이의어를 구분하지 못하는
+문제점이 존재</p>
+<ul>
+<li>한국어에는 '사과'라는 단어가 존재하는데 이 '사과'는 용서를 빈다는
+의미로도 쓰이지만, 먹는 과일의 의미로도 사용</li>
+<li>그러나 임베딩 벡터는 '사과'라는 벡터에 하나의 벡터값을 맵핑하므로 이
+두 가지 의미를 구분할 수 없었음</li>
+</ul>
+<p><span class="math inline">→</span> <strong>이 한계는 사전 훈련된 언어
+모델을 사용하므로서 극복할 수 있었으며 ELMo나 BERT 등이 이러한 문제의
+해결책</strong></p></li>
+</ul>
+<p><br></p>
+<h3 id="사전-훈련된-언어-모델">사전 훈련된 언어 모델</h3>
+<p><img scr='https://wikidocs.net/images/page/108730/image1.PNG'></p>
+<ul>
+<li>2015년 구글은 'Semi-supervised Sequence Learning'라는 논문에서 LSTM
+언어 모델을 학습하고나서, 학습한 LSTM을 텍스트 분류에 추가 학습하는
+방법을 진행</li>
+</ul>
+<ol>
+<li>우선 LSTM 언어 모델을 학습</li>
+</ol>
+<ul>
+<li>LSTM 언어 모델은 주어진 텍스트로부터 이전 단어들로부터 다음 단어를
+예측하도록 학습하므로, 기본적으로 별도의 레이블이 부착되지 않은 텍스트
+데이터로도 학습 가능</li>
+<li>사전 훈련된 워드 임베딩과 마찬가지로 사전 훈련된 언어 모델의 강점은
+학습 전 사람이 별도 레이블을 지정해줄 필요가 없다는 점</li>
+</ul>
+<ol>
+<li>이렇게 레이블이 없는 데이터로 학습된 LSTM과, 가중치가 랜덤으로
+초기화 된 LSTM 두 가지를 두고, 텍스트 분류와 같은 문제를 학습하여</li>
+</ol>
+<p>사전 훈련된 언어 모델을 사용한 전자의 경우가 더 좋은 성능을 얻을 수
+있다는 가능성을 확인</p>
+<ul>
+<li><strong>방대한 텍스트로 LSTM 언어 모델을 학습해두고, 언어 모델을
+다른 태스크에서 높은 성능을 얻기 위해 사용하는 방법으로 ELMo와 같은
+아이디어도 존재</strong></li>
+</ul>
+<p><br></p>
+<h4 id="elmo">ELMO</h4>
+<p><img src='https://wikidocs.net/images/page/108730/image2.PNG'></p>
+<ul>
+<li><p><strong>ELMo는 순방향 언어 모델과 역방향 언어 모델을 각각 따로
+학습시킨 후에,</strong></p>
+<p><strong>사전 학습된 언어 모델로부터 임베딩 값을 얻는다는
+아이디어</strong></p></li>
+<li><p>이러한 임베딩은 문맥에 따라서 임베딩 벡터값이 달라지므로,</p>
+<p>기존 워드 임베딩인 Word2Vec이나 GloVe 등이 다의어를 구분할 수 없었던
+문제점을 해결</p>
+<p><span class="math inline">→</span> 언어 모델은 RNN 계열의 신경망에서
+탈피</p></li>
+</ul>
+<p><strong>트랜스포머가 번역기와 같은 인코더-디코더 구조에서 LSTM을
+뛰어넘는 좋은 성능을 얻자, LSTM이 아닌 트랜스포머로 사전 훈련된 언어
+모델을 학습하는 시도가 등장</strong></p>
+<p><br></p>
+<p><img src='https://wikidocs.net/images/page/108730/image3.PNG'></p>
+<ul>
+<li>그림에서 Trm은 트랜스포머(Transformer)의 약자</li>
+<li>트랜스포머의 디코더는 LSTM 언어 모델처럼 순차적으로 이전
+단어들로부터 다음 단어를 예측</li>
+</ul>
+<p><br></p>
+<ul>
+<li><p>Open AI는 트랜스포머 디코더로 총 12개의 층을 쌓은 후에 방대한
+텍스트 데이터를 학습시킨 언어 모델 GPT-1을 생성</p></li>
+<li><p>Open AI는 GPT-1에 여러 다양한 태스크를 위해 추가 학습을
+진행하였을 때, 다양한 태스크에서 높은 성능을 얻을 수 있음을
+입증</p></li>
+<li><p><strong>NLP의 주요 트렌드는 사전 훈련된 언어 모델을 만들고 이를
+특정 태스크에 추가 학습시켜 해당 태스크에서 높은 성능을 얻는 것으로
+접어들었고,</strong></p>
+<p><strong>언어 모델의 학습 방법에 변화를 주는 모델들이
+등장</strong></p></li>
+</ul>
+</section>
+<div class="cell markdown" id="3HlWd01bkVRq">
+<p><br></p>
+<p><img src='https://wikidocs.net/images/page/108730/image4.PNG'></p>
+<ul>
+<li><p>위의 좌측 그림에 있는 단방향 언어모델은 지금까지 배운 전형적인
+언어 모델</p>
+<ul>
+<li>시작 토큰 &lt;SOS&gt;가 들어가면, 다음 단어 I를 예측하고, 그리고 그
+다음 단어 am을 예측</li>
+</ul></li>
+<li><p>반면, 우측에 있는 양방향 언어 모델은 지금까지 본 적 없던 형태의
+언어 모델</p>
+<ul>
+<li><p>가령, 양방향 LSTM을 이용해서 우측과 같은 언어 모델을 만들었다고
+했을 때.</p>
+<p>초록색 LSTM 셀은 순방향 언어 모델로 &lt;sos&gt;를 입력받아 'I'를
+예측하고, 그 후에 'am'을 예측</p>
+<p>그런데 'am'을 예측할 때, 출력층은 주황색 LSTM 셀인 역방향 언어 모델의
+정보도 함께 받고있음</p>
+<p>'am'을 예측하는 시점에서 역방향 언어 모델이 이미 관측한 단어는 'a',
+'am', 'I' 이렇게 3개의 단어</p>
+<p><strong>이미 예측해야하는 단어를 역방향 언어 모델을 통해 미리 관측한
+셈이므로, 언어 모델은 일반적으로 양방향으로 구현하지
+않음</strong></p></li>
+</ul></li>
+<li><p><strong>하지만 언어의 문맥이라는 것은 실제로는
+양방향</strong></p>
+<p>텍스트 분류나 개체명 인식 등에서 양방향 LSTM을 사용하여 모델을
+구현해서 좋은 성능을 얻을 수 있었음</p>
+<p><strong>하지만 이전 단어들로부터 다음 단어를 예측하는 언어 모델의
+특성으로 인해 위의 그림과 같은 양방향 언어 모델을 사용할 수
+없으므로,</strong></p>
+<p><strong>그 대안으로 ELMo에서는 순방향과 역방향이라는 두 개의 단방향
+언어 모델을 따로 준비하여 학습하는 방법을 사용</strong></p></li>
+</ul>
+<p><br></p>
+<h3 id="마스크드-언어-모델-masked-language-model">마스크드 언어 모델
+(Masked Language Model)</h3>
+<ul>
+<li><p>기존 언어 모델로는 양방향 구조를 도입할 수 없으므로, 양방향
+구조를 도입하기 위해서 2018년에는 새로운 구조의 언어 모델이 탄생</p>
+<p><span class="math inline">→</span> <strong>마스크드 언어
+모델</strong></p></li>
+<li><p><strong>마스크드 언어 모델은 입력 텍스트 단어 집합의 15%의 단어를
+랜덤으로 마스킹(Masking)</strong></p>
+<p>(마스킹이란 원래의 단어가 무엇이었는지 모르게 한다는 뜻)</p>
+<p><span class="math inline">→</span> <strong>인공 신경망에게 이렇게
+마스킹 된 단어들을(Masked words) 예측하도록 지시</strong></p>
+<p><span class="math inline">→</span> <strong>문장 중간에 구멍을
+뚫어놓고, 구멍에 들어갈 단어들을 예측하게 하는 방식</strong></p>
+<ul>
+<li>예를 들어 '나는 [MASK]에 가서 그곳에서 빵과 [MASK]를 샀다'를 주고
+[MASK]에 들어갈 단어를 맞추게 함.</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell markdown" id="v3MvSC-jkVOS">
+<p><br></p>
+<hr>
+<p><br></p>
+<h2
+id="버트bidirectional-encoder-representations-from-transformers-bert">버트(Bidirectional
+Encoder Representations from Transformers, BERT)</h2>
+<ul>
+<li><p>BERT(Bidirectional Encoder Representations from Transformers)는
+2018년에 구글이 공개한 사전 훈련된 모델</p>
+<p>(BERT라는 이름은 세서미 스트리트라는 미국 인형극의 케릭터 이름이기도
+한데, 앞서 소개한 임베딩 방법론인 ELMo와 마찬가지로 세서미 스트리트의
+케릭터 이름을 따온 것)</p></li>
+<li><p><strong>BERT는 2018년에 공개되어 등장과 동시에 수많은 NLP
+태스크에서 최고 성능을 보여주면서 명실공히 NLP의 한 획을 그은
+모델</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="JIw5vmKPkVD8">
+<p><br></p>
+<ul>
+<li><code>transformers</code> 패키지 설치</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>pip install transformers</span></code></pre></div>
+</div>
+<div class="cell markdown" id="udL2zcrWmQFi">
+<p><br></p>
+<h2 id="bert의-개요">BERT의 개요</h2>
+<p><img src='https://wikidocs.net/images/page/35594/%ED%8C%8C%EC%9D%B8%ED%8A%9C%EB%8B%9D.PNG'></p>
+<ul>
+<li><p><strong>BERT는 트랜스포머를 이용하여 구현된, 위키피디아(25억
+단어)와 BooksCorpus(8억 단어)와 같은 레이블이 없는 텍스트 데이터로 사전
+훈련된 언어 모델</strong></p></li>
+<li><p><strong>BERT가 높은 성능을 얻을 수 있었던 것은, 레이블이 없는
+방대한 데이터로 사전 훈련된 모델을 가지고,</strong></p>
+<p><strong>레이블이 있는 다른 작업(Task)에서 추가 훈련과 함께
+하이퍼파라미터를 재조정하여,</strong></p>
+<p><strong>이 모델을 사용하면 성능이 높게 나오는 기존의 사례들을
+참고하였기 때문</strong></p>
+<p><strong>다른 작업에 대해서 파라미터 재조정을 위한 추가 훈련 과정을
+파인 튜닝(Fine-tuning)</strong></p></li>
+<li><p>위의 그림은 BERT의 파인 튜닝 사례</p></li>
+<li><p>태스크가 스팸 메일 분류라고 하였을 때, 이미 위키피디아 등으로
+사전 학습된 BERT 위에 분류를 위한 신경망을 한 층 추가</p>
+<p><span class="math inline">→</span> 이 경우, BERT가 언어 모델 사전
+학습 과정에서 얻은 지식을 활용할 수 있으므로 스팸 메일 분류에서 보다 더
+좋은 성능</p></li>
+<li><p>이전에 언급한 ELMo나 OpenAI GPT-1 등이 이러한 파인 튜닝 사례의
+대표적인 사례</p></li>
+</ul>
+</div>
+<div class="cell markdown" id="wB_srWSkna_A">
+<p><br></p>
+<h3 id="bert의-크기">BERT의 크기</h3>
+<p><img src='https://wikidocs.net/images/page/35594/bartbase%EC%99%80large.PNG'></p>
+<ul>
+<li><strong>BERT의 기본 구조는 트랜스포머의 인코더를 쌓아올린
+구조</strong>
+<ul>
+<li>Base 버전에서는 총 12개를 쌓았으며, Large 버전에서는 총 24개를
+쌓음</li>
+<li>Large 버전은 Base 버전보다 d_model의 크기나 셀프 어텐션 헤드(Self
+Attention Heads)의 수가 더 큼</li>
+<li>트랜스포머 인코더 층의 수를 <span
+class="math inline"><em>L</em></span>, d_model의 크기를 <span
+class="math inline"><em>D</em></span>, 셀프 어텐션 헤드의 수를 <span
+class="math inline"><em>A</em></span>라고 하였을 때 각각의 크기는</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>BERT-Base : <span class="math inline"><em>L</em> = 12</span>, <span
+class="math inline"><em>D</em> = 768</span>, <span
+class="math inline"><em>A</em> = 12</span> : 110M개의 파라미터</p>
+<p>BERT-Large : <span class="math inline"><em>L</em> = 24</span>, <span
+class="math inline"><em>D</em> = 1024</span>, <span
+class="math inline"><em>A</em> = 16</span> : 340M개의 파라미터</p>
+</blockquote>
+</div>
+<div class="cell markdown" id="Oz0aeOJena7Z">
+<ul>
+<li><p>초기 트랜스포머 모델이 <span
+class="math inline"><em>L</em> = 6</span>, <span
+class="math inline"><em>D</em> = 512</span>, <span
+class="math inline"><em>A</em> = 8</span>이었다는 것과 비교하면,</p>
+<p>Base 또한 초기 트랜스포머보다는 큰 네트워크</p></li>
+<li><p>BERT-base는 BERT보다 앞서 등장한 Open AI GPT-1과 하이퍼파라미터가
+동일</p>
+<p>이는 BERT 연구진이 직접적으로 GPT-1과 성능을 비교하기 위해서 GPT-1과
+동등한 크기로 BERT-Base를 설계하였기 때문</p></li>
+<li><p>BERT-Large는 BERT의 최대 성능을 보여주기 위해 만들어진 모델</p>
+<ul>
+<li>BERT가 세운 기록들은 대부분 BERT-Large를 통해 달성</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell markdown" id="zuZqiCOToGRt">
+<p><br></p>
+<h3 id="bert의-문맥을-반영한-임베딩contextual-embedding">BERT의 문맥을
+반영한 임베딩(Contextual Embedding)</h3>
+<ul>
+<li><strong>BERT는 ELMo나 GPT-1과 마찬가지로 문맥을 반영한
+임베딩(Contextual Embedding)을 사용</strong></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/115055/bert0.PNG'></p>
+<ul>
+<li><p><strong>BERT의 입력은 딥 러닝 모델들과 마찬가지로 임베딩
+층(Embedding layer)를 지난 임베딩 벡터들</strong></p></li>
+<li><p>d_model을 768로 정의하였으므로, 모든 단어들은 768차원의 임베딩
+벡터가 되어 BERT의 입력으로 사용</p>
+<p><span class="math inline">→</span> BERT는 내부적인 연산을 거친 후,
+동일하게 각 단어에 대해서 768차원의 벡터를 출력</p></li>
+<li><p>위의 그림에서는 BERT가 각 768차원의 [CLS], 'I', 'love', 'you'라는
+4개의 벡터를 입력받아서(입력 임베딩) 동일하게 768차원의 4개의 벡터를
+출력하는 모습(출력 임베딩)</p></li>
+</ul>
+<p><br></p>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC2.PNG'></p>
+<ul>
+<li><p><strong>BERT의 연산을 거친 후의 출력 임베딩은, 문장의 문맥을 모두
+참고한, 문맥을 반영한 임베딩</strong></p></li>
+<li><p><strong>위의 좌측 그림에서 [CLS]라는 벡터는, BERT의 초기 입력으로
+사용되었을 입력 임베딩 당시에는, 단순히 임베딩 층(embedding layer)를
+지난 임베딩 벡터였지만,</strong></p>
+<p><strong>BERT를 지나고 나서는 [CLS],'I', 'love', 'you'라는 모든 단어
+벡터들을 모두 참고한 후에 문맥 정보를 가진 벡터가 됨</strong></p>
+<p>(위의 좌측 그림에서는 모든 단어를 참고하고 있다는 것을 점선의
+화살표로 표현)</p></li>
+<li><p>이는 [CLS]라는 단어 벡터 뿐만 아니라 다른 벡터들도 전부
+마찬가지</p>
+<ul>
+<li>가령, 우측의 그림에서 출력 임베딩 단계의 'love'를 보면 BERT의
+입력이었던 모든 단어들인 [CLS], 'I', 'love', 'you'를 참고</li>
+</ul></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC3.PNG'></p>
+<ul>
+<li><p><strong>하나의 단어가 모든 단어를 참고하는 연산은 BERT의 12개의
+층에서 전부 이루어지는 연산</strong></p>
+<p>12개의 층을 지난 후에 최종적으로 출력 임베딩을 얻게됨,</p></li>
+<li><p>위의 그림은 BERT의 첫번째 층에 입력된 각 단어가 모든 단어를
+참고한 후에 출력되는 과정을 화살표로 표현</p></li>
+<li><p><strong>BERT의 첫번째 층의 출력 임베딩은 BERT의 두번째 층에서는
+입력 임베딩</strong></p></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC4.PNG'></p>
+<ul>
+<li><strong>BERT는 '셀프 어텐션'을 통하여, 모든 단어들을 참고한 문맥을
+반영한 출력 임베딩을 얻게됨</strong></li>
+<li><strong>BERT는 기본적으로 트랜스포머 인코더를 12번 쌓은 것이므로
+내부적으로 각 층마다 멀티 헤드 셀프 어텐션과 포지션 와이즈 피드 포워드
+신경망을 수행</strong></li>
+</ul>
+</div>
+<div class="cell markdown" id="W5IyCafuoGN3">
+<p><br></p>
+<h3 id="bert의-서브워드-토크나이저--wordpiece">BERT의 서브워드
+토크나이저 : WordPiece</h3>
+<ul>
+<li><p><strong>BERT는 단어보다 더 작은 단위로 쪼개는 서브워드
+토크나이저를 사용</strong></p></li>
+<li><p>BERT가 사용한 토크나이저는 WordPiece 토크나이저로, 바이트 페어
+인코딩(Byte Pair Encoding, BPE)의 유사 알고리즘</p>
+<ul>
+<li>동작 방식은 BPE와 조금 다르지만, 글자로부터 서브워드들을 병합해가는
+방식으로 최종 단어 집합(Vocabulary)을 만드는 것은 BPE와 유사</li>
+</ul></li>
+<li><p><strong>서브워드 토크나이저는 기본적으로 자주 등장하는 단어는
+그대로 단어 집합에 추가하지만,</strong></p>
+<p><strong>자주 등장하지 않는 단어의 경우에는 더 작은 단위인 서브워드로
+분리되어 서브워드들이 단어 집합에 추가된다는 아이디어</strong></p></li>
+<li><p>단어 집합이 만들어지고 나면, 이 단어 집합을 기반으로 토큰화를
+수행</p></li>
+<li><p>서브워드 토크나이저 패키지인 <code>SentencePiece</code>과 같이
+BERT의 서브워드 토크나이저도 동작</p></li>
+</ul>
+<p><br></p>
+<h4 id="bert에서-토큰화를-수행하는-방식">BERT에서 토큰화를 수행하는
+방식</h4>
+<ul>
+<li>준비물 : 이미 훈련 데이터로부터 만들어진 단어 집합</li>
+</ul>
+<ol>
+<li>토큰이 단어 집합에 존재</li>
+</ol>
+<p><span class="math inline">→</span> 해당 토큰을 분리하지 않음</p>
+<ol>
+<li>토큰이 단어 집합에 존재하지 않음</li>
+</ol>
+<p><span class="math inline">→</span> 해당 토큰을 서브워드로 분리</p>
+<p><span class="math inline">→</span> 해당 토큰의 첫번째 서브워드를
+제외한 나머지 서브워드들은, 앞에 "##"를 붙인 것을 토큰으로 함</p>
+</div>
+<div class="cell markdown" id="CZk2Fen9oGK7">
+<p><br></p>
+<ul>
+<li><p><strong>예를 들어 'embeddings'이라는 단어가 입력으로 들어왔을 때,
+BERT의 단어 집합에 해당 단어가 존재하지 않았다면</strong></p></li>
+<li><p><strong>만약, 서브워드 토크나이저가 아닌 토크나이저라면 여기서
+OOV 문제가 발생,</strong></p>
+<p><strong>하지만 서브워드 토크나이저의 경우에는 해당 단어가 단어 집합에
+존재하지 않았다고 해서, 서브워드 또한 존재하지 않는다는 의미는
+아니므로,</strong></p>
+<p><span class="math inline">→</span> <strong>해당 단어를 더 쪼개려고
+시도</strong></p>
+<p><span class="math inline">→</span> <strong>만약, BERT의 단어 집합에
+'em', '##bed', '##ding', '#s'라는 서브 워드들이 존재한다면,
+'embeddings'는 'em', '##bed', '##ding', '#s'로 분리</strong></p>
+<p><span class="math inline">→</span> <strong>여기서 '##'은 이
+서브워드들은 단어의 중간부터 등장하는 서브워드라는 것을 알려주기 위해
+단어 집합 생성 시 표시해둔 기호</strong></p>
+<ul>
+<li>이런 표시가 있어야만 em, ##bed, ##ding, #s를 다시 손쉽게
+embeddings로 복원</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:275,&quot;referenced_widgets&quot;:[&quot;c9e482aaf5bd4f608c5518e3349232a5&quot;,&quot;4fce872888374f46bb39c61e13fade73&quot;,&quot;df835f7162e74e8d8199681d589f717f&quot;,&quot;9254a75ecf294acbb0e6fc99beb8cb27&quot;,&quot;3664a2a1eee84a869d9d324230deace0&quot;,&quot;69af842c9cd7471cb715977a91313c72&quot;,&quot;99b9f9163e104f2081becb4d2064b9f7&quot;,&quot;d685090590de47dfae5284217e24710f&quot;,&quot;4dec5cb8bc8246a7a39964011c03595a&quot;,&quot;910853d7ff734ab68d8de8aea5926325&quot;,&quot;7c2f0c93b10e49eb9ed9aa1524b7ae6e&quot;,&quot;b22ed79fd9e54799ba97e7160e81fcf6&quot;,&quot;96325200adfb4716bb81fce15567a629&quot;,&quot;b68bdedb067d40d1ad0cbf9a962392f3&quot;,&quot;bc1c4d1928e24f69b5cb62b136405e71&quot;,&quot;1cac623de2c04158bb823f08b3b18100&quot;,&quot;b64b4ff0de6e4700b28a1dd1e1045de3&quot;,&quot;bc41da6164d4445f825b9d11d7a425c1&quot;,&quot;47512eb1f9ec4f758ac13e1b6c45fb3f&quot;,&quot;dc01cd37a77d4b5084f4c6fccdcc4908&quot;,&quot;dc2fda0f9c5d4dfda03fda82dad97f04&quot;,&quot;5ccfa140ed04497298d754f509a201e1&quot;,&quot;ab794ddae6c146048137644449bee269&quot;,&quot;d2f74443c0504e859a49afda5ef562ad&quot;,&quot;5e377abff66c4c739c52a41ccc1f0826&quot;,&quot;7fb4b5bf31024d39b3ad1a1904345532&quot;,&quot;929c91521e5a4dc384fcb0d4cf920ce2&quot;,&quot;d5848dec34ee4aebae1222a874980b3d&quot;,&quot;d9688ee05515499d8265983bd6b49ba9&quot;,&quot;014a7d6ecc634058a6a545d89121b596&quot;,&quot;954c13c44d244553be103fef87323f8a&quot;,&quot;1ec29620d4664f89a0fb733db5326555&quot;,&quot;d8cad394da5840448863f9865f96b3c1&quot;,&quot;678e080103344812896986ccfbfc79e5&quot;,&quot;defb9f1e330e426fb4b66743be6b3e7f&quot;,&quot;24de71cbe4d2485bbf17d92f8ed971d1&quot;,&quot;4f2316e5938c4dd2bd30f9d4878551b9&quot;,&quot;a68103e410c44af1a3c44a095ec706ee&quot;,&quot;dd1019130ecc422ebcb90cb312752b12&quot;,&quot;03234a6ed1c14e50b2acaea02872c394&quot;,&quot;e5baf7f4e5fa4c8e849ce0f4753fbe8a&quot;,&quot;6809a1b106a74276a01a421c7f508dfa&quot;,&quot;52945ab660d94582b68a2e626d0a7a13&quot;,&quot;14a5a543a11a49db85ff740223048cc9&quot;]}"
+data-executionInfo="{&quot;elapsed&quot;:13752,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747808283,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="tWnY0QQ6Nf7q" data-outputId="d50504f4-73ad-4e8e-928a-5c1ecc36e9c2">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> BertTokenizer</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/usr/local/lib/python3.10/dist-packages/huggingface_hub/utils/_token.py:88: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+</code></pre>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb4"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;c9e482aaf5bd4f608c5518e3349232a5&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;b22ed79fd9e54799ba97e7160e81fcf6&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;ab794ddae6c146048137644449bee269&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb7"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;678e080103344812896986ccfbfc79e5&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="Q53ASCh9s81b">
+<p><br></p>
+<h4
+id="berttokenizerfrom_pretrained--bert-토크나이저-객체"><code>BertTokenizer.from_pretrained()</code>
+: BERT 토크나이저 객체</h4>
+</div>
+<div class="cell code" id="xMp_VAAes3Wz">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> BertTokenizer.from_pretrained(<span class="st">&quot;bert-base-uncased&quot;</span>) <span class="co"># Bert-base의 토크나이저</span></span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747858772,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="4tx1uecINipZ" data-outputId="e8e6c65e-3520-446c-91cb-4fc7aec6dc3f">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>result <span class="op">=</span> tokenizer.tokenize(<span class="st">&#39;Here is the sentence I want embeddings for.&#39;</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(result)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[&#39;here&#39;, &#39;is&#39;, &#39;the&#39;, &#39;sentence&#39;, &#39;i&#39;, &#39;want&#39;, &#39;em&#39;, &#39;##bed&#39;, &#39;##ding&#39;, &#39;##s&#39;, &#39;for&#39;, &#39;.&#39;]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="0d3L1IoAtKg6">
+<p><br></p>
+<h4
+id="bert토크나이저vocab--bert의-단어-집합에-특정-단어가-있는지-조회"><code>BERT토크나이저.vocab()</code>
+: BERT의 단어 집합에 특정 단어가 있는지 조회</h4>
+<ul>
+<li>'here'이 정수 인코딩을 위해서 단어 집합 내부적으로 2182라는 정수로
+맵핑되어져 있다는 의미</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:570,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747914885,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="wR-IaDSJNj-R" data-outputId="337b59b7-1830-4bf8-ab65-eec7a58b2c49">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;here&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>2182
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="lTTFjeyYtVFm">
+<ul>
+<li>'embeddings' 단어가 존재하지 않는다는 의미</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:184}"
+data-executionInfo="{&quot;elapsed&quot;:4,&quot;status&quot;:&quot;error&quot;,&quot;timestamp&quot;:1707747916925,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="RTpXz-9GNkht" data-outputId="416702d9-f2f0-49cf-a7ac-8a1856fd73ac">
+<div class="sourceCode" id="cb13"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;embeddings&#39;</span>])</span></code></pre></div>
+<div class="output error" data-ename="KeyError"
+data-evalue="&#39;embeddings&#39;">
+<pre><code>---------------------------------------------------------------------------
+KeyError                                  Traceback (most recent call last)
+&lt;ipython-input-6-4ef7a948935c&gt; in &lt;cell line: 1&gt;()
+----&gt; 1 print(tokenizer.vocab[&#39;embeddings&#39;])
+
+KeyError: &#39;embeddings&#39;
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="36HDrKFktd_J">
+<ul>
+<li><strong>하지만 단어 em, ##bed, ##ing, ##s는 모두 단어 집합에
+존재</strong></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747971056,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="oT7UcmHANm3Z" data-outputId="06578846-9815-4cd1-e10a-bc903ce03560">
+<div class="sourceCode" id="cb15"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;em&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>7861
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:635,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747972714,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="Gvwmp5L0NoHx" data-outputId="07243751-371b-4d24-ccdf-9f24b0d9a890">
+<div class="sourceCode" id="cb17"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;##bed&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>8270
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747972714,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="1CXk_B0wNpbB" data-outputId="edd27857-b9fd-408f-f835-17d07c802417">
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;##ding&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>4667
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707747973759,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="AfVJUntBNqoR" data-outputId="70c78c1b-1f74-498a-aeee-e551e98ad315">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.vocab[<span class="st">&#39;##s&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>2015
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="lWnTsp0stjc-">
+<p><br></p>
+<ul>
+<li>BERT의 단어 집합 전체를 로드 : BERT의 단어 집합을 vocabulary.txt에
+저장</li>
+</ul>
+</div>
+<div class="cell code" id="cwmikCL_NrvB">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> <span class="bu">open</span>(<span class="st">&#39;vocabulary.txt&#39;</span>, <span class="st">&#39;w&#39;</span>) <span class="im">as</span> f:</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">for</span> token <span class="kw">in</span> tokenizer.vocab.keys():</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    f.write(token <span class="op">+</span> <span class="st">&#39;</span><span class="ch">\n</span><span class="st">&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:206}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707748010155,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="LkJJMG4_Ns1p" data-outputId="b2ef3964-d765-4821-f4e6-a5092e265864">
+<div class="sourceCode" id="cb24"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_fwf(<span class="st">&#39;vocabulary.txt&#39;</span>, header<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code></pre></div>
+<div class="output execute_result" data-execution_count="12">
+
+  <div id="df-fbfe1955-58e0-48c4-bd0e-3574a8ab3be2" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>0</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>[PAD]</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>[unused0]</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>[unused1]</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>[unused2]</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>[unused3]</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-fbfe1955-58e0-48c4-bd0e-3574a8ab3be2')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-fbfe1955-58e0-48c4-bd0e-3574a8ab3be2 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-fbfe1955-58e0-48c4-bd0e-3574a8ab3be2');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-6e8d4720-c36b-4612-9ed5-a1ae7c1bb4c5">
+  <button class="colab-df-quickchart" onclick="quickchart('df-6e8d4720-c36b-4612-9ed5-a1ae7c1bb4c5')"
+            title="Suggest charts"
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const quickchartButtonEl =
+        document.querySelector('#' + key + ' button');
+      quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+      quickchartButtonEl.classList.add('colab-df-spinner');
+      try {
+        const charts = await google.colab.kernel.invokeFunction(
+            'suggestCharts', [key], {});
+      } catch (error) {
+        console.error('Error during call to suggestCharts:', error);
+      }
+      quickchartButtonEl.classList.remove('colab-df-spinner');
+      quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-6e8d4720-c36b-4612-9ed5-a1ae7c1bb4c5 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+
+    </div>
+  </div>
+
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:519,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707748017446,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="Uf1tI3LTNuyB" data-outputId="c4e9748f-52f8-4362-ac9d-40377b1457d5">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;단어 집합의 크기 :&#39;</span>,<span class="bu">len</span>(df))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>단어 집합의 크기 : 30522
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="mJtmTQ3otv0v">
+<ul>
+<li>정수로부터 맵핑된 단어를 확인</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:35}"
+data-executionInfo="{&quot;elapsed&quot;:527,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707748043960,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="oGe0aFCRNv3p" data-outputId="fa55de02-7e74-4cea-8381-0a94cc145ab4">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>df.loc[<span class="dv">4667</span>].values[<span class="dv">0</span>]</span></code></pre></div>
+<div class="output execute_result" data-execution_count="14">
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;type&quot;</span><span class="fu">:</span><span class="st">&quot;string&quot;</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:35}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707748044525,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="Dve_cUCUNxBh" data-outputId="ca459abf-f680-4b5e-f049-e154e04625d8">
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>df.loc[<span class="dv">102</span>].values[<span class="dv">0</span>]</span></code></pre></div>
+<div class="output execute_result" data-execution_count="15">
+<div class="sourceCode" id="cb30"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;type&quot;</span><span class="fu">:</span><span class="st">&quot;string&quot;</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="qkvgOHO7t3hs">
+<p><br></p>
+<h4 id="bert에서-사용되는-특별-토큰들과-그와-맵핑되는-정수">BERT에서
+사용되는 특별 토큰들과 그와 맵핑되는 정수</h4>
+<ul>
+<li>[PAD] - 0</li>
+<li>[UNK] - 100</li>
+<li>[CLS] - 101</li>
+<li>[SEP] - 102</li>
+<li>[MASK] - 103</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:35}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707748106762,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;05241681837433185221&quot;},&quot;user_tz&quot;:-540}"
+id="ieRKATB6t_oX" data-outputId="1a7a3613-3d54-4d0e-e83c-4dda6167b157">
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>df.loc[<span class="dv">102</span>].values[<span class="dv">0</span>]</span></code></pre></div>
+<div class="output execute_result" data-execution_count="16">
+<div class="sourceCode" id="cb32"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;type&quot;</span><span class="fu">:</span><span class="st">&quot;string&quot;</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="RbmMEneZuBVA">
+<p><br></p>
+<h3 id="포지션-임베딩position-embedding">포지션 임베딩(Position
+Embedding)</h3>
+<ul>
+<li><p>트랜스포머에서는 포지셔널 인코딩(Positional Encoding)이라는
+방법을 통해서 단어의 위치 정보를 표현</p>
+<ul>
+<li>포지셔널 인코딩은 사인 함수와 코사인 함수를 사용하여 위치에 따라,
+다른 값을 가지는 행렬을 만들어 이를 단어 벡터들과 더하는 방법</li>
+</ul></li>
+<li><p><strong>BERT에서는 이와 유사하지만, 위치 정보를 사인 함수와
+코사인 함수로 만드는 것이 아닌,</strong></p>
+<p><strong>학습을 통해서 얻는 포지션 임베딩(Position Embedding)이라는
+방법을 사용</strong></p></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC5.PNG'></p>
+<ul>
+<li><p>위의 그림은 포지션 임베딩을 사용하는 방법</p></li>
+<li><p>위의 그림에서 WordPiece Embedding은 우리가 이미 알고 있는 단어
+임베딩으로 실질적인 입력</p>
+<p>이 입력에 포지션 임베딩을 통해서 위치 정보를 더해줌</p>
+<p><strong>여기서 포지션 임베딩의 아이디어는 위치 정보를 위한 임베딩
+층(Embedding layer)을 하나 더 사용하는 것</strong></p>
+<ul>
+<li>문장의 길이가 4라면, 4개의 포지션 임베딩 벡터를 학습. 그리고 BERT의
+입력마다 다음과 같이 포지션 임베딩 벡터를 더해줌</li>
+</ul></li>
+</ul>
+<blockquote>
+<p>첫번째 단어의 임베딩 벡터 + 0번 포지션 임베딩 벡터</p>
+<p>두번째 단어의 임베딩 벡터 + 1번 포지션 임베딩 벡터</p>
+<p>세번째 단어의 임베딩 벡터 + 2번 포지션 임베딩 벡터</p>
+<p>네번째 단어의 임베딩 벡터 + 3번 포지션 임베딩 벡터</p>
+</blockquote>
+<p><br></p>
+<ul>
+<li><p><strong>실제 BERT에서는 문장의 최대 길이를 512로 하고 있으므로,
+총 512개의 포지션 임베딩 벡터가 학습</strong></p></li>
+<li><p><strong>결론적으로 현재 설명한 내용을 기준으로는 BERT에서는 총 두
+개의 임베딩 층이 사용</strong></p></li>
+<li><p>단어 집합의 크기가 30,522개인 단어 벡터를 위한 임베딩 층과 문장의
+최대 길이가 512이므로, 512개의 포지션 벡터를 위한 임베딩 층</p></li>
+<li><p><strong>추가적으로 BERT는 세그먼트 임베딩(Segment
+Embedding)이라는 1개의 임베딩 층을 더 사용</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="1CHgK2RquSFw">
+<p><br></p>
+<h3 id="bert의-사전-훈련-pre-training">BERT의 사전 훈련
+(Pre-training)</h3>
+<p><img src='https://wikidocs.net/images/page/35594/bert-openai-gpt-elmo-%EC%B6%9C%EC%B2%98-bert%EB%85%BC%EB%AC%B8.png'></p>
+<ul>
+<li><p>위의 그림은 BERT의 논문에 첨부된 그림으로 ELMo와 GPT-1, 그리고
+BERT의 구조적인 차이를 보여줌</p></li>
+<li><p><strong>가장 우측 그림의 ELMo는 정방향 LSTM과 역방향 LSTM을 각각
+훈련시키는 방식으로 양방향 언어 모델을 생성</strong></p></li>
+<li><p><strong>가운데 그림의 GPT-1은 트랜스포머의 디코더를 이전
+단어들로부터 다음 단어를 예측하는 방식으로 단방향 언어 모델을
+생성</strong></p>
+<ul>
+<li>Trm은 트랜스포머를 의미</li>
+</ul></li>
+<li><p><strong>단방향(→)으로 설계된 Open AI GPT와 달리 가장 좌측 그림의
+BERT는 화살표가 양방향으로 뻗어나가는 모습</strong></p>
+<p><strong>이는 마스크드 언어 모델(Masked Language Model)을 통해
+양방향성을 얻었기 때문</strong></p></li>
+<li><p><strong>BERT의 사전 훈련 방법은 크게 두 가지</strong></p></li>
+</ul>
+<ol>
+<li>마스크드 언어 모델</li>
+<li>다음 문장 예측(Next sentence prediction, NSP)</li>
+</ol>
+<ul>
+<li>논문에 따르면 BERT는 BookCorpus(8억 단어)와 위키피디아(25억 단어)로
+학습</li>
+</ul>
+</div>
+<div class="cell markdown" id="f42WYy6Dv4Ak">
+<p><br></p>
+<h4 id="1-마스크드-언어-모델masked-language-model-mlm">1) 마스크드 언어
+모델(Masked Language Model, MLM)</h4>
+<ul>
+<li><p><strong>BERT는 사전 훈련을 위해서 인공 신경망의 입력으로 들어가는
+입력 텍스트의 15%의 단어를 랜덤으로 마스킹(Masking)</strong></p>
+<p><span class="math inline">→</span> <strong>그리고 인공 신경망에게 이
+가려진 단어들을(Masked words) 예측하도록 설정</strong></p>
+<p><span class="math inline">→</span> <strong>중간에 단어들에 구멍을
+뚫어놓고, 구멍에 들어갈 단어들을 예측하게 하는 방식</strong></p>
+<ul>
+<li>예를 들어 '나는 [MASK]에 가서 그곳에서 빵과 [MASK]를 샀다'를 주고
+'슈퍼'와 '우유'를 맞추게 함</li>
+</ul></li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><strong>더 정확히는 전부 [MASK]로 변경하지는 않고, 랜덤으로
+선택된 15%의 단어들은 다시 다음과 같은 비율로 규칙이 적용</strong></p>
+<ul>
+<li><p><strong>80%의 단어들은 [MASK]로 변경</strong></p>
+<p>Ex) The man went to the store → The man went to the [MASK]</p></li>
+<li><p><strong>10%의 단어들은 랜덤으로 단어가 변경</strong></p>
+<p>Ex) The man went to the store → The man went to the dog</p></li>
+<li><p><strong>10%의 단어들은 동일</strong></p>
+<p>Ex) The man went to the store → The man went to the store</p></li>
+</ul></li>
+<li><p><strong>이렇게 하는 이유는 [MASK]만 사용할 경우에는, [MASK]
+토큰이 파인 튜닝 단계에서는 나타나지 않으므로</strong></p>
+<p><strong>사전 학습 단계와 파인 튜닝 단계에서의 불일치가 발생하는
+문제가 발생하기 때문</strong></p>
+<p><span class="math inline">→</span> <strong>이 문제을 완화하기 위해서
+랜덤으로 선택된 15%의 단어들의 모든 토큰을 [MASK]로 사용하지
+않음</strong></p></li>
+</ul>
+<p><br></p>
+<h4 id="마스킹-비율">마스킹 비율</h4>
+<p><img src='https://wikidocs.net/images/page/115055/%EC%A0%84%EC%B2%B4%EB%8B%A8%EC%96%B4.PNG'></p>
+<ul>
+<li><p>전체 단어의 85%는 마스크드 언어 모델의 학습에 사용되지
+않음</p></li>
+<li><p><strong>마스크드 언어 모델의 학습에 사용되는 단어는 전체 단어의
+15%</strong></p></li>
+<li><p>학습에 사용되는 12%는 [MASK]로 변경 후에 원래 단어를
+예측</p></li>
+<li><p>1.5%는 랜덤으로 단어가 변경된 후에 원래 단어를 예측</p></li>
+<li><p>1.5%는 단어가 변경되지는 않았지만, BERT는 이 단어가 변경된
+단어인지 원래 단어가 맞는지는 알 수 없음</p>
+<p><span class="math inline">→</span> 이 경우에도 BERT는 원래 단어가
+무엇인지를 예측</p></li>
+</ul>
+<p><br></p>
+<h4 id="마스크드-언어-모델-과정">마스크드 언어 모델 과정</h4>
+<ul>
+<li><p>'My dog is cute. he likes playing'이라는 문장에 대해서 마스크드
+언어 모델을 학습</p>
+<p><span class="math inline">→</span> 약간의 전처리와 BERT의 서브워드
+토크나이저에 의해 이 문장은 ['my', 'dog', 'is' 'cute', 'he', 'likes',
+'play', '##ing']로 토큰화</p>
+<p><span class="math inline">→</span> BERT의 입력으로 사용</p>
+<p><span class="math inline">→</span> 언어 모델 학습을 위해서 다음과
+같이 데이터가 변경되었다고 가정</p></li>
+</ul>
+<blockquote>
+<p>'dog' 토큰은 [MASK]로 변경</p>
+</blockquote>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC8.PNG'></p>
+<ul>
+<li><p>위 그림은 'dog' 토큰이 [MASK]로 변경되어서 BERT 모델이 원래
+단어를 맞추려고 하는 모습</p></li>
+<li><p><strong>여기서 출력층에 있는 다른 위치의 벡터들은 예측과 학습에
+사용되지 않고,</strong></p>
+<p><strong>오직 'dog' 위치의 출력층의 벡터만이 사용</strong></p>
+<ul>
+<li><strong>구체적으로는 BERT의 손실 함수에서 다른 위치에서의 예측은
+무시</strong></li>
+</ul></li>
+<li><p><strong>출력층에서는 예측을 위해 단어 집합의 크기만큼의
+밀집층(Dense layer)에 소프트맥스 함수가 사용된 1개의 층을 사용하여 원래
+단어가 무엇인지를 맞추게 됨</strong></p></li>
+</ul>
+<p><br></p>
+<blockquote>
+<p>'dog' 토큰은 [MASK]로 변경</p>
+<p>'he'는 랜덤 단어 'king'으로 변경</p>
+<p>'play'는 변경되진 않았지만 예측에 사용</p>
+</blockquote>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC9.PNG'></p>
+<ul>
+<li><strong>BERT는 랜덤 단어 'king'으로 변경된 토큰에 대해서도 원래
+단어가 무엇인지, 변경되지 않은 단어 'play'에 대해서도 원래 단어가
+무엇인지를 예측</strong></li>
+<li><strong>'play'는 변경되지 않았지만, BERT 입장에서는 이것이 변경된
+단어인지 아닌지 모르므로 마찬가지로 원래 단어를 예측</strong></li>
+</ul>
+</div>
+<div class="cell markdown" id="-wE9ZtMBv_Ur">
+<p><br></p>
+<h4 id="2-다음-문장-예측next-sentence-prediction-nsp">2) 다음 문장
+예측(Next Sentence Prediction, NSP)</h4>
+<ul>
+<li><p><strong>BERT는 마스크드 언어 모델 외에도 다음 문장 예측이라는 또
+다른 태스크를 학습</strong></p></li>
+<li><p><strong>BERT는 두 개의 문장을 준 후에 이 문장이 이어지는 문장인지
+아닌지를 맞추는 방식으로 훈련</strong></p>
+<p><span class="math inline">→</span> 이를 위해서 50:50 비율로 실제
+이어지는 두 개의 문장과, 랜덤으로 이어붙인 두 개의 문장을 주고 훈련</p>
+<p><span class="math inline">→</span> 이를 각각 Sentence A와 Sentence
+B라고 하였을 때</p></li>
+</ul>
+<blockquote>
+<ul>
+<li><p>이어지는 문장의 경우</p>
+<blockquote>
+<p>Sentence A : The man went to the store.</p>
+<p>Sentence B : He bought a gallon of milk.</p>
+<p>Label = IsNextSentence</p>
+</blockquote></li>
+<li><p>이어지는 문장이 아닌 경우</p>
+<blockquote>
+<p>Sentence A : The man went to the store.</p>
+<p>Sentence B : dogs are so cute.</p>
+<p>Label = NotNextSentence</p>
+</blockquote></li>
+</ul>
+</blockquote>
+<p><br></p>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC10.PNG'></p>
+<ul>
+<li><strong>BERT의 입력으로 넣을 때에는 [SEP]라는 특별 토큰을 사용해서
+문장을 구분</strong>
+<ul>
+<li>첫번째 문장의 끝에 [SEP] 토큰을 넣고, 두번째 문장이 끝나면 역시
+[SEP] 토큰을 붙임</li>
+</ul></li>
+<li><strong>그리고 이 두 문장이 실제 이어지는 문장인지 아닌지를, [CLS]
+토큰의 위치의 출력층에서 이진 분류 문제로 연결</strong>
+<ul>
+<li>[CLS] 토큰은 BERT가 분류 문제를 풀기 위해 추가된 특별 토큰</li>
+</ul></li>
+<li><strong>그리고 위의 그림에서 나타난 것과 같이 마스크드 언어 모델과
+다음 문장 예측은 따로 학습하는 것이 아닌, loss를 합하여 학습이 동시에
+이루어짐</strong></li>
+</ul>
+<p><br></p>
+<ul>
+<li><p><strong>BERT가 언어 모델 외에도 다음 문장 예측이라는 태스크를
+학습하는 이유는</strong></p>
+<p><strong>BERT가 풀고자 하는 태스크 중에서는 QA(Question Answering)나
+NLI(Natural Language Inference)와 같이 두 문장의 관계를 이해하는 것이
+중요한 태스크들이 존재하기 때문</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="lxQB7qNkwB1i">
+<p><br></p>
+<h3 id="세그먼트-임베딩segment-embedding">세그먼트 임베딩(Segment
+Embedding)</h3>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC7.PNG'></p>
+<ul>
+<li>BERT는 QA 등과 같은 두 개의 문장 입력이 필요한 태스크에 사용</li>
+<li><strong>문장 구분을 위해서 BERT는 세그먼트 임베딩이라는 또 다른
+임베딩 층(Embedding layer)을 사용</strong></li>
+<li><strong>첫번째 문장에는 Sentence 0 임베딩, 두번째 문장에는 Sentence
+1 임베딩을 더해주는 방식이며, 임베딩 벡터는 두 개만 사용</strong></li>
+</ul>
+<p><br></p>
+<h4 id="결론적으로-bert는-총-3개의-임베딩-층이-사용">결론적으로 BERT는
+총 3개의 임베딩 층이 사용</h4>
+<ol>
+<li>WordPiece Embedding : 실질적인 입력이 되는 워드 임베딩. 임베딩
+벡터의 종류는 단어 집합의 크기로 30,522개.</li>
+<li>Position Embedding : 위치 정보를 학습하기 위한 임베딩. 임베딩 벡터의
+종류는 문장의 최대 길이인 512개.</li>
+<li>Segment Embedding : 두 개의 문장을 구분하기 위한 임베딩. 임베딩
+벡터의 종류는 문장의 최대 개수인 2개.</li>
+</ol>
+<p><br></p>
+<h4 id="bert에-여러-문장이-입력되는-경우">BERT에 여러 문장이 입력되는
+경우</h4>
+<ul>
+<li><p><strong>많은 문헌에서 BERT가 문장 중간의 [SEP] 토큰과 두 종류의
+세그먼트 임베딩을 통해서 두 개의 문장을 구분하여 입력받을 수 있다고
+설명하고 있지만,</strong></p>
+<p><strong>BERT에 두 개의 문장이 들어간다는 표현에서 문장이라는 것은
+실제 우리가 알고 있는 문장의 단위가 아님</strong></p></li>
+<li><p><strong>예를 들어 QA 문제를 푸는 경우에는 [SEP]와 세그먼트
+임베딩을 기준으로 구분되는 [질문(Question), 본문(Paragraph)] 두 종류의
+텍스트를 입력받지만,</strong></p>
+<p><strong>본문(Paragraph) 1개는 실제로는 다수의 문장으로 구성될수
+있음</strong></p>
+<p><span class="math inline">→</span> <strong>[SEP]과 세그먼트
+임베딩으로 구분되는 BERT의 입력에서, 두 개의 문장은 실제로는 두 종류의
+텍스트, 두 개의 문서일 수 있음</strong></p></li>
+</ul>
+<p><br></p>
+<h4 id="bert가-두-개의-문장을-입력받을-필요가-없는-경우">BERT가 두 개의
+문장을 입력받을 필요가 없는 경우</h4>
+<ul>
+<li><p><strong>IMDB 리뷰 분류와 같은 감성 분류 태스크에서</strong></p>
+<p><strong>한 개의 문서에 대해서만 분류를 하는 것이므로, 이 경우에는
+BERT의 전체 입력에 Sentence 0 임베딩만을 더해줌</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="Rvpuv9VnwEhm">
+<p><br></p>
+<h3 id="bert-파인-튜닝-fine-tuning">BERT 파인 튜닝 (Fine-Tuning)</h3>
+<ul>
+<li><strong>사전 학습 된 BERT에 우리가 풀고자 하는 태스크의 데이터를
+추가로 학습 시켜서 테스트하는 단계</strong></li>
+<li>실질적으로 태스크에 BERT를 사용하는 단계</li>
+</ul>
+</div>
+<div class="cell markdown" id="BNsXVUP9wHvN">
+<p><br></p>
+<h4
+id="1-하나의-텍스트에-대한-텍스트-분류-유형single-text-classification">1)
+하나의 텍스트에 대한 텍스트 분류 유형(Single Text Classification)</h4>
+<p><img src='https://wikidocs.net/images/page/115055/apply1.PNG'></p>
+<ul>
+<li><strong>영화 리뷰 감성 분류, 로이터 뉴스 분류 등과 같이 입력된
+문서에 대해서 분류를 하는 유형</strong></li>
+<li><strong>문서의 시작에 [CLS] 라는 토큰을 입력</strong>
+<ul>
+<li>[CLS] 토큰은 BERT가 분류 문제를 풀기위한 특별 토큰이며, 이는 BERT를
+실질적으로 사용하는 단계인 파인 튜닝 단계에서도 동일</li>
+</ul></li>
+<li><strong>텍스트 분류 문제를 풀기 위해서 [CLS] 토큰의 위치의
+출력층에서 밀집층(Dense layer) 또는 같은 이름으로는 완전
+연결층(fully-connected layer)이라고 불리는 층들을 추가하여 분류에 대한
+예측</strong></li>
+</ul>
+</div>
+<div class="cell markdown" id="rATK0H1SwJhG">
+<p><br></p>
+<h4 id="2-하나의-텍스트에-대한-태깅-작업tagging">2) 하나의 텍스트에 대한
+태깅 작업(Tagging)</h4>
+<p><img src='https://wikidocs.net/images/page/115055/apply2.PNG'></p>
+<ul>
+<li>대표적으로 문장의 각 단어에 품사를 태깅하는 품사 태깅 작업과 개체를
+태깅하는 개체명 인식 작업</li>
+<li><strong>출력층에서 입력 텍스트의 각 토큰의 위치에 밀집층을 사용하여
+분류에 대한 예측</strong></li>
+</ul>
+</div>
+<div class="cell markdown" id="eeNtYN9iwZQk">
+<p><br></p>
+<h4
+id="3-텍스트의-쌍에-대한-분류-또는-회귀-문제text-pair-classification-or-regression">3)
+텍스트의 쌍에 대한 분류 또는 회귀 문제(Text Pair Classification or
+Regression)</h4>
+<p><img src='https://wikidocs.net/images/page/115055/apply3.PNG'></p>
+<ul>
+<li><p><strong>텍스트의 쌍을 입력으로 받는 대표적인 태스크로 자연어
+추론(Natural language inference)</strong></p>
+<ul>
+<li><strong>자연어 추론 문제 : 두 문장이 주어졌을 때, 하나의 문장이 다른
+문장과 논리적으로 어떤 관계에 있는지를 분류</strong></li>
+<li>유형으로는 모순 관계(contradiction), 함의 관계(entailment), 중립
+관계(neutral)</li>
+</ul></li>
+<li><p><strong>텍스트의 쌍을 입력받는 이러한 태스크의 경우에는 입력
+텍스트가 1개가 아니므로, 텍스트 사이에 [SEP] 토큰을
+집어넣고,</strong></p>
+<p><span class="math inline">→</span> <strong>Sentence 0 임베딩과
+Sentence 1 임베딩이라는 두 종류의 세그먼트 임베딩을 모두 사용하여 문서를
+구분</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="iDIIkOCTwZTq">
+<p><br></p>
+<h4 id="4-질의-응답question-answering">4) 질의 응답(Question
+Answering)</h4>
+<p><img src='https://wikidocs.net/images/page/115055/apply4.PNG'></p>
+<ul>
+<li><p>텍스트의 쌍을 입력으로 받는 또 다른 태스크로 QA(Question
+Answering)</p></li>
+<li><p><strong>BERT로 QA를 풀기 위해서 '질문'과 '본문'이라는 두 개의
+텍스트의 쌍을 입력</strong></p>
+<ul>
+<li>이 태스크의 대표적인 데이터셋으로 SQuAD(Stanford Question Answering
+Dataset) v1.1</li>
+</ul></li>
+<li><p><strong>질문과 본문을 입력받으면, 본문의 일부분을 추출해서 질문에
+답변</strong></p>
+<p>Q : "강우가 떨어지도록 영향을 주는 것은?"</p>
+<p>A : "기상학에서 강우는 대기 수증기가 응결되어 <code>중력</code>의
+영향을 받고 떨어지는 것을 의미합니다. 강우의 주요 형태는 이슬비, 비,
+진눈깨비, 눈, 싸락눈 및 우박이 있습니다."</p>
+<p><strong>라는 본문이 주어졌을 때 <span class="math inline">→</span>
+정답은 "중력"</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="msCAWMqFwZWo">
+<p><br></p>
+<h3 id="어텐션-마스크-attention-mask">어텐션 마스크 (Attention
+Mask)</h3>
+<p><img src='https://wikidocs.net/images/page/115055/%EA%B7%B8%EB%A6%BC11.PNG'></p>
+<ul>
+<li><p><strong>BERT를 실제로 실습하게 되면 어텐션 마스크라는 시퀀스
+입력이 추가로 필요</strong></p></li>
+<li><p><strong>어텐션 마스크는 BERT가 어텐션 연산을 할 때, 불필요하게
+패딩 토큰에 대해서 어텐션을 하지 않도록,</strong></p>
+<p><strong>실제 단어와 패딩 토큰을 구분할 수 있도록 알려주는
+입력</strong></p></li>
+<li><p><strong>0과 1 두 가지 값을 가짐</strong></p>
+<ul>
+<li><p>숫자 1 : 해당 토큰은 실제 단어이므로 마스킹을 하지 않는다라는
+의미</p></li>
+<li><p>숫자 0 : 해당 토큰은 패딩 토큰이므로 마스킹을 한다는
+의미</p></li>
+</ul></li>
+<li><p>위의 그림과 같이 실제 단어의 위치에는 1, 패딩 토큰의 위치에는 0의
+값을 가지는 시퀀스를 만들어 BERT의 또 다른 입력으로 사용</p></li>
+</ul>
+</div>
+</body>
+</html>
