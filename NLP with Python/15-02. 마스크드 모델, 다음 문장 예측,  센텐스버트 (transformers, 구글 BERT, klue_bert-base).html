@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>908bbc015a51448fb0a343f15814cf01</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 15px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 110em;
+      padding-left: 2px;
+      padding-right: 10px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<section id="마스크드-모델-구현" class="cell markdown"
+id="h30wK8X7eT5I">
+<h1>마스크드 모델 구현</h1>
+<p><br></p>
+<h2 id="구글-bert의-마스크드-언어-모델masked-language-model">구글 BERT의
+마스크드 언어 모델(Masked Language Model)</h2>
+</section>
+<div class="cell code" id="xiCVlWzeE06Z">
+<div class="sourceCode" id="cb1"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install transformers</span></code></pre></div>
+</div>
+<div class="cell markdown" id="vjc1Y2UbehIp">
+<p><br></p>
+<h3 id="마스크드-언어-모델과-토크나이저">마스크드 언어 모델과
+토크나이저</h3>
+<ul>
+<li><p><code>transformers</code> 패키지를 사용하여 모델과 토크나이저를
+로드</p></li>
+<li><p>BERT는 이미 누군가가 학습해둔 모델을 사용하는 것이므로, 우리가
+사용하는 모델과 토크나이저는 항상 맵핑 관계여야 함</p>
+<ul>
+<li><strong>A라는 이름의 BERT를 사용하는데, B라는 이름의 BERT의
+토크나이저를 사용하면 모델은 텍스트를 제대로 이해할 수
+없음</strong></li>
+</ul>
+<p><span class="math inline">→</span> BERT의 토크나이저는 '사과'라는
+단어를 36번으로 정수 인코딩하는 반면에, B라는 BERT의 토크나이저는
+'사과'라는 단어를 42번으로 정수 인코딩하는 등 단어와 맵핑되는 정수 정보
+자체가 다르기 때문</p></li>
+</ul>
+</div>
+<div class="cell markdown" id="_5_H5VVAe_2a">
+<p><br></p>
+<h4
+id="tfbertformaskedlmfrom_pretrainedbert-모델-이름"><code>TFBertForMaskedLM.from_pretrained('BERT 모델 이름')</code></h4>
+<ul>
+<li><p>[MASK]라고 되어있는 단어를 맞추기 위한 마스크드 언어 모델링을
+위한 구조로 BERT를 로드</p>
+<p><span class="math inline">→</span> <strong>BERT를 마스크드 언어 모델
+형태로 로드합니다.</strong></p></li>
+</ul>
+<p><br></p>
+<h4
+id="autotokenizerfrom_pretrained모델-이름"><code>AutoTokenizer.from_pretrained('모델 이름')</code></h4>
+<ul>
+<li>해당 모델이 학습되었을 당시에 사용되었던 토크나이저를 로드</li>
+</ul>
+</div>
+<div class="cell code" id="SaWPdxItE-6J">
+<div class="sourceCode" id="cb2"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> TFBertForMaskedLM, AutoTokenizer</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:285,&quot;referenced_widgets&quot;:[&quot;0e59616050aa477e83d773ece8bae360&quot;,&quot;9d0f7d1f255d4771a755baf2ac3d9f41&quot;,&quot;0ec4f6951bc84049bc17fb7254ba6c3c&quot;,&quot;4a665b054fac4e069e48e8a00bb74d83&quot;,&quot;86420f8ddb9245b294d1c46c007fd743&quot;,&quot;ab71563313f24af6acbdd7991d5c8321&quot;,&quot;41fa597026b342c289ea38da8ac7055b&quot;,&quot;bd7e422a39be4b6bbb38e89cf00ffa9c&quot;,&quot;5fcbe254b5864016b82df17ecb8d4151&quot;,&quot;a999d3f515e44c73ad9c5e6f95eec2f1&quot;,&quot;8876f081f6504a34bc8dd8d7348fe050&quot;,&quot;7616345b40244f84be9e07391a741f1c&quot;,&quot;7cd990d0450d43b5b7b495ddab83cab5&quot;,&quot;7f7f6ba33a514e7996d2eb73b58182a2&quot;,&quot;8d354cc04fa247689232de84fdd8f1d0&quot;,&quot;e040c3c7d3a24356bef5b42a8354c68b&quot;,&quot;7530ce22ad0143c79c9cd9e4f237a471&quot;,&quot;cc7b889c944c4ae9ab837c21eeb32aab&quot;,&quot;4c5af0b4c2304b548d03f1e1740d1110&quot;,&quot;b5c44db67fd941e8bfe69e668b5a7464&quot;,&quot;2c2a4388cf8e4c65bb734e89208f82a5&quot;,&quot;ace9d7edd2f7427f88123712298405b1&quot;]}"
+data-executionInfo="{&quot;elapsed&quot;:23471,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707827978583,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="o9KyRC3WFDLG" data-outputId="d0641da2-e140-445b-e29f-deee4abd5c40">
+<div class="sourceCode" id="cb3"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> TFBertForMaskedLM.from_pretrained(<span class="st">&#39;bert-large-uncased&#39;</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>/usr/local/lib/python3.10/dist-packages/huggingface_hub/utils/_token.py:88: UserWarning: 
+The secret `HF_TOKEN` does not exist in your Colab secrets.
+To authenticate with the Hugging Face Hub, create a token in your settings tab (https://huggingface.co/settings/tokens), set it as secret in your Google Colab and restart your session.
+You will be able to reuse this secret in all of your notebooks.
+Please note that authentication is recommended but still optional to access public models or datasets.
+  warnings.warn(
+</code></pre>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb5"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;0e59616050aa477e83d773ece8bae360&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb6"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;7616345b40244f84be9e07391a741f1c&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output stream stderr">
+<pre><code>All PyTorch model weights were used when initializing TFBertForMaskedLM.
+
+All the weights of TFBertForMaskedLM were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertForMaskedLM for predictions without further training.
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:113,&quot;referenced_widgets&quot;:[&quot;043a1a56b2bd45d0bb43ab5b97f76a51&quot;,&quot;41933d2f4ce54a19b4e628f0561c8a94&quot;,&quot;27c174837c02457c9944d0b653cfe0cb&quot;,&quot;e573ed7c1e3d4997a1f86f558f99762c&quot;,&quot;668e5d402a4f4764980e326cf89e10ff&quot;,&quot;38cecc6c62154644a939d2aeba024f94&quot;,&quot;28c3bfa557b94a4d98da32591ffecfbf&quot;,&quot;ab07b00b91e14a43a3cd969bddb00497&quot;,&quot;cc049671577a482d9ead2748b395513d&quot;,&quot;3e01f98f2bf24effb7e4dcc40ee1dfed&quot;,&quot;8682a00377524a398fc9dcd027530b3c&quot;,&quot;a7ce1461924c4f2f8b1f78b294467d57&quot;,&quot;0b9bff692dac41d5a6deb5864fb59807&quot;,&quot;c0b6a36e7a3f42a3b7d529dbfafd6e3b&quot;,&quot;5127e0fe587d42c8adcf8222e1ab0f1a&quot;,&quot;3c5e223cbe4a4f309c03469a5ff6fe4c&quot;,&quot;d8e412a02eaf40d59efc45a126076418&quot;,&quot;6fb9f0d8f81f46a094c946ccd5aee840&quot;,&quot;06b27e9f1b4a4860b1b9d39b5bed2c0a&quot;,&quot;7654ac6e0b754e379553203c7e76bf6e&quot;,&quot;459872f963604b7f8a8536212b5b7778&quot;,&quot;ab51f972c12f40d199e2dc334b57afdb&quot;,&quot;2e7a1c10b96746d6865de797148f11b2&quot;,&quot;ec47435e6ae140bc972776074d8cb469&quot;,&quot;4271adbbca1b44d581019425bc83a88a&quot;,&quot;b6eff7c97baa4b8a95543e45b3d650c8&quot;,&quot;eebc3bda0bfb46dd9248a17cb09cd573&quot;,&quot;d54839d409284525be16f2434b37f9db&quot;,&quot;5f5d5853cc8a462f8791e2d0f4e76591&quot;,&quot;b895a22767474eaa9a00ead9440853ed&quot;,&quot;1337c91bee494b058ab0997f1e713d8b&quot;,&quot;250addcb6a7242be85d3b28e3d8e3299&quot;,&quot;f3a38e5559184519b9ed70f37a8c5f98&quot;]}"
+data-executionInfo="{&quot;elapsed&quot;:977,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707827982708,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="Ox5Fp5rbFMVh" data-outputId="066275c3-e0be-474f-9c4f-091b035adf72">
+<div class="sourceCode" id="cb8"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">&quot;bert-large-uncased&quot;</span>)</span></code></pre></div>
+<div class="output display_data">
+<div class="sourceCode" id="cb9"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;043a1a56b2bd45d0bb43ab5b97f76a51&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb10"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;a7ce1461924c4f2f8b1f78b294467d57&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb11"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;2e7a1c10b96746d6865de797148f11b2&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="OzRVrUbgf2H6">
+<ul>
+<li>[CLS] 토큰의 정수 인코딩</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:271,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828187778,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="zIK19DvhFz8W" data-outputId="18299e98-08a3-4306-8ddb-bf1f4b5d1134">
+<div class="sourceCode" id="cb12"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>tokenizer.cls_token_id</span></code></pre></div>
+<div class="output execute_result" data-execution_count="7">
+<pre><code>101</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="zYkyqzLdf6Td">
+<ul>
+<li>[SEP] 토큰의 정수 인코딩</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="WQOWTgBWF1so" data-outputId="846adad2-ea9a-4844-b577-8a51c89ad5ad">
+<div class="sourceCode" id="cb14"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>tokenizer.sep_token_id</span></code></pre></div>
+<div class="output execute_result" data-execution_count="8">
+<pre><code>102</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="jcCY6cY_f9Kq">
+<ul>
+<li>[MASK] 토큰의 정수 인코딩</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="1WqzV2CDF21Q" data-outputId="87ff0939-3663-49e0-ba1b-d2609849f46b">
+<div class="sourceCode" id="cb16"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>tokenizer.mask_token_id</span></code></pre></div>
+<div class="output execute_result" data-execution_count="9">
+<pre><code>103</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="TE-DAIwafW0w">
+<p><br></p>
+<h3 id="bert의-입력">BERT의 입력</h3>
+<ul>
+<li>임의의 문장</li>
+</ul>
+<blockquote>
+<p>''Soccer is a really fun [MASK]'</p>
+</blockquote>
+<ul>
+<li>이를 마스크드 언어 모델의 입력으로 넣으면, 마스크드 언어 모델은
+[MASK]의 위치에 해당하는 단어를 예측</li>
+<li>마스크드 언어 모델의 예측 결과를 보기위해서
+<code>bert-large-uncased</code>의 토크나이저를 사용하여 해당 문장을 정수
+인코딩</li>
+</ul>
+</div>
+<div class="cell code" id="O_1oLHb9FNRQ">
+<div class="sourceCode" id="cb18"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(<span class="st">&#39;Soccer is a really fun [MASK].&#39;</span>, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:268,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828319215,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="hAfaGK_5Gaa5" data-outputId="d7823bae-6fa2-4295-d9b5-21b589326564">
+<div class="sourceCode" id="cb19"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>inputs</span></code></pre></div>
+<div class="output execute_result" data-execution_count="8">
+<pre><code>{&#39;input_ids&#39;: &lt;tf.Tensor: shape=(1, 9), dtype=int32, numpy=
+array([[ 101, 4715, 2003, 1037, 2428, 4569,  103, 1012,  102]],
+      dtype=int32)&gt;, &#39;token_type_ids&#39;: &lt;tf.Tensor: shape=(1, 9), dtype=int32, numpy=array([[0, 0, 0, 0, 0, 0, 0, 0, 0]], dtype=int32)&gt;, &#39;attention_mask&#39;: &lt;tf.Tensor: shape=(1, 9), dtype=int32, numpy=array([[1, 1, 1, 1, 1, 1, 1, 1, 1]], dtype=int32)&gt;}</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="Vry035wpgPuK">
+<ul>
+<li>토크나이저를 통한 정수 인코딩 결과 (<code>input_ids</code>)</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:287,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828321526,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="1mZtPz_gDwye" data-outputId="904e7805-a6ab-465a-fec2-4751e733e89a">
+<div class="sourceCode" id="cb21"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;input_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[ 101 4715 2003 1037 2428 4569  103 1012  102]], shape=(1, 9), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="CPruDSCWgHJr">
+<ul>
+<li>문장을 구분하는 세그먼트 인코딩 결과 (<code>token_type_ids</code>)
+<ul>
+<li>현재의 입력은 문장이 두 개가 아니라 한 개이므로 여기서는 문장
+길이만큼의 0 시퀀스</li>
+<li>만약 문장이 두 개였다면 두번째 문장이 시작되는 구간부터는 1의
+시퀀스가 나옴</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:290,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828405831,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="Edll0isADyId" data-outputId="4d686b74-7ff3-4d05-824f-85bb716d9871">
+<div class="sourceCode" id="cb23"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;token_type_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[0 0 0 0 0 0 0 0 0]], shape=(1, 9), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="ZcBOfd1WgWk6">
+<ul>
+<li>실제 단어와 패딩 토큰을 구분하는 용도인 어텐션 마스크
+(<code>attention_mask</code>)
+<ul>
+<li>현재의 입력에서는 패딩이 없으므로 여기서는 문장 길이만큼의 1
+시퀀스</li>
+<li>만약 뒤에 패딩이 있었다면 패딩이 시작되는 구간부터는 0의 시퀀스가
+나옴</li>
+</ul></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+id="En1b47ZODz4F" data-outputId="5f553a7a-38ec-44ab-e5b0-367fd54bc14d">
+<div class="sourceCode" id="cb25"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;attention_mask&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[1 1 1 1 1 1 1 1 1]], shape=(1, 9), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="YHBiMy-ggmUO">
+<p><br></p>
+<h3 id="mask-토큰-예측">[MASK] 토큰 예측</h3>
+<h4
+id="transformersfillmaskpipelinemodel-tokenizer"><code>transformers.FillMaskPipeline(model, tokenizer)</code></h4>
+<ul>
+<li><code>FillMaskPipeline</code>은 모델과 토크나이저를 지정하면 손쉽게
+마스크드 언어 모델의 예측 결과를 정리</li>
+</ul>
+</div>
+<div class="cell code" id="_EKe9K6Vgprp">
+<div class="sourceCode" id="cb27"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> FillMaskPipeline</span></code></pre></div>
+</div>
+<div class="cell code" id="7i7cxc_2F68o">
+<div class="sourceCode" id="cb28"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>pip <span class="op">=</span> FillMaskPipeline(model<span class="op">=</span>model, tokenizer<span class="op">=</span>tokenizer)</span></code></pre></div>
+</div>
+<div class="cell markdown" id="l9u6A9xRg6hK">
+<ul>
+<li>입력 문장으로부터 [MASK]의 위치에 들어갈 수 있는 상위 5개의 후보
+단어들을 출력</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:1301,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828539707,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="EcRlCBTfF9Mg" data-outputId="4dd2727b-2cdf-4e34-a79b-131aefe23e43">
+<div class="sourceCode" id="cb29"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;Soccer is a really fun [MASK].&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="13">
+<pre><code>[{&#39;score&#39;: 0.7621111273765564,
+  &#39;token&#39;: 4368,
+  &#39;token_str&#39;: &#39;sport&#39;,
+  &#39;sequence&#39;: &#39;soccer is a really fun sport.&#39;},
+ {&#39;score&#39;: 0.2034205198287964,
+  &#39;token&#39;: 2208,
+  &#39;token_str&#39;: &#39;game&#39;,
+  &#39;sequence&#39;: &#39;soccer is a really fun game.&#39;},
+ {&#39;score&#39;: 0.012208595871925354,
+  &#39;token&#39;: 2518,
+  &#39;token_str&#39;: &#39;thing&#39;,
+  &#39;sequence&#39;: &#39;soccer is a really fun thing.&#39;},
+ {&#39;score&#39;: 0.0018630260601639748,
+  &#39;token&#39;: 4023,
+  &#39;token_str&#39;: &#39;activity&#39;,
+  &#39;sequence&#39;: &#39;soccer is a really fun activity.&#39;},
+ {&#39;score&#39;: 0.0013354860711842775,
+  &#39;token&#39;: 2492,
+  &#39;token_str&#39;: &#39;field&#39;,
+  &#39;sequence&#39;: &#39;soccer is a really fun field.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:2052,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828569259,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="WH-c-ONUJlug" data-outputId="7593590e-fd71-46d0-e913-b78d94220df0">
+<div class="sourceCode" id="cb31"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;The Avengers is a really fun [MASK].&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="14">
+<pre><code>[{&#39;score&#39;: 0.25628986954689026,
+  &#39;token&#39;: 2265,
+  &#39;token_str&#39;: &#39;show&#39;,
+  &#39;sequence&#39;: &#39;the avengers is a really fun show.&#39;},
+ {&#39;score&#39;: 0.1728411465883255,
+  &#39;token&#39;: 3185,
+  &#39;token_str&#39;: &#39;movie&#39;,
+  &#39;sequence&#39;: &#39;the avengers is a really fun movie.&#39;},
+ {&#39;score&#39;: 0.11107723414897919,
+  &#39;token&#39;: 2466,
+  &#39;token_str&#39;: &#39;story&#39;,
+  &#39;sequence&#39;: &#39;the avengers is a really fun story.&#39;},
+ {&#39;score&#39;: 0.07248973101377487,
+  &#39;token&#39;: 2186,
+  &#39;token_str&#39;: &#39;series&#39;,
+  &#39;sequence&#39;: &#39;the avengers is a really fun series.&#39;},
+ {&#39;score&#39;: 0.07046633958816528,
+  &#39;token&#39;: 2143,
+  &#39;token_str&#39;: &#39;film&#39;,
+  &#39;sequence&#39;: &#39;the avengers is a really fun film.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:1786,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828573772,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="XnqwIG3CJnBZ" data-outputId="9c162e57-c4a2-4ed3-a121-d321c43c99e9">
+<div class="sourceCode" id="cb33"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;I went to [MASK] this morning.&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="15">
+<pre><code>[{&#39;score&#39;: 0.3573073446750641,
+  &#39;token&#39;: 2147,
+  &#39;token_str&#39;: &#39;work&#39;,
+  &#39;sequence&#39;: &#39;i went to work this morning.&#39;},
+ {&#39;score&#39;: 0.23304396867752075,
+  &#39;token&#39;: 2793,
+  &#39;token_str&#39;: &#39;bed&#39;,
+  &#39;sequence&#39;: &#39;i went to bed this morning.&#39;},
+ {&#39;score&#39;: 0.1284506916999817,
+  &#39;token&#39;: 2082,
+  &#39;token_str&#39;: &#39;school&#39;,
+  &#39;sequence&#39;: &#39;i went to school this morning.&#39;},
+ {&#39;score&#39;: 0.06230578571557999,
+  &#39;token&#39;: 3637,
+  &#39;token_str&#39;: &#39;sleep&#39;,
+  &#39;sequence&#39;: &#39;i went to sleep this morning.&#39;},
+ {&#39;score&#39;: 0.046952586621046066,
+  &#39;token&#39;: 2465,
+  &#39;token_str&#39;: &#39;class&#39;,
+  &#39;sequence&#39;: &#39;i went to class this morning.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="r2u8fc1Fg-y_">
+<p><br></p>
+<h2 id="한국어-bert의-마스크드-언어-모델masked-language-model">한국어
+BERT의 마스크드 언어 모델(Masked Language Model)</h2>
+<ul>
+<li><strong><code>klue/bert-base</code>는 대표적인 한국어
+BERT</strong></li>
+<li><code>klue/bert-base</code>의 마스크드 언어 모델과 토크나이저를
+로드</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:321,&quot;referenced_widgets&quot;:[&quot;041f2cdf8d2c47bfbc0fa6b467878558&quot;,&quot;c9b47822efb847c39a3b11d9df645477&quot;,&quot;a1a17ff9a14143b8a8ebfba58db9293d&quot;,&quot;ee9f1a3ab5f946ac8fab8d339c93acf1&quot;,&quot;9ea4c7c53473456fb7b9c77706c01cb1&quot;,&quot;0fc3163b435d400e868a317ea3945f75&quot;,&quot;45defb0a8ccb4b018a63a2b1d83d3560&quot;,&quot;7f37d3230ca84438bc2e606ff5420398&quot;,&quot;66747f00f05e43ddb93f006f796bd848&quot;,&quot;290152e8eb144b45b9a8440af5a0ad72&quot;,&quot;72f3663004e643c3b5c1d875553f7a85&quot;,&quot;742ac015b83843dc92c296c91fa37a2d&quot;,&quot;ee687297bf324920a96d59fd239376af&quot;,&quot;81e0990a2b6544b4ada7670380f0026d&quot;,&quot;3cb7f29cce2e4e33981e21a63b8d68a8&quot;,&quot;93fcfb0b3cde4be9ab53686d540185dc&quot;,&quot;a1c2ab4545104e32991751359969256b&quot;,&quot;30955bfcd926469bb156915776824383&quot;,&quot;31fa6da0d83d4feeb954072f87594813&quot;,&quot;67a4c2aee1cc4dbe9e83f9e163749c85&quot;,&quot;6813ecb8d2454508a9b67cc3fede9f56&quot;,&quot;76fc6d4eebb340cca8faea1f291d7be4&quot;,&quot;e85137f59be1462c87cf4914ecd4812c&quot;,&quot;b665a90725cb40b5a933e7f1a100469f&quot;,&quot;6251dbe26b804fb5a62e31c5a26d6dc4&quot;,&quot;b78cfbe586194502bd284cc59d77c50e&quot;,&quot;b98f6431092142b49d93dd1378e9aad6&quot;,&quot;529e36661a214306a00ce7e29ad8274c&quot;,&quot;980873b2e8a8456da69a3a4367a5d8a2&quot;,&quot;358ad70a9d43416a974153a116dcd18a&quot;,&quot;1bfc86ce149142daab73850e068c0272&quot;,&quot;5881fab9a70940fe81ef18f79fc041d8&quot;,&quot;9e8dca185f8345e78d6a07b19921bd4e&quot;,&quot;737ffffceb46430bb5ab4c98264c206f&quot;,&quot;a601145a980945f9902ba05f5d765f96&quot;,&quot;c0f117df8c684defb59fefab2d86e058&quot;,&quot;90a355a51fe44e89a5796a2ff187951f&quot;,&quot;e499c0f1334747ad824c5dfbb72c0154&quot;,&quot;b3eedcc59a1d424baf0b02e9d715490d&quot;,&quot;2f685ec61e3f45dc9fab0fab4bfe61e8&quot;,&quot;47eab74adc954e21b525a9b23de15795&quot;,&quot;d4e25a46503c4774a1f18b6591e7e5b0&quot;,&quot;2963603de5744d28bc718f27eb02197b&quot;,&quot;cc65abcd088946259b301340275f863c&quot;,&quot;cffdb5201a374a5abf6684b61be827cc&quot;,&quot;6600068a46f24e649e859f75c793d2b3&quot;,&quot;a96a5a396e9c4d8096420c8a8915e940&quot;,&quot;c6ab282f93294eeaa12fbfbcb3d6de84&quot;,&quot;faff6687c01445ff98c55ae2df1ac9a3&quot;,&quot;0ddbebc7f5a24f259b8339893ada3119&quot;,&quot;d2383191d0f344c88cbb4c6d1e2a9034&quot;,&quot;d842b71badb74ba19aaa9f2cc263843c&quot;,&quot;fd261148acd141aba799e1e675a0074c&quot;,&quot;d84056322a9044de805a7544d0987d1e&quot;,&quot;d8b195458b754dfa82d8050d564988bb&quot;,&quot;76beb1e85af84ec5a914b5a968f2959d&quot;,&quot;9d8c2b39c6e34a28b43f62df878ee250&quot;,&quot;4e5e14b744a343a785c709df4775a088&quot;,&quot;f4ac05af15c148308924c6aa97998065&quot;,&quot;a7298c55e4ba479ca2f81ade0735e583&quot;,&quot;71ed6d769d2d4614b6d8f336df0b5b32&quot;,&quot;a0999bac70c947a3807e3432c1acc8d8&quot;,&quot;3b0994e14943428a9c2ad99253ad8086&quot;,&quot;ba03dcd4912547eda7d5a8dee149f298&quot;,&quot;ba2c8a5aa29a4f989587cf617b2e6281&quot;,&quot;56d6e931c89242ec95eac61eb7ce7b1d&quot;]}"
+data-executionInfo="{&quot;elapsed&quot;:7766,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828691574,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="autsOtguhCYd" data-outputId="85347daf-ffa8-4f71-ba44-9f91f4690ddd">
+<div class="sourceCode" id="cb35"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> TFBertForMaskedLM.from_pretrained(<span class="st">&#39;klue/bert-base&#39;</span>, from_pt<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">&quot;klue/bert-base&quot;</span>)</span></code></pre></div>
+<div class="output display_data">
+<div class="sourceCode" id="cb36"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;041f2cdf8d2c47bfbc0fa6b467878558&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb37"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;742ac015b83843dc92c296c91fa37a2d&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output stream stderr">
+<pre><code>Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFBertForMaskedLM: [&#39;bert.embeddings.position_ids&#39;, &#39;cls.predictions.decoder.bias&#39;]
+- This IS expected if you are initializing TFBertForMaskedLM from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertForMaskedLM from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFBertForMaskedLM were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertForMaskedLM for predictions without further training.
+</code></pre>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb39"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;e85137f59be1462c87cf4914ecd4812c&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb40"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;737ffffceb46430bb5ab4c98264c206f&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb41"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;cffdb5201a374a5abf6684b61be827cc&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb42"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;76beb1e85af84ec5a914b5a968f2959d&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="0VoincGHhaIB">
+<p><br></p>
+<h3 id="bert의-입력">BERT의 입력</h3>
+<ul>
+<li>임의의 문장</li>
+</ul>
+<blockquote>
+<p>'축구는 정말 재미있는 [MASK]다'</p>
+</blockquote>
+<ul>
+<li>마스크드 언어 모델의 입력으로 넣으면, 마스크드 언어 모델은 [MASK]의
+위치에 해당하는 단어를 예측</li>
+<li>문장을 정수 인코딩</li>
+</ul>
+</div>
+<div class="cell code" id="-2peIF-hhlhW">
+<div class="sourceCode" id="cb43"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>inputs <span class="op">=</span> tokenizer(<span class="st">&#39;축구는 정말 재미있는 [MASK]다.&#39;</span>, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828738557,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="CAXJYAcihmYt" data-outputId="fb8c6da2-a3c3-4473-977f-3d459f13ffd6">
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;input_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[   2 4713 2259 3944 6001 2259    4  809   18    3]], shape=(1, 10), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="cs4TXc2shnaO">
+<ul>
+<li>세그먼트 인코딩 결과</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:280,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828755482,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="EepSpO1HhrSt" data-outputId="4d58f125-d329-442b-ba21-444e3fd251e7">
+<div class="sourceCode" id="cb46"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;token_type_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[0 0 0 0 0 0 0 0 0 0]], shape=(1, 10), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="T3a1FmiPhri6">
+<ul>
+<li>어텐션 마스크</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:2,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828771939,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="-JwF3PYMhuYn" data-outputId="dbe30fed-ce30-4e37-fcbe-16428f69bb5c">
+<div class="sourceCode" id="cb48"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(inputs[<span class="st">&#39;attention_mask&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[1 1 1 1 1 1 1 1 1 1]], shape=(1, 10), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="Sc1_ajffhvlK">
+<p><br></p>
+<h3 id="mask-토큰-예측">[MASK] 토큰 예측</h3>
+</div>
+<div class="cell code" id="6N9r9M2qhzfr">
+<div class="sourceCode" id="cb50"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a>pip <span class="op">=</span> FillMaskPipeline(model<span class="op">=</span>model, tokenizer<span class="op">=</span>tokenizer)</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:434,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828795404,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="tUEgE90oh0iR" data-outputId="389ad802-86ac-4467-f171-f2493f39aac8">
+<div class="sourceCode" id="cb51"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb51-1"><a href="#cb51-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;축구는 정말 재미있는 [MASK]다.&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="23">
+<pre><code>[{&#39;score&#39;: 0.8963505625724792,
+  &#39;token&#39;: 4559,
+  &#39;token_str&#39;: &#39;스포츠&#39;,
+  &#39;sequence&#39;: &#39;축구는 정말 재미있는 스포츠 다.&#39;},
+ {&#39;score&#39;: 0.02595764957368374,
+  &#39;token&#39;: 568,
+  &#39;token_str&#39;: &#39;거&#39;,
+  &#39;sequence&#39;: &#39;축구는 정말 재미있는 거 다.&#39;},
+ {&#39;score&#39;: 0.010033959522843361,
+  &#39;token&#39;: 3682,
+  &#39;token_str&#39;: &#39;경기&#39;,
+  &#39;sequence&#39;: &#39;축구는 정말 재미있는 경기 다.&#39;},
+ {&#39;score&#39;: 0.007924407720565796,
+  &#39;token&#39;: 4713,
+  &#39;token_str&#39;: &#39;축구&#39;,
+  &#39;sequence&#39;: &#39;축구는 정말 재미있는 축구 다.&#39;},
+ {&#39;score&#39;: 0.007844232954084873,
+  &#39;token&#39;: 5845,
+  &#39;token_str&#39;: &#39;놀이&#39;,
+  &#39;sequence&#39;: &#39;축구는 정말 재미있는 놀이 다.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:835,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828802383,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="unDjG-0Ph1O3" data-outputId="e1d13f6c-f9a3-43b6-c6c7-f663ce3105d0">
+<div class="sourceCode" id="cb53"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb53-1"><a href="#cb53-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;어벤져스는 정말 재미있는 [MASK]다.&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="24">
+<pre><code>[{&#39;score&#39;: 0.838241696357727,
+  &#39;token&#39;: 3771,
+  &#39;token_str&#39;: &#39;영화&#39;,
+  &#39;sequence&#39;: &#39;어벤져스는 정말 재미있는 영화 다.&#39;},
+ {&#39;score&#39;: 0.028275659307837486,
+  &#39;token&#39;: 568,
+  &#39;token_str&#39;: &#39;거&#39;,
+  &#39;sequence&#39;: &#39;어벤져스는 정말 재미있는 거 다.&#39;},
+ {&#39;score&#39;: 0.017189301550388336,
+  &#39;token&#39;: 4665,
+  &#39;token_str&#39;: &#39;드라마&#39;,
+  &#39;sequence&#39;: &#39;어벤져스는 정말 재미있는 드라마 다.&#39;},
+ {&#39;score&#39;: 0.01498968992382288,
+  &#39;token&#39;: 3758,
+  &#39;token_str&#39;: &#39;이야기&#39;,
+  &#39;sequence&#39;: &#39;어벤져스는 정말 재미있는 이야기 다.&#39;},
+ {&#39;score&#39;: 0.00938261579722166,
+  &#39;token&#39;: 4938,
+  &#39;token_str&#39;: &#39;장소&#39;,
+  &#39;sequence&#39;: &#39;어벤져스는 정말 재미있는 장소 다.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:435,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828807533,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="m9aev8dTh21e" data-outputId="28af8dc4-2160-46ee-a8dd-beaef58d017a">
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a>pip(<span class="st">&#39;나는 오늘 아침에 [MASK]에 출근을 했다.&#39;</span>)</span></code></pre></div>
+<div class="output execute_result" data-execution_count="25">
+<pre><code>[{&#39;score&#39;: 0.08012574166059494,
+  &#39;token&#39;: 3769,
+  &#39;token_str&#39;: &#39;회사&#39;,
+  &#39;sequence&#39;: &#39;나는 오늘 아침에 회사 에 출근을 했다.&#39;},
+ {&#39;score&#39;: 0.06124085560441017,
+  &#39;token&#39;: 1,
+  &#39;token_str&#39;: &#39;[UNK]&#39;,
+  &#39;sequence&#39;: &#39;나는 오늘 아침에 에 출근을 했다.&#39;},
+ {&#39;score&#39;: 0.0174866896122694,
+  &#39;token&#39;: 4345,
+  &#39;token_str&#39;: &#39;공장&#39;,
+  &#39;sequence&#39;: &#39;나는 오늘 아침에 공장 에 출근을 했다.&#39;},
+ {&#39;score&#39;: 0.016131814569234848,
+  &#39;token&#39;: 5841,
+  &#39;token_str&#39;: &#39;사무실&#39;,
+  &#39;sequence&#39;: &#39;나는 오늘 아침에 사무실 에 출근을 했다.&#39;},
+ {&#39;score&#39;: 0.015360787510871887,
+  &#39;token&#39;: 3671,
+  &#39;token_str&#39;: &#39;서울&#39;,
+  &#39;sequence&#39;: &#39;나는 오늘 아침에 서울 에 출근을 했다.&#39;}]</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="LWdsuWlBiIQe">
+<p><br></p>
+<h2 id="구글-bert의-다음-문장-예측next-sentence-prediction">구글 BERT의
+다음 문장 예측(Next Sentence Prediction)</h2>
+</div>
+<div class="cell markdown" id="CXuxg3--iIU_">
+<p><br></p>
+<h3 id="다음-문장-예측-모델과-토크나이저">다음 문장 예측 모델과
+토크나이저</h3>
+<ul>
+<li><code>transformers</code> 패키지를 사용하여 모델과 토크나이저를
+로드</li>
+<li>BERT는 이미 누군가가 학습해둔 모델을 사용하는 것이므로 우리가
+사용하는 모델과 토크나이저는 항상 맵핑 관계여야힘</li>
+</ul>
+</div>
+<div class="cell code" id="GUGNU0xHiQEk">
+<div class="sourceCode" id="cb57"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb57-1"><a href="#cb57-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb57-2"><a href="#cb57-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> TFBertForNextSentencePrediction</span>
+<span id="cb57-3"><a href="#cb57-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> transformers <span class="im">import</span> AutoTokenizer</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:270,&quot;referenced_widgets&quot;:[&quot;2035f556855f44fb9f5a3b3bb4be64d6&quot;,&quot;414c74ed09504b608da129a6eadeb844&quot;,&quot;798c3f64ff824c6ea8295d178337e8c8&quot;,&quot;d25e67ec79d747559589e0ef21bd0809&quot;,&quot;e223cb1e3fd2486aa04869daec57ed3d&quot;,&quot;67b451b1a10d4195bdf19a3972fd66c3&quot;,&quot;2a7b26903e2c4bae8d1108b9f2fd3b72&quot;,&quot;f6170c4c441948469d6b6414da22afd7&quot;,&quot;f2b5c90dd3944556867e59fcd8f405c3&quot;,&quot;106fce840f7645eea2cfdbc0c1ec055e&quot;,&quot;bac1f2ef438343308fe128794161aa7e&quot;,&quot;85fd3987d2ee40ff833dcbe9f0a453a4&quot;,&quot;f6693efc98d64407a91ab968fa395731&quot;,&quot;9beb59b44668494d945a443435b2a5bb&quot;,&quot;a11d6c4a5741411c9968b4683d1c9ed7&quot;,&quot;1e26f198b51f49288225b23937aed59d&quot;,&quot;3a20c8598d2d4eadad4311786031e72e&quot;,&quot;db24a6682f204efcb74573b6d930e09c&quot;,&quot;b19c0a4b0f504c07b45650ceab3e39cb&quot;,&quot;ef01ce409c514a548be57839bc093d4a&quot;,&quot;3ccf256656204da1986d4f066085e769&quot;,&quot;114317bf2d6741748b8ea2834853a11c&quot;,&quot;6e580b940a9140b7a637190a9e08d1c7&quot;,&quot;779aec015e7845a8a5e80c10b5214eaf&quot;,&quot;61a830970be449ae9647a92c0ca253c8&quot;,&quot;2976178501274ba49f65106d0283ad53&quot;,&quot;4e26bdb1a95f4ee8a08baef484e072ce&quot;,&quot;182be734cd5e417084eab1fb688124f1&quot;,&quot;156d8141f85c44c69dd78bfb17ffd73c&quot;,&quot;b4264c3eb4be46f8bcc73d8b644048e9&quot;,&quot;67c36db3fd8c47c3b16910ca2830fffa&quot;,&quot;df4d5894d5bc4bb78308c49d9d69a127&quot;,&quot;8dae69708cfd4ef394be4c90518b4da0&quot;,&quot;9b9d644e4dc14b3fa698628ed6900edc&quot;,&quot;33619fede7ba43cc80c5c67e27c49534&quot;,&quot;8ecee100d235401b83c80a0c86c3c802&quot;,&quot;48f36ef4f3c54aba9495cfc37494f83e&quot;,&quot;7f7083fd7f3d4df8813a5c87732f137d&quot;,&quot;e915a83fe57f4227a7994cd56457a82c&quot;,&quot;33a5b97ec91c4eb7bc49b062c399325c&quot;,&quot;4eee061fae8147e59cc60810115f2a60&quot;,&quot;dd872e0ee44c4fb499f8050d5d5913ea&quot;,&quot;ce4121c1251d4500bf4ccef1751a51e5&quot;,&quot;4fe1646026af4eaea5f00ee853a44dc4&quot;,&quot;77faf2914187454a897af21777affd18&quot;,&quot;d752267c2a5447b7a8e1a0476706d9ed&quot;,&quot;2d5070f519394248a2e05c55624d91eb&quot;,&quot;acfed6299de04e9cab873c198b6ee6ef&quot;,&quot;67b91f2b62c74b89b489f63dced37975&quot;,&quot;f4235288c9b04a8ba3a7462c407b8924&quot;,&quot;5c0ee617e8d34cb9bed69b9ea38715c5&quot;,&quot;91be934b690549fca602d02a43654228&quot;,&quot;1664a30f0ad9408f86c41a3f15d076ef&quot;,&quot;1b55260fead54dc486dbb3eadefa70ed&quot;,&quot;4caadb9e845442d09bb4e4a5fe20aaea&quot;]}"
+data-executionInfo="{&quot;elapsed&quot;:11284,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707828953149,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="caglQIfpiYzi" data-outputId="bd447c47-6de8-410c-c7b3-c0d719c16bac">
+<div class="sourceCode" id="cb58"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> TFBertForNextSentencePrediction.from_pretrained(<span class="st">&#39;bert-base-uncased&#39;</span>)</span>
+<span id="cb58-2"><a href="#cb58-2" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">&#39;bert-base-uncased&#39;</span>)</span></code></pre></div>
+<div class="output display_data">
+<div class="sourceCode" id="cb59"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb59-1"><a href="#cb59-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;2035f556855f44fb9f5a3b3bb4be64d6&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb60"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;85fd3987d2ee40ff833dcbe9f0a453a4&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output stream stderr">
+<pre><code>All PyTorch model weights were used when initializing TFBertForNextSentencePrediction.
+
+All the weights of TFBertForNextSentencePrediction were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertForNextSentencePrediction for predictions without further training.
+</code></pre>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb62"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;6e580b940a9140b7a637190a9e08d1c7&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb63"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb63-1"><a href="#cb63-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;9b9d644e4dc14b3fa698628ed6900edc&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+<div class="output display_data">
+<div class="sourceCode" id="cb64"><pre
+class="sourceCode json"><code class="sourceCode json"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span><span class="dt">&quot;model_id&quot;</span><span class="fu">:</span><span class="st">&quot;77faf2914187454a897af21777affd18&quot;</span><span class="fu">,</span><span class="dt">&quot;version_major&quot;</span><span class="fu">:</span><span class="dv">2</span><span class="fu">,</span><span class="dt">&quot;version_minor&quot;</span><span class="fu">:</span><span class="dv">0</span><span class="fu">}</span></span></code></pre></div>
+</div>
+</div>
+<div class="cell markdown" id="EfXbIbM6iZKU">
+<p><br></p>
+<h3 id="bert의-입력">BERT의 입력</h3>
+<ul>
+<li>문맥 상으로 실제로 이어지는 두 개의 문장</li>
+</ul>
+</div>
+<div class="cell code" id="jrnVS4yCieDm">
+<div class="sourceCode" id="cb65"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb65-1"><a href="#cb65-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced.&quot;</span></span>
+<span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a>next_sentence <span class="op">=</span> <span class="st">&quot;pizza is eaten with the use of a knife and fork. In casual settings, however, it is cut into wedges to be eaten while held in the hand.&quot;</span></span></code></pre></div>
+</div>
+<div class="cell markdown" id="B_O2DQY2ifK0">
+<ul>
+<li>두 개의 문장을 정수 인코딩</li>
+</ul>
+</div>
+<div class="cell code" id="kr5r6NkIikVh">
+<div class="sourceCode" id="cb66"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>encoding <span class="op">=</span> tokenizer(prompt, next_sentence, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell markdown" id="4uBifgcxik_N">
+<ul>
+<li>정수 인코딩 결과 확인 (<code>input_ids</code>)
+<ul>
+<li><strong>101과 102는 각각 [CLS], [SEP]토큰의 정수 인코딩 (특별
+토큰)</strong></li>
+</ul></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:398,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829023797,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="Dx_TLnctiru7" data-outputId="9bfb35cc-cf67-4045-8bf1-609acf50acee">
+<div class="sourceCode" id="cb67"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encoding[<span class="st">&#39;input_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor(
+[[  101  1999  3304  1010 10733  2366  1999  5337 10906  1010  2107  2004
+   2012  1037  4825  1010  2003  3591  4895 14540  6610  2094  1012   102
+  10733  2003  8828  2007  1996  2224  1997  1037  5442  1998  9292  1012
+   1999 10017 10906  1010  2174  1010  2009  2003  3013  2046 17632  2015
+   2000  2022  8828  2096  2218  1999  1996  2192  1012   102]], shape=(1, 58), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:269,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829068958,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="O5AVmfSEi1Qp" data-outputId="11a2bca7-c1b7-4122-b569-fee8149ed1a5">
+<div class="sourceCode" id="cb69"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.cls_token, <span class="st">&#39;:&#39;</span>, tokenizer.cls_token_id)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[CLS] : 101
+</code></pre>
+</div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:3,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829070202,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="Pzz2c8zZi4IL" data-outputId="b85d0500-ff72-4876-bba1-581bc6c4d24f">
+<div class="sourceCode" id="cb71"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.sep_token, <span class="st">&#39;:&#39;</span> , tokenizer.sep_token_id)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[SEP] : 102
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="mICBtgw4i5OG">
+<ul>
+<li>위의 정수 인코딩 결과를 다시 인코딩 <span
+class="math inline">→</span> 현재 입력의 구성을 확인</li>
+<li>BERT에서 두 개의 문장이 입력으로 들어갈 경우에는 맨 앞에는 [CLS]
+토큰이 존재</li>
+<li>첫번째 문장이 끝나면 [SEP] 토큰, 그리고 두번째 문장이 종료되었을 때
+다시 추가적으로 [SEP] 토큰이 추가</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:302,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829105191,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="6VOHmvPujASj" data-outputId="7d579bf5-99c6-4066-b68b-e05a2777d2e3">
+<div class="sourceCode" id="cb73"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(tokenizer.decode(encoding[<span class="st">&#39;input_ids&#39;</span>][<span class="dv">0</span>]))</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>[CLS] in italy, pizza served in formal settings, such as at a restaurant, is presented unsliced. [SEP] pizza is eaten with the use of a knife and fork. in casual settings, however, it is cut into wedges to be eaten while held in the hand. [SEP]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="79k2CjDLjA9w">
+<ul>
+<li><p>문장을 구분하는 세그먼트 인코딩 결과를 확인
+(<code>token_type_ids</code>)</p></li>
+<li><p>0이 연속적으로 등장하다가 어느 순간부터 1이 연속적으로 등장</p>
+<p><span class="math inline">→</span> [CLS] 토큰의 위치부터 첫번째
+문장이 끝나고나서 등장한 [SEP] 토큰까지의 위치에는 0</p>
+<p><span class="math inline">→</span> 다음 두번째 문장부터는 1이
+등장</p></li>
+<li><p><code>token_type_ids</code>에서는 0과 1로 두 개의 문장을
+구분</p></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:254,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829117200,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="TsZCbwHbjDFL" data-outputId="466e055f-6893-47ae-e8f2-a3991726cdb7">
+<div class="sourceCode" id="cb75"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(encoding[<span class="st">&#39;token_type_ids&#39;</span>])</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor(
+[[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1
+  1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1]], shape=(1, 58), dtype=int32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="3Zhnqu2SjDIW">
+<p><br></p>
+<h3 id="다음-문장-예측">다음 문장 예측</h3>
+<ul>
+<li><code>TFBertForNextSentencePrediction</code>를 통해서 다음 문장을
+예측</li>
+<li><strong>모델에 입력을 넣으면, 해당 모델은 소프트맥스 함수를 지나기
+전의 값인 logits을 리턴</strong></li>
+<li>해당 값을 소프트맥스 함수를 통과시킨 후에 각 레이블에 대한 확률값을
+출력</li>
+</ul>
+<p><br></p>
+<h4 id="이어진-두-개의-문장">이어진 두 개의 문장</h4>
+</div>
+<div class="cell code" id="xyrq01FPkAVG">
+<div class="sourceCode" id="cb77"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb77-1"><a href="#cb77-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> TFBertForNextSentencePrediction.from_pretrained(<span class="st">&#39;bert-base-uncased&#39;</span>)</span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:706,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829363038,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="c3cVBFfkjDLY" data-outputId="d251c0c2-fe68-44a0-f45b-9f482b743e1b">
+<div class="sourceCode" id="cb78"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(encoding[<span class="st">&#39;input_ids&#39;</span>], token_type_ids<span class="op">=</span>encoding[<span class="st">&#39;token_type_ids&#39;</span>])[<span class="dv">0</span>]</span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>softmax <span class="op">=</span> tf.keras.layers.Softmax()</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> softmax(logits)</span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(probs)</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>tf.Tensor([[9.9999714e-01 2.8381912e-06]], shape=(1, 2), dtype=float32)
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="h56SfI6Cj1Nd">
+<ul>
+<li><p><strong>0번 인덱스에 대한 확률값이 1번 인덱스에 대한 확률값보다
+훨씬 높음</strong></p>
+<p><span class="math inline">→</span> <strong>실질적으로 모델이 예측한
+레이블은 0</strong></p>
+<p><span class="math inline">→</span> 두 개의 값 중 더 큰 값을 모델의
+예측값으로 판단하도록, 더 큰 확률값을 가진 인덱스를 리턴</p></li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:311,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829434445,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="maiUP8XSkQqX" data-outputId="ee46369c-139d-449e-8b13-901ecadeb807">
+<div class="sourceCode" id="cb80"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb80-1"><a href="#cb80-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;최종 예측 레이블 :&#39;</span>, tf.math.argmax(probs, axis<span class="op">=-</span><span class="dv">1</span>).numpy())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>최종 예측 레이블 : [0]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="U9WmrMqzkV25">
+<ul>
+<li><p>최종 예측 레이블은 0</p>
+<p><span class="math inline">→</span> <strong>BERT가 다음 문장 예측을
+학습했을 당시, 실질적으로 이어지는 두 개의 문장의 레이블은 0. 이어지지
+않는 두 개의 문장의 경우에는 레이블을 1로 두고서 이진 분류로
+학습</strong></p>
+<p><span class="math inline">→</span> <strong>두 입력 문장은 서로 이어진
+문장</strong></p></li>
+</ul>
+</div>
+<div class="cell markdown" id="zEjmZIrhkV6Z">
+<p><br></p>
+<h4 id="이어지지-않는-두-개의-문장">이어지지 않는 두 개의 문장</h4>
+</div>
+<div class="cell code" id="sXzco2Xak695">
+<div class="sourceCode" id="cb82"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb82-1"><a href="#cb82-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;In Italy, pizza served in formal settings, such as at a restaurant, is presented unsliced.&quot;</span></span>
+<span id="cb82-2"><a href="#cb82-2" aria-hidden="true" tabindex="-1"></a>next_sentence <span class="op">=</span> <span class="st">&quot;The sky is blue due to the shorter wavelength of blue light.&quot;</span></span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:312,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829610978,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="_fJyVLYLkV9P" data-outputId="93a3e93c-d9f9-4671-e1d1-e08034256b37">
+<div class="sourceCode" id="cb83"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb83-1"><a href="#cb83-1" aria-hidden="true" tabindex="-1"></a>encoding <span class="op">=</span> tokenizer(prompt, next_sentence, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span>
+<span id="cb83-2"><a href="#cb83-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(encoding[<span class="st">&#39;input_ids&#39;</span>], token_type_ids<span class="op">=</span>encoding[<span class="st">&#39;token_type_ids&#39;</span>])[<span class="dv">0</span>]</span>
+<span id="cb83-3"><a href="#cb83-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb83-4"><a href="#cb83-4" aria-hidden="true" tabindex="-1"></a>softmax <span class="op">=</span> tf.keras.layers.Softmax()</span>
+<span id="cb83-5"><a href="#cb83-5" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> softmax(logits)</span>
+<span id="cb83-6"><a href="#cb83-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;최종 예측 레이블 :&#39;</span>, tf.math.argmax(probs, axis<span class="op">=-</span><span class="dv">1</span>).numpy())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>최종 예측 레이블 : [1]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="j2g-NL7Xk-Oc">
+<p><br></p>
+<h2 id="한국어-bert의-다음-문장-예측next-sentence-prediction">한국어
+BERT의 다음 문장 예측(Next Sentence Prediction)</h2>
+<ul>
+<li>모델과 해당 모델이 학습되었을 당시에 사용되었던 토크나이저를
+로드</li>
+</ul>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:2131,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829637550,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="V3wXzayBlCKs" data-outputId="b477c9b0-be10-43e1-c03f-b2ebf4e369a6">
+<div class="sourceCode" id="cb85"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb85-1"><a href="#cb85-1" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> TFBertForNextSentencePrediction.from_pretrained(<span class="st">&#39;klue/bert-base&#39;</span>, from_pt<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb85-2"><a href="#cb85-2" aria-hidden="true" tabindex="-1"></a>tokenizer <span class="op">=</span> AutoTokenizer.from_pretrained(<span class="st">&quot;klue/bert-base&quot;</span>)</span></code></pre></div>
+<div class="output stream stderr">
+<pre><code>Some weights of the PyTorch model were not used when initializing the TF 2.0 model TFBertForNextSentencePrediction: [&#39;bert.embeddings.position_ids&#39;]
+- This IS expected if you are initializing TFBertForNextSentencePrediction from a PyTorch model trained on another task or with another architecture (e.g. initializing a TFBertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing TFBertForNextSentencePrediction from a PyTorch model that you expect to be exactly identical (e.g. initializing a TFBertForSequenceClassification model from a BertForSequenceClassification model).
+All the weights of TFBertForNextSentencePrediction were initialized from the PyTorch model.
+If your task is similar to the task the model of the checkpoint was trained on, you can already use TFBertForNextSentencePrediction for predictions without further training.
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="r6DsM8sglCfZ">
+<p><br></p>
+<h3 id="다음-문장-예측">다음 문장 예측</h3>
+<p><br></p>
+<h4 id="이어지는-두-개의-문장">이어지는 두 개의 문장</h4>
+</div>
+<div class="cell code" id="bit2kUEalRgX">
+<div class="sourceCode" id="cb87"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;2002년 월드컵 축구대회는 일본과 공동으로 개최되었던 세계적인 큰 잔치입니다.&quot;</span></span>
+<span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a>next_sentence <span class="op">=</span> <span class="st">&quot;여행을 가보니 한국의 2002년 월드컵 축구대회의 준비는 완벽했습니다.&quot;</span></span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:412,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829706211,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="xe2A0OZflObB" data-outputId="fc6adf9c-cdf6-45ae-a590-9da3315ed3e3">
+<div class="sourceCode" id="cb88"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>encoding <span class="op">=</span> tokenizer(prompt, next_sentence, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span>
+<span id="cb88-2"><a href="#cb88-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(encoding[<span class="st">&#39;input_ids&#39;</span>], token_type_ids<span class="op">=</span>encoding[<span class="st">&#39;token_type_ids&#39;</span>])[<span class="dv">0</span>]</span>
+<span id="cb88-3"><a href="#cb88-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb88-4"><a href="#cb88-4" aria-hidden="true" tabindex="-1"></a>softmax <span class="op">=</span> tf.keras.layers.Softmax()</span>
+<span id="cb88-5"><a href="#cb88-5" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> softmax(logits)</span>
+<span id="cb88-6"><a href="#cb88-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;최종 예측 레이블 :&#39;</span>, tf.math.argmax(probs, axis<span class="op">=-</span><span class="dv">1</span>).numpy())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>최종 예측 레이블 : [0]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="1mPM1Vr-lTrL">
+<p><br></p>
+<h4 id="이어지지-않는-두-개의-문장">이어지지 않는 두 개의 문장</h4>
+</div>
+<div class="cell code" id="ApD_dS-olXOu">
+<div class="sourceCode" id="cb90"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>prompt <span class="op">=</span> <span class="st">&quot;2002년 월드컵 축구대회는 일본과 공동으로 개최되었던 세계적인 큰 잔치입니다.&quot;</span></span>
+<span id="cb90-2"><a href="#cb90-2" aria-hidden="true" tabindex="-1"></a>next_sentence <span class="op">=</span> <span class="st">&quot;극장가서 로맨스 영화를 보고싶어요&quot;</span></span></code></pre></div>
+</div>
+<div class="cell code"
+data-colab="{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;}"
+data-executionInfo="{&quot;elapsed&quot;:696,&quot;status&quot;:&quot;ok&quot;,&quot;timestamp&quot;:1707829731983,&quot;user&quot;:{&quot;displayName&quot;:&quot;Chansol Lee&quot;,&quot;userId&quot;:&quot;00125168842077564815&quot;},&quot;user_tz&quot;:-540}"
+id="3V0uN9wflZQS" data-outputId="429282be-85b8-427b-c66a-0bc14c26d44e">
+<div class="sourceCode" id="cb91"><pre
+class="sourceCode python"><code class="sourceCode python"><span id="cb91-1"><a href="#cb91-1" aria-hidden="true" tabindex="-1"></a>encoding <span class="op">=</span> tokenizer(prompt, next_sentence, return_tensors<span class="op">=</span><span class="st">&#39;tf&#39;</span>)</span>
+<span id="cb91-2"><a href="#cb91-2" aria-hidden="true" tabindex="-1"></a>logits <span class="op">=</span> model(encoding[<span class="st">&#39;input_ids&#39;</span>], token_type_ids<span class="op">=</span>encoding[<span class="st">&#39;token_type_ids&#39;</span>])[<span class="dv">0</span>]</span>
+<span id="cb91-3"><a href="#cb91-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb91-4"><a href="#cb91-4" aria-hidden="true" tabindex="-1"></a>softmax <span class="op">=</span> tf.keras.layers.Softmax()</span>
+<span id="cb91-5"><a href="#cb91-5" aria-hidden="true" tabindex="-1"></a>probs <span class="op">=</span> softmax(logits)</span>
+<span id="cb91-6"><a href="#cb91-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;최종 예측 레이블 :&#39;</span>, tf.math.argmax(probs, axis<span class="op">=-</span><span class="dv">1</span>).numpy())</span></code></pre></div>
+<div class="output stream stdout">
+<pre><code>최종 예측 레이블 : [1]
+</code></pre>
+</div>
+</div>
+<div class="cell markdown" id="kgwXCuOmw-cH">
+<p><br></p>
+<hr>
+<p><br></p>
+<h2 id="센텐스버트sentence-bert-sbert">센텐스버트(Sentence BERT,
+SBERT)</h2>
+<ul>
+<li>BERT로부터 문장 임베딩을 얻을 수 있는 센텐스버트(Sentence BERT,
+SBERT)</li>
+</ul>
+<p><br></p>
+<h3 id="bert의-문장-임베딩">BERT의 문장 임베딩</h3>
+<ul>
+<li><p>BERT로부터 문장 벡터를 얻는 방법은 여러가지 방법이 존재</p></li>
+<li><p><strong>사전 학습된 BERT로부터 문장 벡터를 얻는 방법은 다음과
+같이 세 가지</strong></p></li>
+</ul>
+<ol>
+<li>BERT의 [CLS] 토큰의 출력 벡터를 문장 벡터로 간주한다.</li>
+<li>BERT의 모든 단어의 출력 벡터에 대해서 평균 풀링을 수행한 벡터를 문장
+벡터로 간주한다.</li>
+<li>BERT의 모든 단어의 출력 벡터에 대해서 맥스 풀링을 수행한 벡터를 문장
+벡터로 간주한다.</li>
+</ol>
+<p><br></p>
+<h4 id="1">1)</h4>
+<ul>
+<li><p>만약 사전 학습된 BERT에 'I love you'라는 문장이 입력된다고 하였을
+때,</p>
+<p><strong>이 문장에 대한 벡터를 얻는 첫번째 방법은 [CLS] 토큰의 출력
+벡터를 문장 벡터로 간주하는 것</strong></p></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/156176/%EA%B7%B8%EB%A6%BC1.PNG'></p>
+<ul>
+<li><p>앞서 BERT로 텍스트 분류 문제에서 [CLS] 토큰의 출력 벡터를,
+출력층의 입력으로 사용했던 점에 따라</p>
+<p><strong>이는 [CLS] 토큰이 입력된 문장에 대한 총체적 표현이라고
+간주</strong></p>
+<p><span class="math inline">→</span> <strong>다시 말해 [CLS] 토큰
+자체를 입력 문장의 벡터로 간주할 수 있음</strong></p></li>
+</ul>
+<p><br></p>
+<h4 id="2">2)</h4>
+<p><img src='https://wikidocs.net/images/page/156176/%EA%B7%B8%EB%A6%BC2.PNG'></p>
+<ul>
+<li><p><strong>문장 벡터를 얻는 두번째 방법은 [CLS] 토큰만을 사용하는
+것이 아니라 BERT의 모든 출력 벡터들을 평균내는 것</strong></p></li>
+<li><p>단어 벡터들의 평균을 문장 벡터로 간주할 수 있으며, 이는
+BERT에서도 적용</p>
+<ul>
+<li>BERT의 각 단어에 대한 출력 벡터들에 대해서 평균을 내고 이를 문장
+벡터 간주</li>
+</ul></li>
+<li><p>위 그림에서는 출력 벡터들의 평균을 'pooling'이라고 표현</p>
+<p><span class="math inline">→</span> 이를 평균 풀링(mean pooling)으로
+표현</p></li>
+</ul>
+<p><br></p>
+<h4 id="3">3)</h4>
+<ul>
+<li><p><strong>세번째 방법은 BERT의 각 단어의 출력 벡터들에 대해서 평균
+풀링 대신 맥스 풀링을 진행한 벡터를 얻는 것</strong></p></li>
+<li><p><strong>이때 평균 풀링을 하느냐와 맥스 풀링을 하느냐에 따라서
+해당 문장 벡터가 가지는 의미는 다소 다름</strong></p>
+<ul>
+<li><p><strong>평균 풀링을 얻은 문장 벡터의 경우에는 모든 단어의 의미를
+반영하는 쪽에 가깝다면,</strong></p>
+<p><strong>맥스 풀링을 얻은 문장 벡터의 경우에는 중요한 단어의 의미를
+반영하는 쪽</strong></p></li>
+</ul></li>
+</ul>
+<p><br></p>
+<h3 id="sbert센텐스버트-sentence-bert">SBERT(센텐스버트,
+Sentence-BERT)</h3>
+<ul>
+<li>SBERT는 기본적으로 BERT의 문장 임베딩의 성능을 우수하게 개선시킨
+모델</li>
+<li>SBERT는 위에서 언급한 BERT의 문장 임베딩을 응용하여 BERT를 파인
+튜닝</li>
+</ul>
+<p><br></p>
+<h4 id="1-문장-쌍-분류-태스크로-파인-튜닝">1) 문장 쌍 분류 태스크로 파인
+튜닝</h4>
+<ul>
+<li>SBERT를 학습하는 첫번째 방법은 문장 쌍 분류 태스크</li>
+<li>대표적으로는 NLI(Natural Language Inferencing) 문제
+<ul>
+<li><strong>NLI는 두 개의 문장이 주어지면 수반(entailment) 관계인지,
+모순(contradiction) 관계인지, 중립(neutral) 관계인지를 맞추는
+문제</strong></li>
+</ul></li>
+<li>NLI 데이터의 예시입니다.</li>
+</ul>
+<p><br></p>
+<table>
+<thead>
+<tr>
+<th>문장 A</th>
+<th>문장 B</th>
+<th>레이블</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A lady sits on a bench that is against a shopping mall.</td>
+<td>A person sits on the seat.</td>
+<td>Entailment</td>
+</tr>
+<tr>
+<td>A lady sits on a bench that is against a shopping mall.</td>
+<td>A woman is sitting against a building.</td>
+<td>Entailment</td>
+</tr>
+<tr>
+<td>A lady sits on a bench that is against a shopping mall.</td>
+<td>Nobody is sitting on the bench.</td>
+<td>Contradiction</td>
+</tr>
+<tr>
+<td>Two women are embracing while holding to go packages.</td>
+<td>The sisters are hugging goodbye while holding to go packages after just eating lunch.</td>
+<td>Neutral</td>
+</tr>
+</tbody>
+</table>
+<p><br></p>
+<ul>
+<li>SBERT는 NLI 데이터를 학습하기 위해 다음과 같은 구조를 가짐</li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/156176/%EA%B7%B8%EB%A6%BC3.PNG'></p>
+<ul>
+<li><p>우선 문장 A와 문장 B 각각을 BERT의 입력으로 넣고,</p>
+<p><span class="math inline">→</span> 앞서 BERT의 문장 임베딩을 얻기위한
+방식이라고 언급했던 평균 풀링 또는 맥스 풀링을 통해서 각각에 대한 문장
+임베딩 벡터를 얻음 (각각 u와 v)</p>
+<p><span class="math inline">→</span> u벡터와 v벡터의 차이 벡터를 구함
+(|u-v|)</p>
+<p><span class="math inline">→</span>이 세 가지 벡터를
+연결(concatenation)</p>
+<p>세미콜론(;)을 연결 기호로 한다면 연결된 벡터의 수식은</p></li>
+</ul>
+<p><span
+class="math display"><em>h</em> = (<em>u</em>;<em>v</em>;|<em>u</em>−<em>v</em>|)</span></p>
+<ul>
+<li>만약 BERT의 문장 임베딩 벡터의 차원이 <span
+class="math inline"><em>n</em></span>이라면 세 개의 벡터를 연결한 벡터
+<span class="math inline"><em>h</em></span>의 차원은 <span
+class="math inline">3<em>n</em></span></li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/156176/%EA%B7%B8%EB%A6%BC4.PNG'></p>
+<ul>
+<li><strong>그리고 이 벡터를 출력층으로 보내 다중 클래스 분류 문제로
+전환</strong></li>
+<li><strong>다시 말해 분류하고자 하는 클래스의 개수가 <span
+class="math inline"><em>k</em></span>라면, 가중치 행렬 <span
+class="math inline">3<em>n</em> × <em>k</em></span>의 크기를 가지는 행렬
+<span class="math inline"><em>W</em><sub><em>y</em></sub></span>을 곱한
+후에 소프트맥스 함수를 통과시키는 것으로 볼 수 있음</strong></li>
+</ul>
+<p><span
+class="math display"><em>o</em> = <em>s</em><em>o</em><em>f</em><em>t</em><em>m</em><em>a</em><em>x</em>(<em>W</em><sub><em>y</em></sub><em>h</em>)</span></p>
+<ul>
+<li>마지막으로 실제값에 해당하는 레이블로부터 오차를 줄이는 방식으로
+학습</li>
+</ul>
+</div>
+<div class="cell markdown" id="bENepTJlx0DR">
+<p><br></p>
+<h4 id="2-문장-쌍-회귀-태스크로-파인-튜닝">2) 문장 쌍 회귀 태스크로 파인
+튜닝</h4>
+<ul>
+<li><p>SBERT를 학습하는 두번째 방법은 문장 쌍으로 회귀 문제를 푸는
+것</p>
+<ul>
+<li>대표적으로 STS(Semantic Textual Similarity) 문제</li>
+</ul></li>
+<li><p><strong>STS란 두 개의 문장으로부터 의미적 유사성을 구하는
+문제</strong></p></li>
+<li><p>다음은 STS 데이터의 예시</p>
+<ul>
+<li>여기서 레이블은 두 문장의 유사도로 범위값은 0~5</li>
+</ul></li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>문장 A</th>
+<th>문장 B</th>
+<th>레이블</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A plane is taking off.</td>
+<td>An air plane is taking off.</td>
+<td>5.00</td>
+</tr>
+<tr>
+<td>A man is playing a large flute.</td>
+<td>A man is playing a flute.</td>
+<td>3.80</td>
+</tr>
+<tr>
+<td>A man is spreading shreded cheese on a pizza.</td>
+<td>A man is spreading shredded cheese on an uncoo...</td>
+<td>3.80</td>
+</tr>
+<tr>
+<td>Three men are playing chess.</td>
+<td>Two men are playing chess.</td>
+<td>2.60</td>
+</tr>
+<tr>
+<td>A man is playing the cello.</td>
+<td>A man seated is playing the cello.</td>
+<td>4.25</td>
+</tr>
+</tbody>
+</table>
+<p><a href="https://github.com/kakaobrain/KorNLUDatasets">한국어 버전의
+STS 데이터셋인 KorSTS 데이터셋</a></p>
+</div>
+<div class="cell markdown" id="gWqf8L71yGJl">
+<p><br></p>
+<ul>
+<li>SBERT는 STS 데이터를 학습하기 위해 다음과 같은 구조를 가짐</li>
+</ul>
+<p><img src='https://wikidocs.net/images/page/156176/%EA%B7%B8%EB%A6%BC5.PNG'></p>
+<ul>
+<li><p>문장 A와 문장 B 각각을 BERT의 입력으로 넣고,</p>
+<p><span class="math inline">→</span> 평균 풀링 또는 맥스 풀링을 통해서
+각각에 대한 문장 임베딩 벡터를 얻음 (각각 u와 v)</p>
+<p><span class="math inline">→</span> 이 두 벡터의 코사인 유사도를
+구함</p>
+<p><span class="math inline">→</span> 해당 유사도와 레이블 유사도와의
+평균 제곱 오차(Mean Squared Error, MSE)를 최소화하는 방식으로 학습</p>
+<p><span class="math inline">→</span> 코사인 유사도의 값의 범위는 -1과
+1사이므로 위 데이터와 같이 레이블 스코어의 범위가 0~5점라면, 학습 전
+해당 레이블들의 값들을 5로 나누어 값의 범위를 줄인 후 학습</p></li>
+<li><p>선택에 따라</p>
+<p><strong>1) 문장 쌍 분류 태스크로만 파인 튜닝 할 수도
+있고,</strong></p>
+<p><strong>2) 문장 쌍 회귀 태스크로만 파인 튜닝 할 수도
+있으며,</strong></p>
+<p><strong>1)을 학습한 후에 2)를 학습하는 전략을 세울 수도
+있음</strong></p></li>
+</ul>
+</div>
+</body>
+</html>
