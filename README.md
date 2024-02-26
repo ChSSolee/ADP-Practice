@@ -36,6 +36,6 @@
 
 ### [NLP with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/NLP%20with%20Python)
 
-### [Audio Preprocessing with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Audio%20Preprocessing%20with%20Python)
+### [Audio Processing with Python](https://github.com/ChSSolee/ADP-Practice/tree/main/Audio%20Preprocessing%20with%20Python)
 
 
