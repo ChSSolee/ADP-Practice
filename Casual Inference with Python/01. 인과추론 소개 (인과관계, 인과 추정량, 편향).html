@@ -15055,7 +15055,7 @@ $$IsOnSales\;\leftarrow f_1 (u_1) \\ AmountSold\;\leftarrow f_y(IsOnSales, u_y)$
 </li>
 </ul>
 $$BusinessSize \leftarrow f_s(u_s)\\IsOnSales \leftarrow f_t(BusinessSize, u_t) \\ AmountSold \leftarrow f_y(IsOnSales, BusinessSize, u_y)$$<ul>
-<li><p>첫 번째 식 :추가변수 ($BusinessSize)를 포함하기 위해, 해당 변수가 어떻게 생성되었는지 나타내는 수식을 추가</p>
+<li><p>첫 번째 식 :추가변수 ($BusinessSize$)를 포함하기 위해, 해당 변수가 어떻게 생성되었는지 나타내는 수식을 추가</p>
 <p>그다음 $BusinessSize$를 $u_t$에서 제외</p>
 </li>
 <li><p>두 번째 식 : $IsOnSales$의 원인이 $BusinessSize$와 $u_t$ (모델링하지 않기로 선택한 다른 외부변수들)임을 의미</p>
@@ -15173,7 +15173,7 @@ $$E[AmountSold|IsOnSales=1] \neq E[AmountSold|do(IsOnSales=1)]$$
 <h3 id="%EA%B0%9C%EB%B3%84-%EC%B2%98%EC%B9%98%ED%9A%A8%EA%B3%BC-(Individual-Treatment-Effect,-ITE)">&#44060;&#48324; &#52376;&#52824;&#54952;&#44284; (Individual Treatment Effect, ITE)<a class="anchor-link" href="#%EA%B0%9C%EB%B3%84-%EC%B2%98%EC%B9%98%ED%9A%A8%EA%B3%BC-(Individual-Treatment-Effect,-ITE)">&#182;</a></h3><ul>
 <li>$do(.)$ 연산자를 사용하면, 개별 실험 대상 $i$에 처치가 결과에 미치는 영향인 개별 처치효과를 표현 가능</li>
 </ul>
-$$\tau_t = Y_i | do(T-t_1) - Y_i | do(T=t_0)$$<ul>
+$$\tau_t = Y_i | do(T=t_1) - Y_i | do(T=t_0)$$<ul>
 <li><p>즉, 각 실험대상 $i$에 대한 처치가 $t_0$에서 $t_1$로 바뀔 떄의 효과 $\tau_t$는,</p>
 <p>$t_0$과 비교하여 $t_1$ 하에서의 결과 차이를 의미</p>
 </li>
@@ -15182,7 +15182,7 @@ $$\tau_t = Y_i | do(T-t_1) - Y_i | do(T=t_0)$$<ul>
 </ul>
 $$\tau_t = AmountSold_t | do (IsOnSales = 1) - AmountSold_t | do(IsOnSales = 0)$$<ul>
 <li><p><strong>단, 인과추론의 근본적인 문제 때문에 앞의 식 중 한가지 항에 대해서만 관측할 수 있음</strong></p>
-<p>$\rightarrow$ <strong>따라서 이론적으로 해당 식을 표현할 수 있따고 해도, 반드시 데이터에서 이를 찾을 수 있다는 뜻은 아님</strong></p>
+<p>$\rightarrow$ <strong>따라서 이론적으로 해당 식을 표현할 수 있다고 해도, 반드시 데이터에서 이를 찾을 수 있다는 뜻은 아님</strong></p>
 </li>
 </ul>
 <br>
@@ -16574,7 +16574,7 @@ $$IsOnSales \leftarrow rand(t) \\ AmountSold \leftarrow f_y(IsOnSales, \mu_y)$$
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
 <ul>
-<li>랜던화 처치에 따른 데이터에서, 실현되지 않은 잠재적 결과 (삼각형)을 제거하여, 실험군과 대조군을 비교</li>
+<li>랜덤화 처치에 따른 데이터에서, 실현되지 않은 잠재적 결과 (삼각형)을 제거하여, 실험군과 대조군을 비교</li>
 </ul>
 
 </div>
